@@ -1,0 +1,585 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RMSpace"
+- "=="
+provides-nominal:
+- "C8MemexSDK7RMSpace"
+- "OC8MemexSDK7RMSpace29RepresentationProcessingState"
+- "OC8MemexSDK7RMSpace17PresentationStyle"
+provides-member:
+- ["C8MemexSDK7RMSpace", ""]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", ""]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", ""]
+provides-dynamic-lookup:
+- "typeIdentifier"
+- "tagLabel"
+- "hashValue"
+- "managedAt"
+- "createdAt"
+- "tags"
+- "clientIdentifier"
+- "representations"
+- "MUID"
+- "updatedAt"
+- "tagForegroundColor"
+depends-top-level:
+- "Double"
+- !private "~="
+- "=="
+- "NSDate"
+- "Int"
+- "RMObjectState"
+- "UIColor"
+- "RMManagementEntity"
+- !private "||"
+- "String"
+- "RMMedia"
+- "RMSpace"
+- "Bool"
+- "SUEntity"
+- "RMObjectProtocol"
+- !private "==="
+- "SUMap"
+- !private "<->"
+depends-member:
+- ["Ps9AnyObject", "MUID"]
+- ["Ps9AnyObject", "activity"]
+- ["Ps9AnyObject", "clientIdentifier"]
+- ["Ps9AnyObject", "createdAt"]
+- ["Ps9AnyObject", "createdBy"]
+- ["Ps9AnyObject", "hashValue"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "latitude"]
+- ["Ps9AnyObject", "longitude"]
+- ["Ps9AnyObject", "managedAt"]
+- ["Ps9AnyObject", "managedBy"]
+- ["Ps9AnyObject", "mapping"]
+- ["Ps9AnyObject", "ownerID"]
+- ["Ps9AnyObject", "representationProcessingState"]
+- ["Ps9AnyObject", "representations"]
+- ["Ps9AnyObject", "singleSystemManagementRequired"]
+- ["Ps9AnyObject", "state"]
+- ["Ps9AnyObject", "tagForegroundColor"]
+- ["Ps9AnyObject", "tagLabel"]
+- ["Ps9AnyObject", "tags"]
+- ["Ps9AnyObject", "typeIdentifier"]
+- ["Ps9AnyObject", "unread"]
+- ["Ps9AnyObject", "updatedAt"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps17BitwiseOperations", "Stride"]
+- !private ["Ps17BitwiseOperations", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- ["Ps7CVarArg", "MUID"]
+- !private ["Ps7CVarArg", "Stride"]
+- ["Ps7CVarArg", "activity"]
+- ["Ps7CVarArg", "clientIdentifier"]
+- ["Ps7CVarArg", "createdAt"]
+- ["Ps7CVarArg", "createdBy"]
+- ["Ps7CVarArg", "hashValue"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "latitude"]
+- ["Ps7CVarArg", "longitude"]
+- ["Ps7CVarArg", "managedAt"]
+- ["Ps7CVarArg", "managedBy"]
+- ["Ps7CVarArg", "mapping"]
+- ["Ps7CVarArg", "ownerID"]
+- ["Ps7CVarArg", "representationProcessingState"]
+- ["Ps7CVarArg", "representations"]
+- ["Ps7CVarArg", "singleSystemManagementRequired"]
+- ["Ps7CVarArg", "state"]
+- ["Ps7CVarArg", "tagForegroundColor"]
+- ["Ps7CVarArg", "tagLabel"]
+- ["Ps7CVarArg", "tags"]
+- ["Ps7CVarArg", "typeIdentifier"]
+- ["Ps7CVarArg", "unread"]
+- ["Ps7CVarArg", "updatedAt"]
+- ["Ps7CVarArg", ""]
+- !private ["Vs11ClosedRange", "deinit"]
+- !private ["Ps10Comparable", "Stride"]
+- !private ["Ps10Comparable", "hashValue"]
+- !private ["Vs20CountableClosedRange", "deinit"]
+- !private ["Vs14CountableRange", "deinit"]
+- ["Ps28CustomDebugStringConvertible", "MUID"]
+- ["Ps28CustomDebugStringConvertible", "activity"]
+- ["Ps28CustomDebugStringConvertible", "clientIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "createdAt"]
+- ["Ps28CustomDebugStringConvertible", "createdBy"]
+- ["Ps28CustomDebugStringConvertible", "hashValue"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "latitude"]
+- ["Ps28CustomDebugStringConvertible", "longitude"]
+- ["Ps28CustomDebugStringConvertible", "managedAt"]
+- ["Ps28CustomDebugStringConvertible", "managedBy"]
+- ["Ps28CustomDebugStringConvertible", "mapping"]
+- ["Ps28CustomDebugStringConvertible", "ownerID"]
+- ["Ps28CustomDebugStringConvertible", "representationProcessingState"]
+- ["Ps28CustomDebugStringConvertible", "representations"]
+- ["Ps28CustomDebugStringConvertible", "singleSystemManagementRequired"]
+- ["Ps28CustomDebugStringConvertible", "state"]
+- ["Ps28CustomDebugStringConvertible", "tagForegroundColor"]
+- ["Ps28CustomDebugStringConvertible", "tagLabel"]
+- ["Ps28CustomDebugStringConvertible", "tags"]
+- ["Ps28CustomDebugStringConvertible", "typeIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "unread"]
+- ["Ps28CustomDebugStringConvertible", "updatedAt"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
+- !private ["Ps17CustomReflectable", "Stride"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "hashValue"]
+- ["Ps23CustomStringConvertible", "MUID"]
+- !private ["Ps23CustomStringConvertible", "Stride"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "activity"]
+- ["Ps23CustomStringConvertible", "clientIdentifier"]
+- ["Ps23CustomStringConvertible", "createdAt"]
+- ["Ps23CustomStringConvertible", "createdBy"]
+- ["Ps23CustomStringConvertible", "hashValue"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "latitude"]
+- ["Ps23CustomStringConvertible", "longitude"]
+- ["Ps23CustomStringConvertible", "managedAt"]
+- ["Ps23CustomStringConvertible", "managedBy"]
+- ["Ps23CustomStringConvertible", "mapping"]
+- ["Ps23CustomStringConvertible", "ownerID"]
+- ["Ps23CustomStringConvertible", "representationProcessingState"]
+- ["Ps23CustomStringConvertible", "representations"]
+- ["Ps23CustomStringConvertible", "singleSystemManagementRequired"]
+- ["Ps23CustomStringConvertible", "state"]
+- ["Ps23CustomStringConvertible", "tagForegroundColor"]
+- ["Ps23CustomStringConvertible", "tagLabel"]
+- ["Ps23CustomStringConvertible", "tags"]
+- ["Ps23CustomStringConvertible", "typeIdentifier"]
+- ["Ps23CustomStringConvertible", "unread"]
+- ["Ps23CustomStringConvertible", "updatedAt"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "MUID"]
+- ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_toAnyHashable"]
+- ["Ps9Equatable", "activity"]
+- ["Ps9Equatable", "clientIdentifier"]
+- ["Ps9Equatable", "createdAt"]
+- ["Ps9Equatable", "createdBy"]
+- ["Ps9Equatable", "hashValue"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "latitude"]
+- ["Ps9Equatable", "longitude"]
+- ["Ps9Equatable", "managedAt"]
+- ["Ps9Equatable", "managedBy"]
+- ["Ps9Equatable", "mapping"]
+- ["Ps9Equatable", "ownerID"]
+- ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "representationProcessingState"]
+- ["Ps9Equatable", "representations"]
+- ["Ps9Equatable", "singleSystemManagementRequired"]
+- ["Ps9Equatable", "state"]
+- ["Ps9Equatable", "tagForegroundColor"]
+- ["Ps9Equatable", "tagLabel"]
+- ["Ps9Equatable", "tags"]
+- ["Ps9Equatable", "typeIdentifier"]
+- ["Ps9Equatable", "unread"]
+- ["Ps9Equatable", "updatedAt"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "hashValue"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
+- !private ["Ps32ExpressibleByStringInterpolation", "hashValue"]
+- !private ["Ps26ExpressibleByStringLiteral", "hashValue"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "hashValue"]
+- ["Ps8Hashable", "MUID"]
+- ["Ps8Hashable", "RawValue"]
+- !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_toAnyHashable"]
+- ["Ps8Hashable", "activity"]
+- ["Ps8Hashable", "clientIdentifier"]
+- ["Ps8Hashable", "createdAt"]
+- ["Ps8Hashable", "createdBy"]
+- ["Ps8Hashable", "hashValue"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "latitude"]
+- ["Ps8Hashable", "longitude"]
+- ["Ps8Hashable", "managedAt"]
+- ["Ps8Hashable", "managedBy"]
+- ["Ps8Hashable", "mapping"]
+- ["Ps8Hashable", "ownerID"]
+- ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "representationProcessingState"]
+- ["Ps8Hashable", "representations"]
+- ["Ps8Hashable", "singleSystemManagementRequired"]
+- ["Ps8Hashable", "state"]
+- ["Ps8Hashable", "tagForegroundColor"]
+- ["Ps8Hashable", "tagLabel"]
+- ["Ps8Hashable", "tags"]
+- ["Ps8Hashable", "typeIdentifier"]
+- ["Ps8Hashable", "unread"]
+- ["Ps8Hashable", "updatedAt"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "Stride"]
+- ["Si", "deinit"]
+- !private ["Si", "hashValue"]
+- !private ["Ps7Integer", "Stride"]
+- !private ["Ps7Integer", "hashValue"]
+- !private ["Ps17IntegerArithmetic", "Stride"]
+- !private ["Ps17IntegerArithmetic", "hashValue"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "hashValue"]
+- !private ["Ps10MirrorPath", "Stride"]
+- !private ["Ps10MirrorPath", "hashValue"]
+- !private ["PSo8NSCoding", "hashValue"]
+- !private ["PSo9NSCopying", "hashValue"]
+- !private ["PSo16NSMutableCopying", "hashValue"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "MUID"]
+- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "RMManagementEntity"]
+- ["CSo8NSObject", "RMMedia"]
+- ["CSo8NSObject", "RMObjectState"]
+- ["CSo8NSObject", "RepresentationProcessingState"]
+- ["CSo8NSObject", "SUMap"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "activity"]
+- ["CSo8NSObject", "clientIdentifier"]
+- ["CSo8NSObject", "createdAt"]
+- ["CSo8NSObject", "createdBy"]
+- ["CSo8NSObject", "hashValue"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "latitude"]
+- ["CSo8NSObject", "longitude"]
+- ["CSo8NSObject", "managedAt"]
+- ["CSo8NSObject", "managedBy"]
+- ["CSo8NSObject", "mapping"]
+- ["CSo8NSObject", "ownerID"]
+- ["CSo8NSObject", "representationProcessingState"]
+- ["CSo8NSObject", "representations"]
+- ["CSo8NSObject", "singleSystemManagementRequired"]
+- ["CSo8NSObject", "state"]
+- ["CSo8NSObject", "tagForegroundColor"]
+- ["CSo8NSObject", "tagLabel"]
+- ["CSo8NSObject", "tags"]
+- ["CSo8NSObject", "typeIdentifier"]
+- ["CSo8NSObject", "unread"]
+- ["CSo8NSObject", "updatedAt"]
+- ["PSo16NSObjectProtocol", "MUID"]
+- ["PSo16NSObjectProtocol", "activity"]
+- ["PSo16NSObjectProtocol", "clientIdentifier"]
+- ["PSo16NSObjectProtocol", "createdAt"]
+- ["PSo16NSObjectProtocol", "createdBy"]
+- ["PSo16NSObjectProtocol", "hashValue"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "latitude"]
+- ["PSo16NSObjectProtocol", "longitude"]
+- ["PSo16NSObjectProtocol", "managedAt"]
+- ["PSo16NSObjectProtocol", "managedBy"]
+- ["PSo16NSObjectProtocol", "mapping"]
+- ["PSo16NSObjectProtocol", "ownerID"]
+- ["PSo16NSObjectProtocol", "representationProcessingState"]
+- ["PSo16NSObjectProtocol", "representations"]
+- ["PSo16NSObjectProtocol", "singleSystemManagementRequired"]
+- ["PSo16NSObjectProtocol", "state"]
+- ["PSo16NSObjectProtocol", "tagForegroundColor"]
+- ["PSo16NSObjectProtocol", "tagLabel"]
+- ["PSo16NSObjectProtocol", "tags"]
+- ["PSo16NSObjectProtocol", "typeIdentifier"]
+- ["PSo16NSObjectProtocol", "unread"]
+- ["PSo16NSObjectProtocol", "updatedAt"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "hashValue"]
+- !private ["CSo8NSString", "hashValue"]
+- ["Sq", "deinit"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "Grid"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "List"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "RawValue"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "_toAnyHashable"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "deinit"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "hashValue"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "init"]
+- ["OC8MemexSDK7RMSpace17PresentationStyle", "rawValue"]
+- ["P8MemexSDK16RMObjectProtocol", "MUID"]
+- ["P8MemexSDK16RMObjectProtocol", "updatedAt"]
+- ["P8MemexSDK16RMObjectProtocol", ""]
+- ["C8MemexSDK7RMSpace", "Bool"]
+- ["C8MemexSDK7RMSpace", "Double"]
+- ["C8MemexSDK7RMSpace", "Int"]
+- ["C8MemexSDK7RMSpace", "MUID"]
+- ["C8MemexSDK7RMSpace", "NSDate"]
+- ["C8MemexSDK7RMSpace", "PresentationStyle"]
+- ["C8MemexSDK7RMSpace", "RMManagementEntity"]
+- ["C8MemexSDK7RMSpace", "RMMedia"]
+- ["C8MemexSDK7RMSpace", "RMObjectState"]
+- ["C8MemexSDK7RMSpace", "RepresentationProcessingState"]
+- ["C8MemexSDK7RMSpace", "SUMap"]
+- ["C8MemexSDK7RMSpace", "String"]
+- ["C8MemexSDK7RMSpace", "UIColor"]
+- ["C8MemexSDK7RMSpace", "activity"]
+- ["C8MemexSDK7RMSpace", "clientIdentifier"]
+- ["C8MemexSDK7RMSpace", "createdAt"]
+- ["C8MemexSDK7RMSpace", "createdBy"]
+- ["C8MemexSDK7RMSpace", "deinit"]
+- ["C8MemexSDK7RMSpace", "hashValue"]
+- ["C8MemexSDK7RMSpace", "init"]
+- ["C8MemexSDK7RMSpace", "latitude"]
+- ["C8MemexSDK7RMSpace", "longitude"]
+- ["C8MemexSDK7RMSpace", "managedAt"]
+- ["C8MemexSDK7RMSpace", "managedBy"]
+- ["C8MemexSDK7RMSpace", "mapping"]
+- ["C8MemexSDK7RMSpace", "ownerID"]
+- ["C8MemexSDK7RMSpace", "representationProcessingState"]
+- ["C8MemexSDK7RMSpace", "representations"]
+- ["C8MemexSDK7RMSpace", "singleSystemManagementRequired"]
+- ["C8MemexSDK7RMSpace", "state"]
+- ["C8MemexSDK7RMSpace", "tagForegroundColor"]
+- ["C8MemexSDK7RMSpace", "tagLabel"]
+- ["C8MemexSDK7RMSpace", "tags"]
+- ["C8MemexSDK7RMSpace", "typeIdentifier"]
+- ["C8MemexSDK7RMSpace", "unread"]
+- ["C8MemexSDK7RMSpace", "updatedAt"]
+- !private ["Vs5Range", "deinit"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "_toAnyHashable"]
+- ["Ps16RawRepresentable", "hashValue"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", ""]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "Done"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "RawValue"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "Waiting"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "_toAnyHashable"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "deinit"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "hashValue"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "init"]
+- ["OC8MemexSDK7RMSpace29RepresentationProcessingState", "rawValue"]
+- ["C8MemexSDK8SUEntity", "Bool"]
+- ["C8MemexSDK8SUEntity", "Double"]
+- ["C8MemexSDK8SUEntity", "Int"]
+- ["C8MemexSDK8SUEntity", "MUID"]
+- ["C8MemexSDK8SUEntity", "NSDate"]
+- ["C8MemexSDK8SUEntity", "RMManagementEntity"]
+- ["C8MemexSDK8SUEntity", "RMMedia"]
+- ["C8MemexSDK8SUEntity", "RMObjectState"]
+- ["C8MemexSDK8SUEntity", "RepresentationProcessingState"]
+- ["C8MemexSDK8SUEntity", "SUMap"]
+- ["C8MemexSDK8SUEntity", "String"]
+- ["C8MemexSDK8SUEntity", "UIColor"]
+- ["C8MemexSDK8SUEntity", "activity"]
+- ["C8MemexSDK8SUEntity", "clientIdentifier"]
+- ["C8MemexSDK8SUEntity", "createdAt"]
+- ["C8MemexSDK8SUEntity", "createdBy"]
+- ["C8MemexSDK8SUEntity", "deinit"]
+- ["C8MemexSDK8SUEntity", "hashValue"]
+- ["C8MemexSDK8SUEntity", "init"]
+- ["C8MemexSDK8SUEntity", "latitude"]
+- ["C8MemexSDK8SUEntity", "longitude"]
+- ["C8MemexSDK8SUEntity", "managedAt"]
+- ["C8MemexSDK8SUEntity", "managedBy"]
+- ["C8MemexSDK8SUEntity", "mapping"]
+- ["C8MemexSDK8SUEntity", "ownerID"]
+- ["C8MemexSDK8SUEntity", "representationProcessingState"]
+- ["C8MemexSDK8SUEntity", "representations"]
+- ["C8MemexSDK8SUEntity", "singleSystemManagementRequired"]
+- ["C8MemexSDK8SUEntity", "state"]
+- ["C8MemexSDK8SUEntity", "tagForegroundColor"]
+- ["C8MemexSDK8SUEntity", "tagLabel"]
+- ["C8MemexSDK8SUEntity", "tags"]
+- ["C8MemexSDK8SUEntity", "typeIdentifier"]
+- ["C8MemexSDK8SUEntity", "unread"]
+- ["C8MemexSDK8SUEntity", "updatedAt"]
+- ["C8MemexSDK8SUEntity", ""]
+- ["P8MemexSDK16SUEntityProtocol", "MUID"]
+- ["P8MemexSDK16SUEntityProtocol", "activity"]
+- ["P8MemexSDK16SUEntityProtocol", "clientIdentifier"]
+- ["P8MemexSDK16SUEntityProtocol", "createdAt"]
+- ["P8MemexSDK16SUEntityProtocol", "createdBy"]
+- ["P8MemexSDK16SUEntityProtocol", "hashValue"]
+- ["P8MemexSDK16SUEntityProtocol", "init"]
+- ["P8MemexSDK16SUEntityProtocol", "latitude"]
+- ["P8MemexSDK16SUEntityProtocol", "longitude"]
+- ["P8MemexSDK16SUEntityProtocol", "managedAt"]
+- ["P8MemexSDK16SUEntityProtocol", "managedBy"]
+- ["P8MemexSDK16SUEntityProtocol", "mapping"]
+- ["P8MemexSDK16SUEntityProtocol", "ownerID"]
+- ["P8MemexSDK16SUEntityProtocol", "representationProcessingState"]
+- ["P8MemexSDK16SUEntityProtocol", "representations"]
+- ["P8MemexSDK16SUEntityProtocol", "singleSystemManagementRequired"]
+- ["P8MemexSDK16SUEntityProtocol", "state"]
+- ["P8MemexSDK16SUEntityProtocol", "tagForegroundColor"]
+- ["P8MemexSDK16SUEntityProtocol", "tagLabel"]
+- ["P8MemexSDK16SUEntityProtocol", "tags"]
+- ["P8MemexSDK16SUEntityProtocol", "typeIdentifier"]
+- ["P8MemexSDK16SUEntityProtocol", "unread"]
+- ["P8MemexSDK16SUEntityProtocol", "updatedAt"]
+- ["P8MemexSDK16SUEntityProtocol", ""]
+- ["C8MemexSDK5SUMap", "deinit"]
+- ["P8MemexSDK10SUMappable", "MUID"]
+- ["P8MemexSDK10SUMappable", "activity"]
+- ["P8MemexSDK10SUMappable", "clientIdentifier"]
+- ["P8MemexSDK10SUMappable", "createdAt"]
+- ["P8MemexSDK10SUMappable", "createdBy"]
+- ["P8MemexSDK10SUMappable", "hashValue"]
+- ["P8MemexSDK10SUMappable", "init"]
+- ["P8MemexSDK10SUMappable", "latitude"]
+- ["P8MemexSDK10SUMappable", "longitude"]
+- ["P8MemexSDK10SUMappable", "managedAt"]
+- ["P8MemexSDK10SUMappable", "managedBy"]
+- ["P8MemexSDK10SUMappable", "mapping"]
+- ["P8MemexSDK10SUMappable", "ownerID"]
+- ["P8MemexSDK10SUMappable", "representationProcessingState"]
+- ["P8MemexSDK10SUMappable", "representations"]
+- ["P8MemexSDK10SUMappable", "singleSystemManagementRequired"]
+- ["P8MemexSDK10SUMappable", "state"]
+- ["P8MemexSDK10SUMappable", "tagForegroundColor"]
+- ["P8MemexSDK10SUMappable", "tagLabel"]
+- ["P8MemexSDK10SUMappable", "tags"]
+- ["P8MemexSDK10SUMappable", "typeIdentifier"]
+- ["P8MemexSDK10SUMappable", "unread"]
+- ["P8MemexSDK10SUMappable", "updatedAt"]
+- ["P8MemexSDK10SUMappable", ""]
+- !private ["Ps13SignedInteger", "Stride"]
+- !private ["Ps13SignedInteger", "hashValue"]
+- !private ["Ps12SignedNumber", "Stride"]
+- !private ["Ps12SignedNumber", "hashValue"]
+- !private ["Ps10Strideable", "Stride"]
+- !private ["Ps10Strideable", "hashValue"]
+- !private ["SS", "hashValue"]
+- !private ["Ps16TextOutputStream", "hashValue"]
+- !private ["Ps20TextOutputStreamable", "hashValue"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "hashValue"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "hashValue"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "hashValue"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "hashValue"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "hashValue"]
+- ["Ps9_Hashable", "MUID"]
+- ["Ps9_Hashable", "RawValue"]
+- !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_toAnyHashable"]
+- ["Ps9_Hashable", "activity"]
+- ["Ps9_Hashable", "clientIdentifier"]
+- ["Ps9_Hashable", "createdAt"]
+- ["Ps9_Hashable", "createdBy"]
+- ["Ps9_Hashable", "hashValue"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "latitude"]
+- ["Ps9_Hashable", "longitude"]
+- ["Ps9_Hashable", "managedAt"]
+- ["Ps9_Hashable", "managedBy"]
+- ["Ps9_Hashable", "mapping"]
+- ["Ps9_Hashable", "ownerID"]
+- ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "representationProcessingState"]
+- ["Ps9_Hashable", "representations"]
+- ["Ps9_Hashable", "singleSystemManagementRequired"]
+- ["Ps9_Hashable", "state"]
+- ["Ps9_Hashable", "tagForegroundColor"]
+- ["Ps9_Hashable", "tagLabel"]
+- ["Ps9_Hashable", "tags"]
+- ["Ps9_Hashable", "typeIdentifier"]
+- ["Ps9_Hashable", "unread"]
+- ["Ps9_Hashable", "updatedAt"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "Stride"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps8_Integer", "Stride"]
+- !private ["Ps8_Integer", "hashValue"]
+- !private ["Ps18_IntegerArithmetic", "Stride"]
+- !private ["Ps18_IntegerArithmetic", "hashValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps14_SignedInteger", "Stride"]
+- !private ["Ps14_SignedInteger", "hashValue"]
+- !private ["Ps11_Strideable", "Stride"]
+- !private ["Ps11_Strideable", "hashValue"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps17BitwiseOperations"
+- "Sb"
+- "Ps7CVarArg"
+- !private "Vs11ClosedRange"
+- !private "Ps10Comparable"
+- !private "Vs20CountableClosedRange"
+- !private "Vs14CountableRange"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Si"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- "OC8MemexSDK7RMSpace17PresentationStyle"
+- "P8MemexSDK16RMObjectProtocol"
+- "C8MemexSDK7RMSpace"
+- !private "Vs5Range"
+- "Ps16RawRepresentable"
+- "OC8MemexSDK7RMSpace29RepresentationProcessingState"
+- "C8MemexSDK8SUEntity"
+- "P8MemexSDK16SUEntityProtocol"
+- "C8MemexSDK5SUMap"
+- "P8MemexSDK10SUMappable"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/adamzdara/Memex/memex-swift-sdk/MemexSDK/MemexSDK/MemexSDK.h"
+- "/Users/adamzdara/Memex/memex-swift-sdk/MemexSDK/Build/Intermediates/MemexSDK.build/Debug-iphonesimulator/MemexSDK.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "b2b9c27ecce9ecf5886d6efe409305f0"

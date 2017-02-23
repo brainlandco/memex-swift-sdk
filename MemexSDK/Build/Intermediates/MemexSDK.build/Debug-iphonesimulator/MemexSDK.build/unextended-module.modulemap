@@ -5,6 +5,6 @@ framework module MemexSDK {
   module * { export * }
 }
 
-module MemexSDK.Swift {
-    header "MemexSDK-Swift.h"
+module MemexSDK.__Swift {
+    exclude header "MemexSDK-Swift.h"
 }

@@ -1,0 +1,102 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SUColorTransform"
+provides-nominal:
+- "C8MemexSDK16SUColorTransform"
+provides-member:
+- ["C8MemexSDK16SUColorTransform", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "SUColorTransform"
+- "CastingPrecedence"
+- "UIColor"
+- "SUTransformType"
+- "String"
+- "AnyObject"
+depends-member:
+- !private ["Ps9AnyObject", "JSColorString"]
+- ["Ps9AnyObject", "JSON"]
+- ["Ps9AnyObject", "Object"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "colorFromJSColorString"]
+- ["Ps9AnyObject", "transformFromJSON"]
+- ["Ps9AnyObject", "transformToJSON"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps7CVarArg", "JSColorString"]
+- !private ["Ps7CVarArg", "colorFromJSColorString"]
+- !private ["Ps28CustomDebugStringConvertible", "JSColorString"]
+- !private ["Ps28CustomDebugStringConvertible", "colorFromJSColorString"]
+- !private ["Ps23CustomStringConvertible", "JSColorString"]
+- !private ["Ps23CustomStringConvertible", "colorFromJSColorString"]
+- !private ["Ps9Equatable", "JSColorString"]
+- !private ["Ps9Equatable", "colorFromJSColorString"]
+- !private ["Ps8Hashable", "JSColorString"]
+- !private ["Ps8Hashable", "colorFromJSColorString"]
+- !private ["PSo8NSCoding", "JSColorString"]
+- !private ["PSo8NSCoding", "colorFromJSColorString"]
+- !private ["PSo9NSCopying", "JSColorString"]
+- !private ["PSo9NSCopying", "colorFromJSColorString"]
+- !private ["CSo8NSObject", "JSColorString"]
+- !private ["CSo8NSObject", "colorFromJSColorString"]
+- !private ["PSo16NSObjectProtocol", "JSColorString"]
+- !private ["PSo16NSObjectProtocol", "colorFromJSColorString"]
+- !private ["PSo14NSSecureCoding", "JSColorString"]
+- !private ["PSo14NSSecureCoding", "colorFromJSColorString"]
+- ["Sq", "deinit"]
+- ["C8MemexSDK16SUColorTransform", "AnyObject"]
+- ["C8MemexSDK16SUColorTransform", "JSON"]
+- ["C8MemexSDK16SUColorTransform", "Object"]
+- ["C8MemexSDK16SUColorTransform", "String"]
+- ["C8MemexSDK16SUColorTransform", "UIColor"]
+- ["C8MemexSDK16SUColorTransform", "deinit"]
+- ["C8MemexSDK16SUColorTransform", "init"]
+- ["C8MemexSDK16SUColorTransform", "transformFromJSON"]
+- ["C8MemexSDK16SUColorTransform", "transformToJSON"]
+- ["P8MemexSDK15SUTransformType", "JSON"]
+- ["P8MemexSDK15SUTransformType", "Object"]
+- !private ["P8MemexSDK15SUTransformType", "UIColor"]
+- ["P8MemexSDK15SUTransformType", "transformFromJSON"]
+- ["P8MemexSDK15SUTransformType", "transformToJSON"]
+- ["P8MemexSDK15SUTransformType", ""]
+- ["SS", "deinit"]
+- !private ["CSo7UIColor", "JSColorString"]
+- !private ["CSo7UIColor", "colorFromJSColorString"]
+- ["CSo7UIColor", "deinit"]
+- !private ["Ps26_ExpressibleByColorLiteral", "JSColorString"]
+- !private ["Ps26_ExpressibleByColorLiteral", "colorFromJSColorString"]
+- !private ["Ps9_Hashable", "JSColorString"]
+- !private ["Ps9_Hashable", "colorFromJSColorString"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps7CVarArg"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "Sq"
+- "C8MemexSDK16SUColorTransform"
+- "P8MemexSDK15SUTransformType"
+- "SS"
+- "CSo7UIColor"
+- !private "Ps26_ExpressibleByColorLiteral"
+- !private "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/adamzdara/Memex/memex-swift-sdk/MemexSDK/MemexSDK/MemexSDK.h"
+- "/Users/adamzdara/Memex/memex-swift-sdk/MemexSDK/Build/Intermediates/MemexSDK.build/Debug-iphonesimulator/MemexSDK.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "3fb1afc6822e889f3c5aa968e49b33bb"
