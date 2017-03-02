@@ -1,6 +1,0 @@
-framework module MemexSDK {
-  umbrella header "MemexSDK.h"
-
-  export *
-  module * { export * }
-}

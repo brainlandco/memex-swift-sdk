@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7873F0F78047E647F0FC6414D894F5EFBD126D79",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7873F0F78047E647F0FC6414D894F5EFBD126D79" : 9223372036854775807,
+    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C356BA3A-66CB-4D3A-A81E-2428E0F845A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7873F0F78047E647F0FC6414D894F5EFBD126D79" : "memex-swift-sdk\/",
+    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : "core\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MemexSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MemexSDK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/memex-swift-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7873F0F78047E647F0FC6414D894F5EFBD126D79"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/foundations-extension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AFACD3407C4D37A6A2E0610C910FC073AA5A8960"
+    }
+  ]
+}
