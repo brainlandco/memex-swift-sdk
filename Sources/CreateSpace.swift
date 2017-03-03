@@ -8,8 +8,11 @@
 
 import Foundation
 
+import Foundation
+import Sushi
+import ObjectMapper
 
-public struct RMCreateSpace {
+public extension Memex {
   
   public class Inputs: OPVoidOperationParameters {
     public var space: RMSpace!

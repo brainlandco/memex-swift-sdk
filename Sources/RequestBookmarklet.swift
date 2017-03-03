@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMRequestBookmarklet {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Operation: RMOperation<OPVoidOperationParameters, OPVoidOperationResults> {
     

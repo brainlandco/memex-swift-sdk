@@ -13,31 +13,21 @@
 // ******************************************************************************
 
 import Foundation
+import Sushi
+import ObjectMapper
 
-public struct RMCreateUser {
+public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    var user: RMUser!
-    var inviteToken: String?
-  }
-  
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    
-    init(user: RMUser,
-         inviteToken: String?,
-         module: OPModuleProtocol? = nil) {
-      super.init(module: module)
-      self.parameters.user = user
-      self.parameters.inviteToken = inviteToken
+  public func createUser(user: User,
+                         inviteToken: String?,
+                         completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["user"] = user.toJSON()
+    if let token = inviteToken {
+      parameters["invite_token"] = token
     }
-    
-    override public func execute() {
-      var parameters = [String: AnyObject]()
-      parameters["user"] = SUMapper<RMUser>().toJSON(self.parameters.user)
-      if let token = self.parameters.inviteToken {
-        parameters["invite_token"] = token
-      }
-      POST("users", parameters: parameters)
+    POST("users", parameters: parameters) { response in
+      completion(response.error)
     }
   }
 }

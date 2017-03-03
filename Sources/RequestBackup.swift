@@ -13,20 +13,16 @@
  */
 
 import Foundation
+import Sushi
 
-public struct RMRequestBackup {
+public extension Memex {
   
-  public class Operation: RMOperation<OPVoidOperationParameters, OPVoidOperationResults> {
-    
-    public init(module: OPModuleProtocol? = nil) {
-      super.init(module: module)
+  public func requestBackup(completion: @escaping VoidOutputs) {
+    GET("users/self/backup") { response in
+      completion(response.error)
     }
-    
-    override public func execute() {
-      GET("users/self/backup")
-    }
-    
   }
+  
 }
 
 

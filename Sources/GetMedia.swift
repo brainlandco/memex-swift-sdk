@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMGetMedia {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Inputs: OPVoidOperationParameters {
     public var media: RMMedia!

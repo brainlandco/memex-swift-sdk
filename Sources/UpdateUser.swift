@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMUpdateUser {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Parameters: OPVoidOperationParameters {
     var user: RMUser!

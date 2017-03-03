@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMPushLinks {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Inputs: OPVoidOperationParameters {
     public var items: [RMLink]!

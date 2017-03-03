@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMProcessSpace {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Parameters: OPVoidOperationParameters {
     public var MUID: String!

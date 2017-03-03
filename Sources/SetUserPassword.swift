@@ -14,8 +14,12 @@
 
 import Foundation
 
-public struct RMSetUserPassword
-{
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
+  
   public class Parameters: OPVoidOperationParameters
   {
     var oldPassword: String?

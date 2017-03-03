@@ -24,10 +24,6 @@ public enum PresentationStyle: Int {
   case Grid = 1
 }
 
-public struct Constants {
-  public static let SELF_ID = -1
-}
-
 public enum ObjectState: Int {
   case Unknown = -1
   case Visible = 0
@@ -60,5 +56,11 @@ public enum Error: Int, Swift.Error {
   case InvalidData
   case InvalidInvitationToken
 }
+
+
+public struct Constants {
+  public static let SELF_ID = -1
+}
+
 
 

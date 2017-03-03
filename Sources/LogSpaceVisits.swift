@@ -14,8 +14,12 @@
 
 import Foundation
 
-public struct RMLogSpaceVisits
-{
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
+
   public class Parameters: OPVoidOperationParameters
   {
     public var visits: [RMSpaceVisit]!

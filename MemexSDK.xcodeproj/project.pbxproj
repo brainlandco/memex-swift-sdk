@@ -31,7 +31,7 @@
 		7922C3811E6A0F8700A54980 /* SetUserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3651E6A0F8700A54980 /* SetUserPassword.swift */; };
 		7922C3821E6A0F8700A54980 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3661E6A0F8700A54980 /* Space.swift */; };
 		7922C3831E6A0F8700A54980 /* SpaceVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3671E6A0F8700A54980 /* SpaceVisit.swift */; };
-		7922C3841E6A0F8700A54980 /* UpdateSelfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3681E6A0F8700A54980 /* UpdateSelfUser.swift */; };
+		7922C3841E6A0F8700A54980 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3681E6A0F8700A54980 /* UpdateUser.swift */; };
 		7922C3851E6A0F8700A54980 /* UpdateSubscriptionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C3691E6A0F8700A54980 /* UpdateSubscriptionReceipt.swift */; };
 		7922C3861E6A0F8700A54980 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C36A1E6A0F8700A54980 /* User.swift */; };
 		7922C3871E6A0F8700A54980 /* WebpageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7922C36B1E6A0F8700A54980 /* WebpageMetadata.swift */; };
@@ -82,7 +82,7 @@
 		7922C3651E6A0F8700A54980 /* SetUserPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUserPassword.swift; sourceTree = "<group>"; };
 		7922C3661E6A0F8700A54980 /* Space.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		7922C3671E6A0F8700A54980 /* SpaceVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceVisit.swift; sourceTree = "<group>"; };
-		7922C3681E6A0F8700A54980 /* UpdateSelfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSelfUser.swift; sourceTree = "<group>"; };
+		7922C3681E6A0F8700A54980 /* UpdateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		7922C3691E6A0F8700A54980 /* UpdateSubscriptionReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSubscriptionReceipt.swift; sourceTree = "<group>"; };
 		7922C36A1E6A0F8700A54980 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7922C36B1E6A0F8700A54980 /* WebpageMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
@@ -125,6 +125,7 @@
 				7922C3661E6A0F8700A54980 /* Space.swift */,
 				7922C3671E6A0F8700A54980 /* SpaceVisit.swift */,
 				7922C36A1E6A0F8700A54980 /* User.swift */,
+				7922C35A1E6A0F8700A54980 /* ObjectsSet.swift */,
 				7922C36B1E6A0F8700A54980 /* WebpageMetadata.swift */,
 			);
 			name = Data;
@@ -133,6 +134,7 @@
 		7922C3891E6A0FB800A54980 /* Proces */ = {
 			isa = PBXGroup;
 			children = (
+				7922C3621E6A0F8700A54980 /* RequestBackup.swift */,
 				7922C3511E6A0F8700A54980 /* CreateMedia.swift */,
 				7922C3521E6A0F8700A54980 /* CreateSpace.swift */,
 				7922C3531E6A0F8700A54980 /* CreateUser.swift */,
@@ -140,7 +142,6 @@
 				7922C3551E6A0F8700A54980 /* GetUser.swift */,
 				7922C3571E6A0F8700A54980 /* LogSpaceVisits.swift */,
 				7922C3581E6A0F8700A54980 /* MarkMediaAsUploaded.swift */,
-				7922C35A1E6A0F8700A54980 /* ObjectsSet.swift */,
 				7922C35B1E6A0F8700A54980 /* ProcessSpace.swift */,
 				7922C35C1E6A0F8700A54980 /* PullLinks.swift */,
 				7922C35D1E6A0F8700A54980 /* PullMedia.swift */,
@@ -148,11 +149,10 @@
 				7922C35F1E6A0F8700A54980 /* PushLinks.swift */,
 				7922C3601E6A0F8700A54980 /* PushMedia.swift */,
 				7922C3611E6A0F8700A54980 /* PushSpaces.swift */,
-				7922C3621E6A0F8700A54980 /* RequestBackup.swift */,
 				7922C3631E6A0F8700A54980 /* RequestBookmarklet.swift */,
 				7922C3641E6A0F8700A54980 /* RequestInvite.swift */,
 				7922C3651E6A0F8700A54980 /* SetUserPassword.swift */,
-				7922C3681E6A0F8700A54980 /* UpdateSelfUser.swift */,
+				7922C3681E6A0F8700A54980 /* UpdateUser.swift */,
 				7922C3691E6A0F8700A54980 /* UpdateSubscriptionReceipt.swift */,
 			);
 			name = Proces;
@@ -301,7 +301,7 @@
 			files = (
 				7922C36D1E6A0F8700A54980 /* CreateMedia.swift in Sources */,
 				7922C3721E6A0F8700A54980 /* Link.swift in Sources */,
-				7922C3841E6A0F8700A54980 /* UpdateSelfUser.swift in Sources */,
+				7922C3841E6A0F8700A54980 /* UpdateUser.swift in Sources */,
 				7922C3801E6A0F8700A54980 /* RequestInvite.swift in Sources */,
 				7922C3741E6A0F8700A54980 /* MarkMediaAsUploaded.swift in Sources */,
 				7922C3861E6A0F8700A54980 /* User.swift in Sources */,

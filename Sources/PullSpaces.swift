@@ -14,7 +14,11 @@
 
 import Foundation
 
-public struct RMPullSpaces {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public extension Memex {
   
   public class Inputs: OPVoidOperationParameters {
     public var lastModelVersion: Int?

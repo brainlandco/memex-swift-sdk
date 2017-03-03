@@ -13,8 +13,10 @@
 // ******************************************************************************
 
 import Foundation
+import Sushi
+import ObjectMapper
 
-public struct RMRequestInvite {
+public extension Memex {
   
   public class Parameters: OPVoidOperationParameters {
     var email: String!

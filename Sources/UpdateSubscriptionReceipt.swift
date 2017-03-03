@@ -13,32 +13,19 @@
 // ******************************************************************************
 
 import Foundation
+import Sushi
+import ObjectMapper
 
-public struct RMUpdateSubscriptionReceipt {
+public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    var receiptData: NSData!
-    var transactionID: String?
+  public func updateSubscriptionReceipt(receiptData: NSData,
+                                        transactionID: String?,
+                                        completion: @escaping VoidOutputs) {
+    let base64 = receiptData.base64EncodedString(options: [.encodingEndLineWithLineFeed])
+    POST("users/self/update-subscription",
+         parameters: ["receipt_data": base64]) { response in
+          completion(response.error)
+    }
   }
   
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(receiptData receiptData: NSData, transactionID: String?) -> Self {
-      self.parameters.receiptData = receiptData
-      self.parameters.transactionID = transactionID
-      return self
-    }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.receiptData, "Missing receiptData")
-    }
-    
-    override public func execute() {
-      let base64 = self.parameters.receiptData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.EncodingEndLineWithLineFeed)
-      POST("users/self/update-subscription",
-           parameters: ["receipt_data": base64])
-    }
-  }
 }
