@@ -25,19 +25,18 @@ public class SpaceVisit: JSONRepresentable {
   
   // MARK: Lifecycle
   
-  public required init()
-  {
+  public required init() {
     super.init()
   }
   
   public required init?(map: Map) {
-    super.init(map)
+    super.init(map: map)
   }
   
   // MARK: Mapping
   
   override public func mapping(map: Map) {
-    super.mapping(map)
+    super.mapping(map: map)
     
     self.spaceMUID <- map["muid"]
     self.visitedAt <- map["visited_at"]

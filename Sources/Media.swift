@@ -43,7 +43,7 @@ public class Media: JSONRepresentable, ObjectProtocol {
   }
   
   public required init?(map: Map) {
-    super.init(map)
+    super.init(map: map)
   }
   
   override public func mapping(map: Map) {
@@ -56,7 +56,7 @@ public class Media: JSONRepresentable, ObjectProtocol {
     self.managedAt <- map["managed_at"]
     self.singleSystemManagementRequired <- map["single_system_management_required"]
     self.clientIdentifier <- map["client_identifier"]
-    self.metadata <- (map["metadata"], MetadataTransform())
+    self.metadata <- (map["metadata"], EncodedJSONTransform())
     self.tag <- map["type"]
     self.dataState <- map["data_state"]
     self.embededData <- map["embeded_data"]
@@ -66,38 +66,6 @@ public class Media: JSONRepresentable, ObjectProtocol {
     self.representedSpaceMUID <- map["represented_space_muid"]
   }
 
-}
-
-public class MetadataTransform: TransformType {
-  
-  public typealias Object = [String: AnyObject]
-  public typealias JSON = String
-  
-  public init() {}
-  
-  public func transformFromJSON(_ value: Any?) -> [String: AnyObject]? {
-    if let string = value as? String {
-      do {
-        let data = string.data(using: String.Encoding.utf8)!
-        let object = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-        return object
-      }
-      catch {
-        return nil
-      }
-    }
-    return nil
-  }
-  
-  public func transformToJSON(_ value: [String: AnyObject]?) -> String? {
-    if let value = value {
-      let data = try! JSONSerialization.data(withJSONObject: value, options: [])
-      let string = String(data: data, encoding: String.Encoding.utf8)
-      return string
-    }
-    return nil
-  }
-  
 }
 
 public func ==(lhs: Media, rhs: Media) -> Bool{

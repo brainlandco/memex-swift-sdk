@@ -17,7 +17,7 @@ import Foundation
 public struct RMCreateMedia {
   
   public class Parameters: OPVoidOperationParameters {
-    public var media: RMMedia!
+    public var media: Media!
   }
   
   public class Outputs: OPVoidOperationResults {

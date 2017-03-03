@@ -34,7 +34,7 @@ public enum ObjectState: Int {
   case Trashed = 1
 }
 
-public enum RMManagementEntity: Int {
+public enum ManagementEntity: Int {
   case user = 0
   case system = 1
 }
@@ -45,7 +45,6 @@ public enum DataState: Int {
   case ReadyForDataUpload = 1
   case DataValid = 2
 }
-
 
 public enum Error: Int, Swift.Error {
   case Generic

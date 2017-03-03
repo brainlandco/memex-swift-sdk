@@ -19,16 +19,16 @@ import ObjectMapper
 
 public protocol ObjectProtocol: Hashable {
   var MUID: String? { get }
-  var updatedAt: NSDate? { get }
+  var updatedAt: Date? { get }
 }
 
-public class ObjectsSet: Entity {
+public class ObjectsSet: JSONRepresentable {
 
   // MARK: Properties
 
-  public var media: [RMMedia]?
-  public var spaces: [RMSpace]?
-  public var links: [RMLink]?
+  public var media: [Media]?
+  public var spaces: [Space]?
+  public var links: [Link]?
   
   // MARK: Lifecycle
   
@@ -37,13 +37,13 @@ public class ObjectsSet: Entity {
   }
   
   public required init?(map: Map) {
-    super.init(map)
+    super.init(map: map)
   }
   
   // MARK: Mapping
   
   override public func mapping(map: Map) {
-    super.mapping(map)
+    super.mapping(map: map)
     
     self.media <- map["media"]
     self.spaces <- map["spaces"]

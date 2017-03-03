@@ -49,7 +49,7 @@ public class User: JSONRepresentable {
   }
   
   public required init?(map: Map) {
-    super.init(map)
+    super.init(map: map)
   }
   
   // MARK: Mapping

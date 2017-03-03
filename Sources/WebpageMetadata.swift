@@ -31,11 +31,11 @@ public class WebpageMetadata: JSONRepresentable {
   }
   
   public required init?(map: Map) {
-    super.init(map)
+    super.init(map: map)
   }
   
   override public func mapping(map: Map) {
-    super.mapping(map)
+    super.mapping(map: map)
     self.title <- map["caption"]
     self.summary <- map["preview_text"]
     self.tintColor <- map["tint_color"]

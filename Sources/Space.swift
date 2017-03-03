@@ -46,9 +46,13 @@ public class Space: JSONRepresentable, ObjectProtocol {
   
   // MARK: Lifecycle
   
-  public required init() { super.init() }
+  public required init() {
+    super.init()
+  }
   
-  public required init?(map: Map) { super.init(map) }
+  public required init?(map: Map) {
+    super.init(map: map)
+  }
   
   // MARK: Mapping
   

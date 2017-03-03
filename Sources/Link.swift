@@ -16,7 +16,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-public class RMLink: JSONRepresentable, ObjectProtocol {
+public class Link: JSONRepresentable, ObjectProtocol {
   
   public var MUID: String?
   public override var hashValue: Int {
@@ -37,9 +37,13 @@ public class RMLink: JSONRepresentable, ObjectProtocol {
   public var originSpaceMUID: String?
   public var targetSpaceMUID: String?
   
-  public required init() { super.init() }
+  public required init() {
+    super.init()
+  }
   
-  public required init?( map: Map) { super.init(map) }
+  public required init?(map: Map) {
+    super.init(map: map)
+  }
 
   override public func mapping(map: Map) {
     self.MUID <- map["muid"]
@@ -61,7 +65,7 @@ public class RMLink: JSONRepresentable, ObjectProtocol {
   
 }
 
-public func ==(lhs: RMLink, rhs: RMLink) -> Bool {
+public func ==(lhs: Link, rhs: Link) -> Bool {
   if lhs.MUID == nil || rhs.MUID == nil {
     return lhs === rhs
   }
