@@ -13,13 +13,15 @@
 // ******************************************************************************
 
 import Foundation
+import Sushi
+import ObjectMapper
 
-public class RMSpaceVisit: SUEntity {
+public class SpaceVisit: JSONRepresentable {
   
   // MARK: Properties
   
   public var spaceMUID: String?
-  public var visitedAt: NSDate?
+  public var visitedAt: Date?
   
   // MARK: Lifecycle
   
@@ -28,19 +30,17 @@ public class RMSpaceVisit: SUEntity {
     super.init()
   }
   
-  public required init?(_ map: SUMap)
-  {
+  public required init?(map: Map) {
     super.init(map)
   }
   
   // MARK: Mapping
   
-  override public func mapping(map: SUMap)
-  {
+  override public func mapping(map: Map) {
     super.mapping(map)
     
-    self.spaceMUID <-> map["muid"]
-    self.visitedAt <-> map["visited_at"]
+    self.spaceMUID <- map["muid"]
+    self.visitedAt <- map["visited_at"]
   }
   
 }

@@ -1,6 +1,6 @@
 // ******************************************************************************
 //
-// Copyright © 2016, Adam Zdara. All rights reserved.
+// Copyright © 2015, Adam Zdara. All rights reserved.
 // Author: Adam Zdara
 //
 // All rights reserved. This source code can be used only for purposes specified
@@ -12,35 +12,42 @@
 //
 // ******************************************************************************
 
-import Foundation
-import UIKit
 
-public class WebpageMetadata: SUEntity {
+import Foundation
+import Sushi
+import ObjectMapper
+
+public protocol ObjectProtocol: Hashable {
+  var MUID: String? { get }
+  var updatedAt: NSDate? { get }
+}
+
+public class ObjectsSet: Entity {
+
+  // MARK: Properties
+
+  public var media: [RMMedia]?
+  public var spaces: [RMSpace]?
+  public var links: [RMLink]?
   
-  public var title: String?
-  public var summary: String?
-  public var tintColor: UIColor?
-  public var thumbnailURL: NSURL?
-  public var thumbnailWidth: CGFloat?
-  public var thumbnailHeight: CGFloat?
+  // MARK: Lifecycle
   
   public required init() {
     super.init()
   }
   
-  public required init?(_ map: SUMap) {
+  public required init?(map: Map) {
     super.init(map)
   }
   
-  override public func mapping(map: SUMap) {
+  // MARK: Mapping
+  
+  override public func mapping(map: Map) {
     super.mapping(map)
     
-    self.title <-> map["caption"]
-    self.summary <-> map["preview_text"]
-    self.tintColor <-> map["tint_color"]
-    self.thumbnailURL <-> map["preview_url"]
-    self.thumbnailWidth <-> map["preview_width"]
-    self.thumbnailHeight <-> map["preview_height"]
+    self.media <- map["media"]
+    self.spaces <- map["spaces"]
+    self.links <- map["links"]
   }
   
 }

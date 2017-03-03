@@ -13,20 +13,22 @@
 // ******************************************************************************
 
 import Foundation
+import Sushi
+import ObjectMapper
 
-public class RMLink: SUEntity, RMObjectProtocol {
+public class RMLink: JSONRepresentable, ObjectProtocol {
   
   public var MUID: String?
   public override var hashValue: Int {
     return self.MUID!.hashValue
   }
-  public var createdAt: NSDate?
-  public var updatedAt: NSDate?
-  public var state: RMObjectState?
+  public var createdAt: Date?
+  public var updatedAt: Date?
+  public var state: ObjectState?
   public var ownerID: Int?
-  public var createdBy: RMManagementEntity?
-  public var managedBy: RMManagementEntity?
-  public var managedAt: NSDate?
+  public var createdBy: ManagementEntity?
+  public var managedBy: ManagementEntity?
+  public var managedAt: Date?
   public var singleSystemManagementRequired: Bool?
   public var clientIdentifier: String?
   public var order: Int?
@@ -37,24 +39,24 @@ public class RMLink: SUEntity, RMObjectProtocol {
   
   public required init() { super.init() }
   
-  public required init?(_ map: SUMap) { super.init(map) }
+  public required init?( map: Map) { super.init(map) }
 
-  override public func mapping(map: SUMap) {
-    self.MUID <-> map["muid"]
-    self.createdAt <-> map["created_at"]
-    self.updatedAt <-> map["updated_at"]
-    self.state <-> map["state"]
-    self.ownerID <-> map["owner_id"]
-    self.createdBy <-> map["created_by"]
-    self.managedBy <-> map["managed_by"]
-    self.managedAt <-> map["managed_at"]
-    self.singleSystemManagementRequired <-> map["single_system_management_required"]
-    self.clientIdentifier <-> map["client_identifier"]
-    self.tagLabel <-> map["tag_label"]
-    self.order <-> map["order"]
-    self.originSpaceMUID <-> map["origin_space_muid"]
-    self.targetSpaceMUID <-> map["target_space_muid"]
-    self.preview <-> map["preview"]
+  override public func mapping(map: Map) {
+    self.MUID <- map["muid"]
+    self.createdAt <- map["created_at"]
+    self.updatedAt <- map["updated_at"]
+    self.state <- map["state"]
+    self.ownerID <- map["owner_id"]
+    self.createdBy <- map["created_by"]
+    self.managedBy <- map["managed_by"]
+    self.managedAt <- map["managed_at"]
+    self.singleSystemManagementRequired <- map["single_system_management_required"]
+    self.clientIdentifier <- map["client_identifier"]
+    self.tagLabel <- map["tag_label"]
+    self.order <- map["order"]
+    self.originSpaceMUID <- map["origin_space_muid"]
+    self.targetSpaceMUID <- map["target_space_muid"]
+    self.preview <- map["preview"]
   }
   
 }

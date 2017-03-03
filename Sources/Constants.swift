@@ -47,7 +47,7 @@ public enum DataState: Int {
 }
 
 
-public enum Error: Int, ErrorType {
+public enum Error: Int, Swift.Error {
   case Generic
   case ServerMaintanance
   case MissingID

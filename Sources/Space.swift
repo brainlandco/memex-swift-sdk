@@ -13,8 +13,10 @@
 
 import Foundation
 import UIKit
+import Sushi
+import ObjectMapper
 
-public class RMSpace: SUEntity, RMObjectProtocol {
+public class Space: JSONRepresentable, ObjectProtocol {
   
   // MARK: Properties
   
@@ -24,10 +26,10 @@ public class RMSpace: SUEntity, RMObjectProtocol {
   }
   public var createdAt: NSDate?
   public var updatedAt: NSDate?
-  public var state: RMObjectState?
-  public var createdBy: RMManagementEntity?
-  public var managedBy: RMManagementEntity?
-  public var managedAt: NSDate?
+  public var state: ObjectState?
+  public var createdBy: ManagementEntity?
+  public var managedBy: ManagementEntity?
+  public var managedAt: Date?
   public var singleSystemManagementRequired: Bool?
   public var clientIdentifier: String?
   public var latitude: Double?
@@ -40,41 +42,41 @@ public class RMSpace: SUEntity, RMObjectProtocol {
   public var unread: Bool?
   public var representationProcessingState: RepresentationProcessingState?
   public var ownerID: Int?
-  public var representations: [RMMedia]?
+  public var representations: [Media]?
   
   // MARK: Lifecycle
   
   public required init() { super.init() }
   
-  public required init?(_ map: SUMap) { super.init(map) }
+  public required init?(map: Map) { super.init(map) }
   
   // MARK: Mapping
   
-  override public func mapping(map: SUMap) {
-    self.MUID <-> map["muid"]
-    self.createdAt <-> map["created_at"]
-    self.updatedAt <-> map["updated_at"]
-    self.state <-> map["state"]
-    self.createdBy <-> map["created_by"]
-    self.managedBy <-> map["managed_by"]
-    self.managedAt <-> map["managed_at"]
-    self.singleSystemManagementRequired <-> map["single_system_management_required"]
-    self.clientIdentifier <-> map["client_identifier"]
-    self.tagLabel <-> map["tag_label"]
-    self.tags <-> map["tags"]
-    self.latitude <-> map["latitude"]
-    self.longitude <-> map["longitude"]
-    self.activity <-> map["activity"]
-    self.unread <-> map["unread"]
-    self.tagForegroundColor <-> map["tag_color"]
-    self.typeIdentifier <-> map["type_identifier"]
-    self.representationProcessingState <-> map["processing_state"]
-    self.ownerID <-> map["owner_id"]
+  override public func mapping(map: Map) {
+    self.MUID <- map["muid"]
+    self.createdAt <- map["created_at"]
+    self.updatedAt <- map["updated_at"]
+    self.state <- map["state"]
+    self.createdBy <- map["created_by"]
+    self.managedBy <- map["managed_by"]
+    self.managedAt <- map["managed_at"]
+    self.singleSystemManagementRequired <- map["single_system_management_required"]
+    self.clientIdentifier <- map["client_identifier"]
+    self.tagLabel <- map["tag_label"]
+    self.tags <- map["tags"]
+    self.latitude <- map["latitude"]
+    self.longitude <- map["longitude"]
+    self.activity <- map["activity"]
+    self.unread <- map["unread"]
+    self.tagForegroundColor <- map["tag_color"]
+    self.typeIdentifier <- map["type_identifier"]
+    self.representationProcessingState <- map["processing_state"]
+    self.ownerID <- map["owner_id"]
   }
   
 }
 
-public func ==(lhs: RMSpace, rhs: RMSpace) -> Bool {
+public func ==(lhs: Space, rhs: Space) -> Bool {
   if lhs.MUID == nil || rhs.MUID == nil {
     return lhs === rhs
   }
