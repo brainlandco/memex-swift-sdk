@@ -32,8 +32,7 @@
 		794E267F1E68BDD0005E92C9 /* CreateMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E264D1E68BDD0005E92C9 /* CreateMedia.swift */; };
 		794E26801E68BDD0005E92C9 /* GetMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E264E1E68BDD0005E92C9 /* GetMedia.swift */; };
 		794E26811E68BDD0005E92C9 /* MarkMediaAsUploaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E264F1E68BDD0005E92C9 /* MarkMediaAsUploaded.swift */; };
-		794E26821E68BDD0005E92C9 /* Operation copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26501E68BDD0005E92C9 /* Operation copy.swift */; };
-		794E26831E68BDD0005E92C9 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26511E68BDD0005E92C9 /* Operation.swift */; };
+		794E26821E68BDD0005E92C9 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26501E68BDD0005E92C9 /* Operation.swift */; };
 		794E26841E68BDD0005E92C9 /* CreateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26531E68BDD0005E92C9 /* CreateSpace.swift */; };
 		794E26851E68BDD0005E92C9 /* LogSpaceVisits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26541E68BDD0005E92C9 /* LogSpaceVisits.swift */; };
 		794E26861E68BDD0005E92C9 /* ProcessSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26551E68BDD0005E92C9 /* ProcessSpace.swift */; };
@@ -55,26 +54,15 @@
 		794E26961E68BDD0005E92C9 /* RequestInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E26691E68BDD0005E92C9 /* RequestInvoker.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		794E262F1E68BCA0005E92C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 794E262B1E68BCA0005E92C9 /* Core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 794E25671E68B74E005E92C9;
-			remoteInfo = Core;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		794E25B11E68BC5B005E92C9 /* MemexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MemexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		794E25BC1E68BC87005E92C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		794E25BD1E68BC87005E92C9 /* MemexSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemexSDK.h; sourceTree = SOURCE_ROOT; };
-		794E262B1E68BCA0005E92C9 /* Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Core.xcodeproj; path = ../core/Core.xcodeproj; sourceTree = "<group>"; };
-		794E26331E68BDD0005E92C9 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
-		794E26351E68BDD0005E92C9 /* AuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
-		794E26361E68BDD0005E92C9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		794E26371E68BDD0005E92C9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		794E26391E68BDD0005E92C9 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		794E26331E68BDD0005E92C9 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = "Authorization Controler/Auth.swift"; sourceTree = "<group>"; };
+		794E26351E68BDD0005E92C9 /* AuthToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthToken.swift; path = Data/AuthToken.swift; sourceTree = "<group>"; };
+		794E26361E68BDD0005E92C9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Data/Configuration.swift; sourceTree = "<group>"; };
+		794E26371E68BDD0005E92C9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Data/Constants.swift; sourceTree = "<group>"; };
+		794E26391E68BDD0005E92C9 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = Data/Entities/Entity.swift; sourceTree = "<group>"; };
 		794E263A1E68BDD0005E92C9 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		794E263B1E68BDD0005E92C9 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		794E263C1E68BDD0005E92C9 /* ObjectsSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsSet.swift; sourceTree = "<group>"; };
@@ -82,20 +70,19 @@
 		794E263E1E68BDD0005E92C9 /* SpaceVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceVisit.swift; sourceTree = "<group>"; };
 		794E263F1E68BDD0005E92C9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		794E26401E68BDD0005E92C9 /* WebpageMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
-		794E26411E68BDD0005E92C9 /* ErrorPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPayload.swift; sourceTree = "<group>"; };
-		794E26431E68BDD0005E92C9 /* AuthorizationChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationChanged.swift; sourceTree = "<group>"; };
-		794E26441E68BDD0005E92C9 /* ConnectionHealthChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHealthChanged.swift; sourceTree = "<group>"; };
+		794E26411E68BDD0005E92C9 /* ErrorPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorPayload.swift; path = Data/ErrorPayload.swift; sourceTree = "<group>"; };
+		794E26431E68BDD0005E92C9 /* AuthorizationChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationChanged.swift; path = Data/Events/AuthorizationChanged.swift; sourceTree = "<group>"; };
+		794E26441E68BDD0005E92C9 /* ConnectionHealthChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionHealthChanged.swift; path = Data/Events/ConnectionHealthChanged.swift; sourceTree = "<group>"; };
 		794E26451E68BDD0005E92C9 /* HealthChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthChecker.swift; sourceTree = "<group>"; };
 		794E26461E68BDD0005E92C9 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		794E26481E68BDD0005E92C9 /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorize.swift; sourceTree = "<group>"; };
-		794E26491E68BDD0005E92C9 /* Bootstrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
-		794E264A1E68BDD0005E92C9 /* Deauthorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deauthorize.swift; sourceTree = "<group>"; };
-		794E264B1E68BDD0005E92C9 /* GetAuthorizationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAuthorizationStatus.swift; sourceTree = "<group>"; };
+		794E26481E68BDD0005E92C9 /* Authorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Authorize.swift; path = Process/Authorize.swift; sourceTree = "<group>"; };
+		794E26491E68BDD0005E92C9 /* Bootstrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bootstrap.swift; path = Process/Bootstrap.swift; sourceTree = "<group>"; };
+		794E264A1E68BDD0005E92C9 /* Deauthorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deauthorize.swift; path = Process/Deauthorize.swift; sourceTree = "<group>"; };
+		794E264B1E68BDD0005E92C9 /* GetAuthorizationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetAuthorizationStatus.swift; path = Process/GetAuthorizationStatus.swift; sourceTree = "<group>"; };
 		794E264D1E68BDD0005E92C9 /* CreateMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMedia.swift; sourceTree = "<group>"; };
 		794E264E1E68BDD0005E92C9 /* GetMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMedia.swift; sourceTree = "<group>"; };
 		794E264F1E68BDD0005E92C9 /* MarkMediaAsUploaded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkMediaAsUploaded.swift; sourceTree = "<group>"; };
-		794E26501E68BDD0005E92C9 /* Operation copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation copy.swift"; sourceTree = "<group>"; };
-		794E26511E68BDD0005E92C9 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		794E26501E68BDD0005E92C9 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = Process/Operation.swift; sourceTree = "<group>"; };
 		794E26531E68BDD0005E92C9 /* CreateSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSpace.swift; sourceTree = "<group>"; };
 		794E26541E68BDD0005E92C9 /* LogSpaceVisits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogSpaceVisits.swift; sourceTree = "<group>"; };
 		794E26551E68BDD0005E92C9 /* ProcessSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessSpace.swift; sourceTree = "<group>"; };
@@ -113,8 +100,8 @@
 		794E26631E68BDD0005E92C9 /* SetUserPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUserPassword.swift; sourceTree = "<group>"; };
 		794E26641E68BDD0005E92C9 /* UpdateSelfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSelfUser.swift; sourceTree = "<group>"; };
 		794E26651E68BDD0005E92C9 /* UpdateSubscriptionReceipt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSubscriptionReceipt.swift; sourceTree = "<group>"; };
-		794E26681E68BDD0005E92C9 /* QueryStringTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStringTransformer.swift; sourceTree = "<group>"; };
-		794E26691E68BDD0005E92C9 /* RequestInvoker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestInvoker.swift; sourceTree = "<group>"; };
+		794E26681E68BDD0005E92C9 /* QueryStringTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryStringTransformer.swift; path = "Request Invoker/Query String Transformer/QueryStringTransformer.swift"; sourceTree = "<group>"; };
+		794E26691E68BDD0005E92C9 /* RequestInvoker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestInvoker.swift; path = "Request Invoker/RequestInvoker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +115,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7922C0D01E68C85B00A54980 /* SushiKit */ = {
+			isa = PBXGroup;
+			children = (
+				794E26501E68BDD0005E92C9 /* Operation.swift */,
+				794E26351E68BDD0005E92C9 /* AuthToken.swift */,
+				794E26331E68BDD0005E92C9 /* Auth.swift */,
+				794E26361E68BDD0005E92C9 /* Configuration.swift */,
+				794E26371E68BDD0005E92C9 /* Constants.swift */,
+				794E26411E68BDD0005E92C9 /* ErrorPayload.swift */,
+				794E26431E68BDD0005E92C9 /* AuthorizationChanged.swift */,
+				794E26441E68BDD0005E92C9 /* ConnectionHealthChanged.swift */,
+				794E26451E68BDD0005E92C9 /* HealthChecker.swift */,
+				794E26461E68BDD0005E92C9 /* Manager.swift */,
+				794E26481E68BDD0005E92C9 /* Authorize.swift */,
+				794E26491E68BDD0005E92C9 /* Bootstrap.swift */,
+				794E264A1E68BDD0005E92C9 /* Deauthorize.swift */,
+				794E264B1E68BDD0005E92C9 /* GetAuthorizationStatus.swift */,
+				794E26681E68BDD0005E92C9 /* QueryStringTransformer.swift */,
+				794E26691E68BDD0005E92C9 /* RequestInvoker.swift */,
+				794E26391E68BDD0005E92C9 /* Entity.swift */,
+			);
+			name = SushiKit;
+			sourceTree = "<group>";
+		};
 		794E25A71E68BC5B005E92C9 = {
 			isa = PBXGroup;
 			children = (
-				794E262B1E68BCA0005E92C9 /* Core.xcodeproj */,
 				794E25B31E68BC5B005E92C9 /* MemexSDK */,
 				794E25B21E68BC5B005E92C9 /* Products */,
 			);
@@ -155,44 +165,20 @@
 			path = MemexSDK;
 			sourceTree = "<group>";
 		};
-		794E262C1E68BCA0005E92C9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				794E26301E68BCA0005E92C9 /* Core.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		794E26311E68BDD0005E92C9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				794E26321E68BDD0005E92C9 /* Authorization Controler */,
+				7922C0D01E68C85B00A54980 /* SushiKit */,
 				794E26341E68BDD0005E92C9 /* Data */,
-				794E26451E68BDD0005E92C9 /* HealthChecker.swift */,
-				794E26461E68BDD0005E92C9 /* Manager.swift */,
-				794E26471E68BDD0005E92C9 /* Process */,
-				794E26661E68BDD0005E92C9 /* Request Invoker */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		794E26321E68BDD0005E92C9 /* Authorization Controler */ = {
-			isa = PBXGroup;
-			children = (
-				794E26331E68BDD0005E92C9 /* Auth.swift */,
-			);
-			path = "Authorization Controler";
-			sourceTree = "<group>";
-		};
 		794E26341E68BDD0005E92C9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				794E26351E68BDD0005E92C9 /* AuthToken.swift */,
-				794E26361E68BDD0005E92C9 /* Configuration.swift */,
-				794E26371E68BDD0005E92C9 /* Constants.swift */,
 				794E26381E68BDD0005E92C9 /* Entities */,
-				794E26411E68BDD0005E92C9 /* ErrorPayload.swift */,
-				794E26421E68BDD0005E92C9 /* Events */,
+				794E26471E68BDD0005E92C9 /* Process */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -200,7 +186,6 @@
 		794E26381E68BDD0005E92C9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				794E26391E68BDD0005E92C9 /* Entity.swift */,
 				794E263A1E68BDD0005E92C9 /* Link.swift */,
 				794E263B1E68BDD0005E92C9 /* Media.swift */,
 				794E263C1E68BDD0005E92C9 /* ObjectsSet.swift */,
@@ -212,30 +197,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		794E26421E68BDD0005E92C9 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				794E26431E68BDD0005E92C9 /* AuthorizationChanged.swift */,
-				794E26441E68BDD0005E92C9 /* ConnectionHealthChanged.swift */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
 		794E26471E68BDD0005E92C9 /* Process */ = {
 			isa = PBXGroup;
 			children = (
-				794E26481E68BDD0005E92C9 /* Authorize.swift */,
-				794E26491E68BDD0005E92C9 /* Bootstrap.swift */,
-				794E264A1E68BDD0005E92C9 /* Deauthorize.swift */,
-				794E264B1E68BDD0005E92C9 /* GetAuthorizationStatus.swift */,
 				794E264C1E68BDD0005E92C9 /* Media */,
-				794E26501E68BDD0005E92C9 /* Operation copy.swift */,
-				794E26511E68BDD0005E92C9 /* Operation.swift */,
 				794E26521E68BDD0005E92C9 /* Space */,
 				794E26571E68BDD0005E92C9 /* Sync */,
 				794E265E1E68BDD0005E92C9 /* User */,
 			);
-			path = Process;
+			name = Process;
+			path = ../Process;
 			sourceTree = "<group>";
 		};
 		794E264C1E68BDD0005E92C9 /* Media */ = {
@@ -284,23 +255,6 @@
 				794E26651E68BDD0005E92C9 /* UpdateSubscriptionReceipt.swift */,
 			);
 			path = User;
-			sourceTree = "<group>";
-		};
-		794E26661E68BDD0005E92C9 /* Request Invoker */ = {
-			isa = PBXGroup;
-			children = (
-				794E26671E68BDD0005E92C9 /* Query String Transformer */,
-				794E26691E68BDD0005E92C9 /* RequestInvoker.swift */,
-			);
-			path = "Request Invoker";
-			sourceTree = "<group>";
-		};
-		794E26671E68BDD0005E92C9 /* Query String Transformer */ = {
-			isa = PBXGroup;
-			children = (
-				794E26681E68BDD0005E92C9 /* QueryStringTransformer.swift */,
-			);
-			path = "Query String Transformer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,28 +315,12 @@
 			mainGroup = 794E25A71E68BC5B005E92C9;
 			productRefGroup = 794E25B21E68BC5B005E92C9 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 794E262C1E68BCA0005E92C9 /* Products */;
-					ProjectRef = 794E262B1E68BCA0005E92C9 /* Core.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				794E25B01E68BC5B005E92C9 /* MemexSDK */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		794E26301E68BCA0005E92C9 /* Core.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Core.framework;
-			remoteRef = 794E262F1E68BCA0005E92C9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		794E25AF1E68BC5B005E92C9 /* Resources */ = {
@@ -429,11 +367,10 @@
 				794E26951E68BDD0005E92C9 /* QueryStringTransformer.swift in Sources */,
 				794E267A1E68BDD0005E92C9 /* Manager.swift in Sources */,
 				794E267F1E68BDD0005E92C9 /* CreateMedia.swift in Sources */,
-				794E26831E68BDD0005E92C9 /* Operation.swift in Sources */,
 				794E266E1E68BDD0005E92C9 /* Entity.swift in Sources */,
 				794E26841E68BDD0005E92C9 /* CreateSpace.swift in Sources */,
 				794E268D1E68BDD0005E92C9 /* PushSpaces.swift in Sources */,
-				794E26821E68BDD0005E92C9 /* Operation copy.swift in Sources */,
+				794E26821E68BDD0005E92C9 /* Operation.swift in Sources */,
 				794E267C1E68BDD0005E92C9 /* Bootstrap.swift in Sources */,
 				794E26801E68BDD0005E92C9 /* GetMedia.swift in Sources */,
 				794E267B1E68BDD0005E92C9 /* Authorize.swift in Sources */,
