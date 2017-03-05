@@ -14,20 +14,22 @@
 
 import Foundation
 
-public enum RepresentationProcessingState: Int {
-  case Done = 0
-  case Waiting = 1
+public enum Environment: Int {
+  case production = 0
+  case sandbox = 1
+  case staging = 2
+  case localhost = 3
 }
 
-public enum PresentationStyle: Int {
-  case List = 0
-  case Grid = 1
+public enum RepresentationProcessingState: Int {
+  case done = 0
+  case waiting = 1
 }
 
 public enum ObjectState: Int {
-  case Unknown = -1
-  case Visible = 0
-  case Trashed = 1
+  case unknown = -1
+  case visible = 0
+  case trashed = 1
 }
 
 public enum ManagementEntity: Int {
@@ -36,28 +38,30 @@ public enum ManagementEntity: Int {
 }
 
 public enum DataState: Int {
-  case Unknown = -1
-  case WaitingForNewUploadURL = 0
-  case ReadyForDataUpload = 1
-  case DataValid = 2
+  case unknown = -1
+  case waitingForNewUploadURL = 0
+  case readyForDataUpload = 1
+  case dataValid = 2
 }
 
 public enum Error: Int, Swift.Error {
-  case Generic
-  case ServerMaintanance
-  case MissingID
-  case EmailAlreadyExists
+  case generic
+  case serverMaintanance
+  case missingID
+  case emailAlreadyExists
   case iCloudIDAlreadyExists
-  case InvalidPassword
-  case EndpointNotFound
-  case ObjectNotFound
-  case MasterRepresentationNotFound
-  case NotAuthorized
-  case InvalidData
-  case InvalidInvitationToken
+  case invalidPassword
+  case endpointNotFound
+  case objectNotFound
+  case masterRepresentationNotFound
+  case notAuthorized
+  case invalidData
+  case invalidInvitationToken
 }
 
 
-
-
+public enum PresentationStyle: Int {
+  case list = 0
+  case grid = 1
+}
 

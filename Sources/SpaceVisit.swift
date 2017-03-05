@@ -18,12 +18,8 @@ import ObjectMapper
 
 public class SpaceVisit: JSONRepresentable {
   
-  // MARK: Properties
-  
   public var spaceMUID: String?
   public var visitedAt: Date?
-  
-  // MARK: Lifecycle
   
   public required init() {
     super.init()
@@ -32,8 +28,6 @@ public class SpaceVisit: JSONRepresentable {
   public required init?(map: Map) {
     super.init(map: map)
   }
-  
-  // MARK: Mapping
   
   override public func mapping(map: Map) {
     super.mapping(map: map)

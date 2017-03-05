@@ -18,8 +18,6 @@ import ObjectMapper
 
 public class Space: JSONRepresentable, ObjectProtocol {
   
-  // MARK: Properties
-  
   public var MUID: String?
   public override var hashValue: Int {
     return self.MUID!.hashValue
@@ -44,8 +42,6 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public var ownerID: Int?
   public var representations: [Media]?
   
-  // MARK: Lifecycle
-  
   public required init() {
     super.init()
   }
@@ -53,8 +49,6 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public required init?(map: Map) {
     super.init(map: map)
   }
-  
-  // MARK: Mapping
   
   override public func mapping(map: Map) {
     self.MUID <- map["muid"]

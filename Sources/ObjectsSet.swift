@@ -24,13 +24,9 @@ public protocol ObjectProtocol: Hashable {
 
 public class ObjectsSet: JSONRepresentable {
 
-  // MARK: Properties
-
   public var media: [Media]?
   public var spaces: [Space]?
   public var links: [Link]?
-  
-  // MARK: Lifecycle
   
   public required init() {
     super.init()
@@ -39,8 +35,6 @@ public class ObjectsSet: JSONRepresentable {
   public required init?(map: Map) {
     super.init(map: map)
   }
-  
-  // MARK: Mapping
   
   override public func mapping(map: Map) {
     super.mapping(map: map)

@@ -22,8 +22,6 @@ public class User: JSONRepresentable {
     public static let myselfUserID = -1
   }
   
-  // MARK: Properties
-
   public var ID: Int?
   public var fullname: String?
   public var email: String?
@@ -46,8 +44,6 @@ public class User: JSONRepresentable {
     return self.ID!.hashValue
   }
   
-  // MARK: Lifecycle
-  
   public required init() {
     super.init()
   }
@@ -55,8 +51,6 @@ public class User: JSONRepresentable {
   public required init?(map: Map) {
     super.init(map: map)
   }
-  
-  // MARK: Mapping
   
   override public func mapping(map: Map) {
     self.ID <- map["id"]
