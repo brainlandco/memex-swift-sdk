@@ -23,7 +23,9 @@ public extension Memex {
     POST("spaces/log-visits",
          parameters: [
           "spaces": Mapper<SpaceVisit>().toJSONArray(visits)
-      ])
+    ]) { response in
+      completion(response.error)
+    }
   }
   
 }

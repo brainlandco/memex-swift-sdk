@@ -18,10 +18,10 @@ import ObjectMapper
 
 public extension Memex {
   
-  public func updateSubscriptionReceipt(receiptData: NSData,
+  public func updateSubscriptionReceipt(receiptData: Data,
                                         transactionID: String?,
                                         completion: @escaping VoidOutputs) {
-    let base64 = receiptData.base64EncodedString(options: [.encodingEndLineWithLineFeed])
+    let base64 = receiptData.base64EncodedString(options: .endLineWithLineFeed)
     POST("users/self/update-subscription",
          parameters: ["receipt_data": base64]) { response in
           completion(response.error)

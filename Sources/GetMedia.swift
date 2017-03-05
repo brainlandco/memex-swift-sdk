@@ -16,14 +16,12 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-typealias Outputs = (_ media: Media?, _ error: Error?)->()
-
 public extension Memex {
   
   public func getMedia(media: Media,
-                       completion: @escaping Outputs) {
+                       completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     GET("media/\(media.MUID!)") { [weak self] response in
-      self?.results.media = self?.entityFromDictionary(response.data!["media"])
+      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["media"]), response.error)
     }
   }
   

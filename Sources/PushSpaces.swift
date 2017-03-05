@@ -16,19 +16,20 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-typealias Outputs = (
+public typealias PushOutputs = (
   _ oldModelVersion: Int?,
   _ modelVersion: Int?,
-  _ error: Error?)->()
+  _ error: Swift.Error?)->()
 
 public extension Memex {
   
   public func pushSpaces(items: [Space],
-                         completion: @escaping Outputs) {
+                         completion: @escaping PushOutputs) {
     POST("spaces/batched",
          parameters:["data": items.toJSON()]) { response in
           let oldModelVersion = response.metadata?["old_model_version"] as? Int
           let modelVersion = response.metadata?["model_version"] as? Int
+          completion(oldModelVersion, modelVersion, response.error)
     }
   }
   

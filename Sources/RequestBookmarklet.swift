@@ -19,7 +19,9 @@ import ObjectMapper
 public extension Memex {
   
   public func requestBookmarklet(completion: @escaping VoidOutputs) {
-    GET("users/self/request-bookmarklet-token")
+    GET("users/self/request-bookmarklet-token") { response in
+      completion(response.error)
+    }
   }
   
 }

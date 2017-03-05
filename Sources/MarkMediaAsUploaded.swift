@@ -20,7 +20,9 @@ public extension Memex {
   
   public func markMediaAsUploaded(media: Media,
                                   completion: @escaping VoidOutputs) {
-    POST("media/\(media.MUID!)")
+    POST("media/\(media.MUID!)") { response in
+      completion(response.error)
+    }
   }
   
 }

@@ -26,7 +26,7 @@ public class Media: JSONRepresentable, ObjectProtocol {
   public var state: ObjectState?
   public var createdBy: ManagementEntity?
   public var managedBy: ManagementEntity?
-  public var managedAt: NSDate?
+  public var managedAt: Date?
   public var singleSystemManagementRequired: Bool?
   public var clientIdentifier: String?
   public var metadata: [String: Any]?

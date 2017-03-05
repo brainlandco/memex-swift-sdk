@@ -16,16 +16,14 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-typealias Outputs = (_ user: User?, _ error: Error?)->()
-
 public extension Memex {
   
   public func getUser(userID: Int?,
-                      completion: @escaping Outputs) {
+                      completion: @escaping (_ user: User?, _ error: Swift.Error?)->()) {
     let id = userID == User.Constants.myselfUserID ? "self" : "\(userID)"
     GET("users/\(id)",
     parameters: nil) { [weak self] response in
-      self?.results.user = self?.entityFromDictionary(response.data?["user"])
+      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["user"]), response.error)
     }
   }
 }

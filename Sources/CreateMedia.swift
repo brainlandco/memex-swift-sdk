@@ -16,17 +16,15 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-typealias Outputs = (_ media: Media?, _ error: Error?)->()
-
 public extension Memex {
   
   public func createMedia(media: Media,
-                          completion: @escaping Outputs) {
+                          completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     POST("media",
          parameters: [
           "media": Mapper<Media>().toJSON(media)
     ]) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.data?["media"]),
+      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["media"]),
                  response.error)
     }
   }

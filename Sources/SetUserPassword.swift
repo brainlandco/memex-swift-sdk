@@ -27,7 +27,9 @@ public extension Memex {
     }
     parameters["new_password"] = newPassword
     POST("users/self/change-password",
-         parameters: parameters)
+         parameters: parameters) { response in
+          completion(response.error)
+    }
   }
   
 }

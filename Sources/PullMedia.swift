@@ -16,20 +16,20 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-typealias Outputs = (
+public typealias PullMediaOutputs = (
   _ items: [Media]?,
   _ modelVersion: Int?,
   _ totalItems: Int?,
   _ hasMore: Bool?,
   _ nextOffset: Int?,
-  _ error: Error?)->()
+  _ error: Swift.Error?)->()
 
 
 public extension Memex {
   
   public func pullMedia(lastModelVersion: Int?,
                         offset: Int?,
-                        completion: @escaping Outputs) {
+                        completion: @escaping PullMediaOutputs) {
     var parameters = [String: Any]()
     if let value = lastModelVersion {
       parameters["last_model_version"] = value
@@ -39,11 +39,12 @@ public extension Memex {
     }
     GET("users/self/media",
         parameters: parameters) { [weak self] response in
-          self?.results.items = self?.entitiesFromArray(response.data)
-          self?.results.modelVersion = response.metadata?["model_version"] as? Int
-          self?.results.totalItems = response.metadata?["total"] as? Int
-          self?.results.hasMore = response.metadata?["has_more"] as? Bool
-          self?.results.nextOffset = response.metadata?["next_offset"] as? Int
+          let items: [Media]? = self?.entitiesFromArray(array: response.data)
+          let modelVersion = response.metadata?["model_version"] as? Int
+          let totalItems = response.metadata?["total"] as? Int
+          let hasMore = response.metadata?["has_more"] as? Bool
+          let nextOffset = response.metadata?["next_offset"] as? Int
+          completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }
 }

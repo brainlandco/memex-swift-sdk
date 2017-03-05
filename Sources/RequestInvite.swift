@@ -21,7 +21,9 @@ public extension Memex {
   public func requestInvite(email: String,
                             completion: @escaping VoidOutputs) {
     POST("invitations",
-         parameters: ["email": email])
+         parameters: ["email": email]) { response in
+          completion(response.error)
+    }
   }
   
 }

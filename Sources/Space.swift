@@ -24,8 +24,8 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public override var hashValue: Int {
     return self.MUID!.hashValue
   }
-  public var createdAt: NSDate?
-  public var updatedAt: NSDate?
+  public var createdAt: Date?
+  public var updatedAt: Date?
   public var state: ObjectState?
   public var createdBy: ManagementEntity?
   public var managedBy: ManagementEntity?

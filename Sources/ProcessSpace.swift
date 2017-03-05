@@ -18,8 +18,11 @@ import ObjectMapper
 
 public extension Memex {
   
-  public func processSpace(MUID: String, completion: @escaping VoidOutputs) {
-    POST("spaces/\(MUID)/process")
+  public func processSpace(MUID: String,
+                           completion: @escaping VoidOutputs) {
+    POST("spaces/\(MUID)/process") { response in
+      completion(response.error)
+    }
   }
 
 }
