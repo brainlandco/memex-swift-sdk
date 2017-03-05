@@ -13,15 +13,15 @@
 // ******************************************************************************
 
 import Foundation
-import UIKit
 import Sushi
 import ObjectMapper
+import Atom
 
 public class WebpageMetadata: JSONRepresentable {
   
   public var title: String?
   public var summary: String?
-  public var tintColor: UIColor?
+  public var tintColor: Color?
   public var thumbnailURL: URL?
   public var thumbnailWidth: CGFloat?
   public var thumbnailHeight: CGFloat?

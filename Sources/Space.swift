@@ -12,9 +12,9 @@
 // ******************************************************************************
 
 import Foundation
-import UIKit
 import Sushi
 import ObjectMapper
+import Atom
 
 public class Space: JSONRepresentable, ObjectProtocol {
   
@@ -34,7 +34,7 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public var longitude: Double?
   public var activity: Int?
   public var tagLabel: String?
-  public var tagForegroundColor: UIColor?
+  public var tagForegroundColor: Color?
   public var tags: String?
   public var typeIdentifier: String?
   public var unread: Bool?

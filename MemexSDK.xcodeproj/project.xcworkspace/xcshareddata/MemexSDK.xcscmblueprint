@@ -4,19 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "E9921015607142C40BFDCE51432C01DD01D32E02" : 9223372036854775807,
     "DB9E298218B78224C6B357EA2CAFB47DD00E477C" : 9223372036854775807,
     "7873F0F78047E647F0FC6414D894F5EFBD126D79" : 9223372036854775807,
     "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : 9223372036854775807,
     "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C356BA3A-66CB-4D3A-A81E-2428E0F845A3",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "95A94F9C-5FE9-4A0E-A12B-5E96B8F394E9",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "E9921015607142C40BFDCE51432C01DD01D32E02" : "atom-uikit\/",
-    "DB9E298218B78224C6B357EA2CAFB47DD00E477C" : "sushi-swift\/",
+    "DB9E298218B78224C6B357EA2CAFB47DD00E477C" : "memex-swift-sdk\/Packages\/Sushi-0.2.0\/",
     "7873F0F78047E647F0FC6414D894F5EFBD126D79" : "memex-swift-sdk\/",
-    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : "atom\/",
-    "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : "object-mapper\/"
+    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : "memex-swift-sdk\/Packages\/Atom-0.1.0\/",
+    "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : "memex-swift-sdk\/Packages\/ObjectMapper-0.1.0\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MemexSDK",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -33,7 +31,7 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7873F0F78047E647F0FC6414D894F5EFBD126D79"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/foundations-extension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/atom.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AFACD3407C4D37A6A2E0610C910FC073AA5A8960"
     },
@@ -41,11 +39,6 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/sushi-swift.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DB9E298218B78224C6B357EA2CAFB47DD00E477C"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/memexapp\/atom-uikit.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E9921015607142C40BFDCE51432C01DD01D32E02"
     }
   ]
 }

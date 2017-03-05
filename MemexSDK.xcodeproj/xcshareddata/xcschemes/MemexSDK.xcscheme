@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "9999"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,49 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "794E25B01E68BC5B005E92C9"
+               BlueprintIdentifier = "OBJ_110"
+               BuildableName = "Atom.framework"
+               BlueprintName = "Atom"
+               ReferencedContainer = "container:MemexSDK.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_134"
+               BuildableName = "ObjectMapper.framework"
+               BlueprintName = "ObjectMapper"
+               ReferencedContainer = "container:MemexSDK.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_164"
+               BuildableName = "Sushi.framework"
+               BlueprintName = "Sushi"
+               ReferencedContainer = "container:MemexSDK.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_197"
                BuildableName = "MemexSDK.framework"
                BlueprintName = "MemexSDK"
                ReferencedContainer = "container:MemexSDK.xcodeproj">
@@ -45,9 +87,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "794E25B01E68BC5B005E92C9"
-            BuildableName = "MemexSDK.framework"
-            BlueprintName = "MemexSDK"
+            BlueprintIdentifier = "OBJ_110"
+            BuildableName = "Atom.framework"
+            BlueprintName = "Atom"
             ReferencedContainer = "container:MemexSDK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,15 +102,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "794E25B01E68BC5B005E92C9"
-            BuildableName = "MemexSDK.framework"
-            BlueprintName = "MemexSDK"
-            ReferencedContainer = "container:MemexSDK.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
