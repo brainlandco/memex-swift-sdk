@@ -18,6 +18,10 @@ import ObjectMapper
 
 public class User: JSONRepresentable {
   
+  public struct Constants {
+    public static let myselfUserID = -1
+  }
+  
   // MARK: Properties
 
   public var ID: Int?

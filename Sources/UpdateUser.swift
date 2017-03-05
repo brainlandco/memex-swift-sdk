@@ -13,38 +13,22 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    var user: RMUser!
+  public func updateUser(user: User,
+                         completion: @escaping VoidOutputs) {
+    var userParams = Mapper<User>().toJSON(user)
+    userParams["avatar"] = nil
+    if let avatar_muid = user.avatar?.MUID {
+      userParams["avatar_muid"] = avatar_muid
+    }
+    POST("users/self",
+         parameters: ["user": userParams]) { response in
+          completion(response.error)
+    }
   }
   
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(user user: RMUser) -> Self {
-      self.parameters.user = user
-      return self
-    }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.user, "Missing user")
-    }
-    
-    override public func execute() {
-      var userParams = SUMapper<RMUser>().toJSON(self.parameters.user)
-      userParams["avatar"] = nil
-      if let avatar_muid = self.parameters.user.avatar?.MUID {
-        userParams["avatar_muid"] = avatar_muid
-      }
-      POST("users/self",
-           parameters: ["user": userParams])
-    }
-  }
 }

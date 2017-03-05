@@ -58,9 +58,6 @@ public enum Error: Int, Swift.Error {
 }
 
 
-public struct Constants {
-  public static let SELF_ID = -1
-}
 
 
 

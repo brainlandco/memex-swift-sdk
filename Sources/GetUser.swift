@@ -13,40 +13,19 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
+typealias Outputs = (_ user: User?, _ error: Error?)->()
+
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    public var userID: Int!
-  }
-  
-  public class Results: OPVoidOperationResults {
-    public var user: RMUser!
-  }
-  
-  public class Operation: RMOperation<Parameters, Results> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(userID userID: Int?) -> Self {
-      self.parameters.userID = userID
-      return self
-    }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.userID, "Missing userID")
-    }
-    
-    override public func execute() {
-      let id = self.parameters.userID == RMUser.Constants.SELF_ID ? "self" : "\(self.parameters.userID)"
-      GET("users/\(id)",
-          parameters: nil) { [weak self] response in
-            self?.results.user = self?.entityFromDictionary(response.data?["user"])
-      }
+  public func getUser(userID: Int?,
+                      completion: @escaping Outputs) {
+    let id = userID == User.Constants.myselfUserID ? "self" : "\(userID)"
+    GET("users/\(id)",
+    parameters: nil) { [weak self] response in
+      self?.results.user = self?.entityFromDictionary(response.data?["user"])
     }
   }
 }

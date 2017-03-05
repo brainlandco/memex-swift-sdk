@@ -13,27 +13,13 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    public var MUID: String!
+  public func processSpace(MUID: String, completion: @escaping VoidOutputs) {
+    POST("spaces/\(MUID)/process")
   }
-  
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    init(MUID: String,
-         module: OPModuleProtocol? = nil) {
-      super.init(module: module)
-      self.parameters.MUID = MUID
-    }
 
-    override public func execute() {
-      POST("spaces/\(self.parameters.MUID)/process")
-    }
-  }
-  
 }

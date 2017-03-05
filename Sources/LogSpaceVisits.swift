@@ -13,39 +13,17 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
 public extension Memex {
-
-  public class Parameters: OPVoidOperationParameters
-  {
-    public var visits: [RMSpaceVisit]!
+  
+  public func logSpaceVisits(visits: [SpaceVisit],
+                             completion: @escaping VoidOutputs) {
+    POST("spaces/log-visits",
+         parameters: [
+          "spaces": Mapper<SpaceVisit>().toJSONArray(visits)
+      ])
   }
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults>
-  {
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(visits visits: [RMSpaceVisit]) -> Self
-    {
-      self.parameters.visits = visits
-      return self
-    }
-    
-    override public func defineValidationRules()
-    {
-      requireNonNil(self.parameters.visits, "Missing visits")
-    }
-    
-    override public func execute()
-    {
-      POST("spaces/log-visits",
-        parameters: [
-          "spaces": SUMapper<RMSpaceVisit>().toJSONArray(self.parameters.visits)
-        ])
-    }
-    
-  }
+  
 }

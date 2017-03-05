@@ -13,33 +13,14 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    public var media: RMMedia!
+  public func markMediaAsUploaded(media: Media,
+                                  completion: @escaping VoidOutputs) {
+    POST("media/\(media.MUID!)")
   }
   
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(media media: RMMedia) -> Self {
-      self.parameters.media = media
-      return self
-    }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.media, "Missing media")
-    }
-    
-    override public func execute() {
-      POST("media/\(self.parameters.media.MUID!)")
-    }
-    
-  }
 }

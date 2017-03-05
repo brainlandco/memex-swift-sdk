@@ -13,42 +13,21 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
+typealias Outputs = (_ media: Media?, _ error: Error?)->()
+
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    public var media: Media!
-  }
-  
-  public class Outputs: OPVoidOperationResults {
-    public var media: RMMedia!
-  }
-  
-  public class Operation: RMOperation<Parameters, Outputs> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(media media: RMMedia) -> Self {
-      self.parameters.media = media
-      return self
+  public func createMedia(media: Media,
+                          completion: @escaping Outputs) {
+    POST("media",
+         parameters: [
+          "media": Mapper<Media>().toJSON(media)
+    ]) { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.data?["media"]),
+                 response.error)
     }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.media, "Missing media")
-    }
-    
-    override public func execute() {
-      POST("media",
-        parameters: [
-          "media": SUMapper<RMMedia>().toJSON(self.parameters.media)
-      ]) { [weak self] response in
-        self?.results.media = self?.entityFromDictionary(response.data?["media"])
-      }
-    }
-    
   }
 }

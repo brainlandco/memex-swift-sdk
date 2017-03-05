@@ -18,26 +18,11 @@ import ObjectMapper
 
 public extension Memex {
   
-  public class Parameters: OPVoidOperationParameters {
-    var email: String!
+  public func requestInvite(email: String,
+                            completion: @escaping VoidOutputs) {
+    POST("invitations",
+         parameters: ["email": email])
   }
   
-  public class Operation: RMOperation<Parameters, OPVoidOperationResults> {
-    
-    init(module: OPModuleProtocol? = nil) { super.init(module: module) }
-    
-    public func withParameters(email email: String) -> Self {
-      self.parameters.email = email
-      return self
-    }
-    
-    override public func defineValidationRules() {
-      requireNonNil(self.parameters.email, "Missing email")
-    }
-    
-    override public func execute() {
-      POST("invitations",
-           parameters: ["email": self.parameters.email])
-    }
-  }
 }
+

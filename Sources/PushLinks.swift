@@ -18,36 +18,22 @@ import Foundation
 import Sushi
 import ObjectMapper
 
+typealias Outputs = (
+  _ oldModelVersion: Int?,
+  _ modelVersion: Int?,
+  _ error: Error?)->()
+
 public extension Memex {
   
-  public class Inputs: OPVoidOperationParameters {
-    public var items: [RMLink]!
-  }
-  
-  public class Outputs: OPVoidOperationResults {
-    public var oldModelVersion: Int!
-    public var modelVersion: Int!
-  }
-  
-  public class Operation: RMOperation<Inputs, Outputs> {
-    
-    public init(items: [RMLink]?,
-                module: OPModuleProtocol? = nil) {
-      super.init(module: module)
-      self.parameters.items = items
-    }
-    
-    override public func execute() {
-      POST("links/batched",
-           parameters:["data": self.parameters.items.toJSON()]) { [weak self] response in
-            self?.results.oldModelVersion = response.metadata?["old_model_version"] as? Int
-            self?.results.modelVersion = response.metadata?["model_version"] as? Int
-      }
+  public func pushLinks(items: [Link]?,
+                        completion: @escaping Outputs) {
+    POST("links/batched",
+         parameters:["data": items.toJSON()]) { [weak self] response in
+          self?.results.oldModelVersion = response.metadata?["old_model_version"] as? Int
+          self?.results.modelVersion = response.metadata?["model_version"] as? Int
     }
   }
-  
   
 }
-
 
 

@@ -13,21 +13,13 @@
 // ******************************************************************************
 
 import Foundation
-
-import Foundation
 import Sushi
 import ObjectMapper
 
 public extension Memex {
   
-  public class Operation: RMOperation<OPVoidOperationParameters, OPVoidOperationResults> {
-    
-    init(module: OPModuleProtocol? = nil) {
-      super.init(module: module)
-    }
-    
-    override public func execute() {
-      GET("users/self/request-bookmarklet-token")
-    }
+  public func requestBookmarklet(completion: @escaping VoidOutputs) {
+    GET("users/self/request-bookmarklet-token")
   }
+  
 }
