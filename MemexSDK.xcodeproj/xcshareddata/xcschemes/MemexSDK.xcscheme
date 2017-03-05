@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_110"
+               BlueprintIdentifier = "OBJ_115"
                BuildableName = "Atom.framework"
                BlueprintName = "Atom"
                ReferencedContainer = "container:MemexSDK.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_134"
+               BlueprintIdentifier = "OBJ_139"
                BuildableName = "ObjectMapper.framework"
                BlueprintName = "ObjectMapper"
                ReferencedContainer = "container:MemexSDK.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_164"
+               BlueprintIdentifier = "OBJ_169"
                BuildableName = "Sushi.framework"
                BlueprintName = "Sushi"
                ReferencedContainer = "container:MemexSDK.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_197"
+               BlueprintIdentifier = "OBJ_202"
                BuildableName = "MemexSDK.framework"
                BlueprintName = "MemexSDK"
                ReferencedContainer = "container:MemexSDK.xcodeproj">
@@ -70,6 +70,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_243"
+               BuildableName = "MemexSDKTests.xctest"
+               BlueprintName = "MemexSDKTests"
+               ReferencedContainer = "container:MemexSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -87,7 +97,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_110"
+            BlueprintIdentifier = "OBJ_115"
             BuildableName = "Atom.framework"
             BlueprintName = "Atom"
             ReferencedContainer = "container:MemexSDK.xcodeproj">

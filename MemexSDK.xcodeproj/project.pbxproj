@@ -7,148 +7,181 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		OBJ_115 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Array+Additions.swift */; };
-		OBJ_116 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Color.swift */; };
-		OBJ_117 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Credentials.swift */; };
-		OBJ_118 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DateRange.swift */; };
-		OBJ_119 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Dictionary+Additions.swift */; };
-		OBJ_120 /* Dispatch+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Dispatch+Additions.swift */; };
-		OBJ_121 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Lock.swift */; };
-		OBJ_122 /* MIMETypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* MIMETypes.swift */; };
-		OBJ_123 /* NSCalendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NSCalendar+Extension.swift */; };
-		OBJ_124 /* NSError+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* NSError+Additions.swift */; };
-		OBJ_125 /* NSLock+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NSLock+Additions.swift */; };
-		OBJ_126 /* NSQualityOfService+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NSQualityOfService+Additions.swift */; };
-		OBJ_127 /* NSURL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NSURL+Additions.swift */; };
-		OBJ_128 /* NSURLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* NSURLRequest+Additions.swift */; };
-		OBJ_129 /* NSURLSession+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NSURLSession+Additions.swift */; };
-		OBJ_130 /* PropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* PropertyNames.swift */; };
-		OBJ_131 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* String+Additions.swift */; };
-		OBJ_132 /* Unimplemented.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Unimplemented.swift */; };
-		OBJ_139 /* Base64Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Base64Transform.swift */; };
-		OBJ_140 /* BytesCountTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BytesCountTransform.swift */; };
-		OBJ_141 /* ColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ColorTransform.swift */; };
-		OBJ_142 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CustomOperators.swift */; };
-		OBJ_143 /* DecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* DecimalNumberTransform.swift */; };
-		OBJ_144 /* EncodedJSONTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* EncodedJSONTransform.swift */; };
-		OBJ_145 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* EnumOperators.swift */; };
-		OBJ_146 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* EnumTransform.swift */; };
-		OBJ_147 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* FromJSON.swift */; };
-		OBJ_148 /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ImmutableMappable.swift */; };
-		OBJ_149 /* IntegerOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* IntegerOperators.swift */; };
-		OBJ_150 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ISO8601DateTransform.swift */; };
-		OBJ_151 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Map.swift */; };
-		OBJ_152 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* MapError.swift */; };
-		OBJ_153 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Mappable.swift */; };
-		OBJ_154 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Mapper.swift */; };
-		OBJ_155 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Operators.swift */; };
-		OBJ_156 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ToJSON.swift */; };
-		OBJ_157 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* TransformOf.swift */; };
-		OBJ_158 /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* TransformOperators.swift */; };
-		OBJ_159 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* TransformType.swift */; };
-		OBJ_160 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* URLTransform.swift */; };
-		OBJ_162 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Atom.framework */; };
-		OBJ_169 /* AuthorizationChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* AuthorizationChanged.swift */; };
-		OBJ_170 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* AuthorizationController.swift */; };
-		OBJ_171 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Authorize.swift */; };
-		OBJ_172 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* AuthToken.swift */; };
-		OBJ_173 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Bootstrap.swift */; };
-		OBJ_174 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Configuration.swift */; };
-		OBJ_175 /* ConnectionHealthChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ConnectionHealthChanged.swift */; };
-		OBJ_176 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Constants.swift */; };
-		OBJ_177 /* Deauthorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Deauthorize.swift */; };
-		OBJ_178 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Entity.swift */; };
-		OBJ_179 /* ErrorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* ErrorPayload.swift */; };
-		OBJ_180 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Event.swift */; };
-		OBJ_181 /* GetAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* GetAuthorizationStatus.swift */; };
-		OBJ_182 /* HealthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* HealthChecker.swift */; };
-		OBJ_183 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* KeychainSwift.swift */; };
-		OBJ_184 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* KeychainSwiftAccessOptions.swift */; };
-		OBJ_185 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Operation.swift */; };
-		OBJ_186 /* QueryStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* QueryStringTransformer.swift */; };
-		OBJ_187 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Reachability.swift */; };
-		OBJ_188 /* RequestInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* RequestInvoker.swift */; };
-		OBJ_189 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Response.swift */; };
-		OBJ_190 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Service.swift */; };
-		OBJ_191 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* TegKeychainConstants.swift */; };
-		OBJ_193 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Atom.framework */; };
-		OBJ_194 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* ObjectMapper.framework */; };
-		OBJ_202 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Constants.swift */; };
-		OBJ_203 /* CreateMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* CreateMedia.swift */; };
-		OBJ_204 /* CreateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* CreateSpace.swift */; };
-		OBJ_205 /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* CreateUser.swift */; };
-		OBJ_206 /* GetMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* GetMedia.swift */; };
-		OBJ_207 /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* GetUser.swift */; };
-		OBJ_208 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Link.swift */; };
-		OBJ_209 /* LogSpaceVisits.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* LogSpaceVisits.swift */; };
-		OBJ_210 /* MarkMediaAsUploaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* MarkMediaAsUploaded.swift */; };
-		OBJ_211 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Media.swift */; };
-		OBJ_212 /* Memex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Memex.swift */; };
-		OBJ_213 /* ObjectsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* ObjectsSet.swift */; };
-		OBJ_214 /* ProcessSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* ProcessSpace.swift */; };
-		OBJ_215 /* PullLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* PullLinks.swift */; };
-		OBJ_216 /* PullMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* PullMedia.swift */; };
-		OBJ_217 /* PullSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* PullSpaces.swift */; };
-		OBJ_218 /* PushLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* PushLinks.swift */; };
-		OBJ_219 /* PushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* PushMedia.swift */; };
-		OBJ_220 /* PushSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* PushSpaces.swift */; };
-		OBJ_221 /* RequestBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* RequestBackup.swift */; };
-		OBJ_222 /* RequestBookmarklet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* RequestBookmarklet.swift */; };
-		OBJ_223 /* RequestInvite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* RequestInvite.swift */; };
-		OBJ_224 /* SetUserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* SetUserPassword.swift */; };
-		OBJ_225 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Space.swift */; };
-		OBJ_226 /* SpaceVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* SpaceVisit.swift */; };
-		OBJ_227 /* UpdateSubscriptionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* UpdateSubscriptionReceipt.swift */; };
-		OBJ_228 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* UpdateUser.swift */; };
-		OBJ_229 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* User.swift */; };
-		OBJ_230 /* WebpageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* WebpageMetadata.swift */; };
-		OBJ_232 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Atom.framework */; };
-		OBJ_233 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* ObjectMapper.framework */; };
-		OBJ_234 /* Sushi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* Sushi.framework */; };
+		OBJ_120 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Array+Additions.swift */; };
+		OBJ_121 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Color.swift */; };
+		OBJ_122 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Credentials.swift */; };
+		OBJ_123 /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DateRange.swift */; };
+		OBJ_124 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Dictionary+Additions.swift */; };
+		OBJ_125 /* Dispatch+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Dispatch+Additions.swift */; };
+		OBJ_126 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Lock.swift */; };
+		OBJ_127 /* MIMETypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* MIMETypes.swift */; };
+		OBJ_128 /* NSCalendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* NSCalendar+Extension.swift */; };
+		OBJ_129 /* NSError+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* NSError+Additions.swift */; };
+		OBJ_130 /* NSLock+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NSLock+Additions.swift */; };
+		OBJ_131 /* NSQualityOfService+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NSQualityOfService+Additions.swift */; };
+		OBJ_132 /* NSURL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* NSURL+Additions.swift */; };
+		OBJ_133 /* NSURLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* NSURLRequest+Additions.swift */; };
+		OBJ_134 /* NSURLSession+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NSURLSession+Additions.swift */; };
+		OBJ_135 /* PropertyNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* PropertyNames.swift */; };
+		OBJ_136 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* String+Additions.swift */; };
+		OBJ_137 /* Unimplemented.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Unimplemented.swift */; };
+		OBJ_144 /* Base64Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Base64Transform.swift */; };
+		OBJ_145 /* BytesCountTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* BytesCountTransform.swift */; };
+		OBJ_146 /* ColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ColorTransform.swift */; };
+		OBJ_147 /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CustomOperators.swift */; };
+		OBJ_148 /* DecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* DecimalNumberTransform.swift */; };
+		OBJ_149 /* EncodedJSONTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* EncodedJSONTransform.swift */; };
+		OBJ_150 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* EnumOperators.swift */; };
+		OBJ_151 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* EnumTransform.swift */; };
+		OBJ_152 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* FromJSON.swift */; };
+		OBJ_153 /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ImmutableMappable.swift */; };
+		OBJ_154 /* IntegerOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* IntegerOperators.swift */; };
+		OBJ_155 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ISO8601DateTransform.swift */; };
+		OBJ_156 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Map.swift */; };
+		OBJ_157 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* MapError.swift */; };
+		OBJ_158 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Mappable.swift */; };
+		OBJ_159 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Mapper.swift */; };
+		OBJ_160 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Operators.swift */; };
+		OBJ_161 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ToJSON.swift */; };
+		OBJ_162 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* TransformOf.swift */; };
+		OBJ_163 /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* TransformOperators.swift */; };
+		OBJ_164 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* TransformType.swift */; };
+		OBJ_165 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* URLTransform.swift */; };
+		OBJ_167 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
+		OBJ_174 /* AuthorizationChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* AuthorizationChanged.swift */; };
+		OBJ_175 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* AuthorizationController.swift */; };
+		OBJ_176 /* Authorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Authorize.swift */; };
+		OBJ_177 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* AuthToken.swift */; };
+		OBJ_178 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Bootstrap.swift */; };
+		OBJ_179 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Configuration.swift */; };
+		OBJ_180 /* ConnectionHealthChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* ConnectionHealthChanged.swift */; };
+		OBJ_181 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Constants.swift */; };
+		OBJ_182 /* Deauthorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Deauthorize.swift */; };
+		OBJ_183 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Entity.swift */; };
+		OBJ_184 /* ErrorPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* ErrorPayload.swift */; };
+		OBJ_185 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Event.swift */; };
+		OBJ_186 /* GetAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* GetAuthorizationStatus.swift */; };
+		OBJ_187 /* HealthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* HealthChecker.swift */; };
+		OBJ_188 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* KeychainSwift.swift */; };
+		OBJ_189 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* KeychainSwiftAccessOptions.swift */; };
+		OBJ_190 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* Operation.swift */; };
+		OBJ_191 /* QueryStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* QueryStringTransformer.swift */; };
+		OBJ_192 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Reachability.swift */; };
+		OBJ_193 /* RequestInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* RequestInvoker.swift */; };
+		OBJ_194 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Response.swift */; };
+		OBJ_195 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Service.swift */; };
+		OBJ_196 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* TegKeychainConstants.swift */; };
+		OBJ_198 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
+		OBJ_199 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ObjectMapper.framework */; };
+		OBJ_207 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Constants.swift */; };
+		OBJ_208 /* CreateMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* CreateMedia.swift */; };
+		OBJ_209 /* CreateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* CreateSpace.swift */; };
+		OBJ_210 /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* CreateUser.swift */; };
+		OBJ_211 /* GetMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* GetMedia.swift */; };
+		OBJ_212 /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* GetUser.swift */; };
+		OBJ_213 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Link.swift */; };
+		OBJ_214 /* LogSpaceVisits.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* LogSpaceVisits.swift */; };
+		OBJ_215 /* MarkMediaAsUploaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* MarkMediaAsUploaded.swift */; };
+		OBJ_216 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Media.swift */; };
+		OBJ_217 /* Memex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Memex.swift */; };
+		OBJ_218 /* ObjectsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* ObjectsSet.swift */; };
+		OBJ_219 /* ProcessSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* ProcessSpace.swift */; };
+		OBJ_220 /* PullLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* PullLinks.swift */; };
+		OBJ_221 /* PullMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* PullMedia.swift */; };
+		OBJ_222 /* PullSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* PullSpaces.swift */; };
+		OBJ_223 /* PushLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* PushLinks.swift */; };
+		OBJ_224 /* PushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* PushMedia.swift */; };
+		OBJ_225 /* PushSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* PushSpaces.swift */; };
+		OBJ_226 /* RequestBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* RequestBackup.swift */; };
+		OBJ_227 /* RequestBookmarklet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* RequestBookmarklet.swift */; };
+		OBJ_228 /* RequestInvite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* RequestInvite.swift */; };
+		OBJ_229 /* SetUserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* SetUserPassword.swift */; };
+		OBJ_230 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Space.swift */; };
+		OBJ_231 /* SpaceVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* SpaceVisit.swift */; };
+		OBJ_232 /* UpdateSubscriptionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* UpdateSubscriptionReceipt.swift */; };
+		OBJ_233 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* UpdateUser.swift */; };
+		OBJ_234 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* User.swift */; };
+		OBJ_235 /* WebpageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* WebpageMetadata.swift */; };
+		OBJ_237 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
+		OBJ_238 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ObjectMapper.framework */; };
+		OBJ_239 /* Sushi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Sushi.framework */; };
+		OBJ_248 /* CreateMemexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* CreateMemexTests.swift */; };
+		OBJ_250 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
+		OBJ_251 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ObjectMapper.framework */; };
+		OBJ_252 /* Sushi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Sushi.framework */; };
+		OBJ_253 /* MemexSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* MemexSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		79EF35521E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF35661E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_110;
+			remoteGlobalIDString = OBJ_115;
 			remoteInfo = Atom;
 		};
-		79EF35531E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF35671E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_110;
+			remoteGlobalIDString = OBJ_115;
 			remoteInfo = Atom;
 		};
-		79EF35541E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF35681E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_134;
+			remoteGlobalIDString = OBJ_139;
 			remoteInfo = ObjectMapper;
 		};
-		79EF35551E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF35691E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_110;
+			remoteGlobalIDString = OBJ_115;
 			remoteInfo = Atom;
 		};
-		79EF35561E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF356A1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_134;
+			remoteGlobalIDString = OBJ_139;
 			remoteInfo = ObjectMapper;
 		};
-		79EF35571E6CC90D004376F3 /* PBXContainerItemProxy */ = {
+		79EF356B1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_164;
+			remoteGlobalIDString = OBJ_169;
 			remoteInfo = Sushi;
+		};
+		79EF356C1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_115;
+			remoteInfo = Atom;
+		};
+		79EF356D1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_139;
+			remoteInfo = ObjectMapper;
+		};
+		79EF356E1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_169;
+			remoteInfo = Sushi;
+		};
+		79EF356F1E6CCB5F004376F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_202;
+			remoteInfo = MemexSDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -158,11 +191,15 @@
 		OBJ_101 /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		OBJ_102 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		OBJ_103 /* WebpageMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
-		OBJ_106 /* Atom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Atom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_107 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_108 /* Sushi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sushi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_109 /* MemexSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MemexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_106 /* CreateMemexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemexTests.swift; sourceTree = "<group>"; };
+		OBJ_107 /* Add */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Add; sourceTree = SOURCE_ROOT; };
+		OBJ_108 /* Build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Build; sourceTree = SOURCE_ROOT; };
 		OBJ_11 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		OBJ_110 /* Atom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Atom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_111 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_112 /* Sushi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sushi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_113 /* MemexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MemexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_114 /* MemexSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MemexSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Dictionary+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
 		OBJ_14 /* Dispatch+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dispatch+Additions.swift"; sourceTree = "<group>"; };
@@ -253,37 +290,48 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_133 /* Frameworks */ = {
+		OBJ_138 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_161 /* Frameworks */ = {
+		OBJ_166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_162 /* Atom.framework in Frameworks */,
+				OBJ_167 /* Atom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_192 /* Frameworks */ = {
+		OBJ_197 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_193 /* Atom.framework in Frameworks */,
-				OBJ_194 /* ObjectMapper.framework in Frameworks */,
+				OBJ_198 /* Atom.framework in Frameworks */,
+				OBJ_199 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_231 /* Frameworks */ = {
+		OBJ_236 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_232 /* Atom.framework in Frameworks */,
-				OBJ_233 /* ObjectMapper.framework in Frameworks */,
-				OBJ_234 /* Sushi.framework in Frameworks */,
+				OBJ_237 /* Atom.framework in Frameworks */,
+				OBJ_238 /* ObjectMapper.framework in Frameworks */,
+				OBJ_239 /* Sushi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_250 /* Atom.framework in Frameworks */,
+				OBJ_251 /* ObjectMapper.framework in Frameworks */,
+				OBJ_252 /* Sushi.framework in Frameworks */,
+				OBJ_253 /* MemexSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,17 +341,28 @@
 		OBJ_104 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_105 /* MemexSDKTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		OBJ_105 /* Products */ = {
+		OBJ_105 /* MemexSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_106 /* Atom.framework */,
-				OBJ_107 /* ObjectMapper.framework */,
-				OBJ_108 /* Sushi.framework */,
-				OBJ_109 /* MemexSDK.framework */,
+				OBJ_106 /* CreateMemexTests.swift */,
+			);
+			name = MemexSDKTests;
+			path = Tests/MemexSDKTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_109 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_110 /* Atom.framework */,
+				OBJ_111 /* ObjectMapper.framework */,
+				OBJ_112 /* Sushi.framework */,
+				OBJ_113 /* MemexSDK.framework */,
+				OBJ_114 /* MemexSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -344,7 +403,9 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_104 /* Tests */,
-				OBJ_105 /* Products */,
+				OBJ_107 /* Add */,
+				OBJ_108 /* Build */,
+				OBJ_109 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -457,12 +518,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_110 /* Atom */ = {
+		OBJ_115 /* Atom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_111 /* Build configuration list for PBXNativeTarget "Atom" */;
+			buildConfigurationList = OBJ_116 /* Build configuration list for PBXNativeTarget "Atom" */;
 			buildPhases = (
-				OBJ_114 /* Sources */,
-				OBJ_133 /* Frameworks */,
+				OBJ_119 /* Sources */,
+				OBJ_138 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,62 +531,82 @@
 			);
 			name = Atom;
 			productName = Atom;
-			productReference = OBJ_106 /* Atom.framework */;
+			productReference = OBJ_110 /* Atom.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_134 /* ObjectMapper */ = {
+		OBJ_139 /* ObjectMapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_135 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
+			buildConfigurationList = OBJ_140 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
 			buildPhases = (
-				OBJ_138 /* Sources */,
-				OBJ_161 /* Frameworks */,
+				OBJ_143 /* Sources */,
+				OBJ_166 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_163 /* PBXTargetDependency */,
+				OBJ_168 /* PBXTargetDependency */,
 			);
 			name = ObjectMapper;
 			productName = ObjectMapper;
-			productReference = OBJ_107 /* ObjectMapper.framework */;
+			productReference = OBJ_111 /* ObjectMapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_164 /* Sushi */ = {
+		OBJ_169 /* Sushi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_165 /* Build configuration list for PBXNativeTarget "Sushi" */;
+			buildConfigurationList = OBJ_170 /* Build configuration list for PBXNativeTarget "Sushi" */;
 			buildPhases = (
-				OBJ_168 /* Sources */,
-				OBJ_192 /* Frameworks */,
+				OBJ_173 /* Sources */,
+				OBJ_197 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_195 /* PBXTargetDependency */,
-				OBJ_196 /* PBXTargetDependency */,
+				OBJ_200 /* PBXTargetDependency */,
+				OBJ_201 /* PBXTargetDependency */,
 			);
 			name = Sushi;
 			productName = Sushi;
-			productReference = OBJ_108 /* Sushi.framework */;
+			productReference = OBJ_112 /* Sushi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_197 /* MemexSDK */ = {
+		OBJ_202 /* MemexSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_198 /* Build configuration list for PBXNativeTarget "MemexSDK" */;
+			buildConfigurationList = OBJ_203 /* Build configuration list for PBXNativeTarget "MemexSDK" */;
 			buildPhases = (
-				OBJ_201 /* Sources */,
-				OBJ_231 /* Frameworks */,
+				OBJ_206 /* Sources */,
+				OBJ_236 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_235 /* PBXTargetDependency */,
-				OBJ_236 /* PBXTargetDependency */,
-				OBJ_237 /* PBXTargetDependency */,
+				OBJ_240 /* PBXTargetDependency */,
+				OBJ_241 /* PBXTargetDependency */,
+				OBJ_242 /* PBXTargetDependency */,
 			);
 			name = MemexSDK;
 			productName = MemexSDK;
-			productReference = OBJ_109 /* MemexSDK.framework */;
+			productReference = OBJ_113 /* MemexSDK.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		OBJ_243 /* MemexSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_244 /* Build configuration list for PBXNativeTarget "MemexSDKTests" */;
+			buildPhases = (
+				OBJ_247 /* Sources */,
+				OBJ_249 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_254 /* PBXTargetDependency */,
+				OBJ_255 /* PBXTargetDependency */,
+				OBJ_256 /* PBXTargetDependency */,
+				OBJ_257 /* PBXTargetDependency */,
+			);
+			name = MemexSDKTests;
+			productName = MemexSDKTests;
+			productReference = OBJ_114 /* MemexSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -543,176 +624,205 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_105 /* Products */;
+			productRefGroup = OBJ_109 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_110 /* Atom */,
-				OBJ_134 /* ObjectMapper */,
-				OBJ_164 /* Sushi */,
-				OBJ_197 /* MemexSDK */,
+				OBJ_115 /* Atom */,
+				OBJ_139 /* ObjectMapper */,
+				OBJ_169 /* Sushi */,
+				OBJ_202 /* MemexSDK */,
+				OBJ_243 /* MemexSDKTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_114 /* Sources */ = {
+		OBJ_119 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_115 /* Array+Additions.swift in Sources */,
-				OBJ_116 /* Color.swift in Sources */,
-				OBJ_117 /* Credentials.swift in Sources */,
-				OBJ_118 /* DateRange.swift in Sources */,
-				OBJ_119 /* Dictionary+Additions.swift in Sources */,
-				OBJ_120 /* Dispatch+Additions.swift in Sources */,
-				OBJ_121 /* Lock.swift in Sources */,
-				OBJ_122 /* MIMETypes.swift in Sources */,
-				OBJ_123 /* NSCalendar+Extension.swift in Sources */,
-				OBJ_124 /* NSError+Additions.swift in Sources */,
-				OBJ_125 /* NSLock+Additions.swift in Sources */,
-				OBJ_126 /* NSQualityOfService+Additions.swift in Sources */,
-				OBJ_127 /* NSURL+Additions.swift in Sources */,
-				OBJ_128 /* NSURLRequest+Additions.swift in Sources */,
-				OBJ_129 /* NSURLSession+Additions.swift in Sources */,
-				OBJ_130 /* PropertyNames.swift in Sources */,
-				OBJ_131 /* String+Additions.swift in Sources */,
-				OBJ_132 /* Unimplemented.swift in Sources */,
+				OBJ_120 /* Array+Additions.swift in Sources */,
+				OBJ_121 /* Color.swift in Sources */,
+				OBJ_122 /* Credentials.swift in Sources */,
+				OBJ_123 /* DateRange.swift in Sources */,
+				OBJ_124 /* Dictionary+Additions.swift in Sources */,
+				OBJ_125 /* Dispatch+Additions.swift in Sources */,
+				OBJ_126 /* Lock.swift in Sources */,
+				OBJ_127 /* MIMETypes.swift in Sources */,
+				OBJ_128 /* NSCalendar+Extension.swift in Sources */,
+				OBJ_129 /* NSError+Additions.swift in Sources */,
+				OBJ_130 /* NSLock+Additions.swift in Sources */,
+				OBJ_131 /* NSQualityOfService+Additions.swift in Sources */,
+				OBJ_132 /* NSURL+Additions.swift in Sources */,
+				OBJ_133 /* NSURLRequest+Additions.swift in Sources */,
+				OBJ_134 /* NSURLSession+Additions.swift in Sources */,
+				OBJ_135 /* PropertyNames.swift in Sources */,
+				OBJ_136 /* String+Additions.swift in Sources */,
+				OBJ_137 /* Unimplemented.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_138 /* Sources */ = {
+		OBJ_143 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_139 /* Base64Transform.swift in Sources */,
-				OBJ_140 /* BytesCountTransform.swift in Sources */,
-				OBJ_141 /* ColorTransform.swift in Sources */,
-				OBJ_142 /* CustomOperators.swift in Sources */,
-				OBJ_143 /* DecimalNumberTransform.swift in Sources */,
-				OBJ_144 /* EncodedJSONTransform.swift in Sources */,
-				OBJ_145 /* EnumOperators.swift in Sources */,
-				OBJ_146 /* EnumTransform.swift in Sources */,
-				OBJ_147 /* FromJSON.swift in Sources */,
-				OBJ_148 /* ImmutableMappable.swift in Sources */,
-				OBJ_149 /* IntegerOperators.swift in Sources */,
-				OBJ_150 /* ISO8601DateTransform.swift in Sources */,
-				OBJ_151 /* Map.swift in Sources */,
-				OBJ_152 /* MapError.swift in Sources */,
-				OBJ_153 /* Mappable.swift in Sources */,
-				OBJ_154 /* Mapper.swift in Sources */,
-				OBJ_155 /* Operators.swift in Sources */,
-				OBJ_156 /* ToJSON.swift in Sources */,
-				OBJ_157 /* TransformOf.swift in Sources */,
-				OBJ_158 /* TransformOperators.swift in Sources */,
-				OBJ_159 /* TransformType.swift in Sources */,
-				OBJ_160 /* URLTransform.swift in Sources */,
+				OBJ_144 /* Base64Transform.swift in Sources */,
+				OBJ_145 /* BytesCountTransform.swift in Sources */,
+				OBJ_146 /* ColorTransform.swift in Sources */,
+				OBJ_147 /* CustomOperators.swift in Sources */,
+				OBJ_148 /* DecimalNumberTransform.swift in Sources */,
+				OBJ_149 /* EncodedJSONTransform.swift in Sources */,
+				OBJ_150 /* EnumOperators.swift in Sources */,
+				OBJ_151 /* EnumTransform.swift in Sources */,
+				OBJ_152 /* FromJSON.swift in Sources */,
+				OBJ_153 /* ImmutableMappable.swift in Sources */,
+				OBJ_154 /* IntegerOperators.swift in Sources */,
+				OBJ_155 /* ISO8601DateTransform.swift in Sources */,
+				OBJ_156 /* Map.swift in Sources */,
+				OBJ_157 /* MapError.swift in Sources */,
+				OBJ_158 /* Mappable.swift in Sources */,
+				OBJ_159 /* Mapper.swift in Sources */,
+				OBJ_160 /* Operators.swift in Sources */,
+				OBJ_161 /* ToJSON.swift in Sources */,
+				OBJ_162 /* TransformOf.swift in Sources */,
+				OBJ_163 /* TransformOperators.swift in Sources */,
+				OBJ_164 /* TransformType.swift in Sources */,
+				OBJ_165 /* URLTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_168 /* Sources */ = {
+		OBJ_173 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_169 /* AuthorizationChanged.swift in Sources */,
-				OBJ_170 /* AuthorizationController.swift in Sources */,
-				OBJ_171 /* Authorize.swift in Sources */,
-				OBJ_172 /* AuthToken.swift in Sources */,
-				OBJ_173 /* Bootstrap.swift in Sources */,
-				OBJ_174 /* Configuration.swift in Sources */,
-				OBJ_175 /* ConnectionHealthChanged.swift in Sources */,
-				OBJ_176 /* Constants.swift in Sources */,
-				OBJ_177 /* Deauthorize.swift in Sources */,
-				OBJ_178 /* Entity.swift in Sources */,
-				OBJ_179 /* ErrorPayload.swift in Sources */,
-				OBJ_180 /* Event.swift in Sources */,
-				OBJ_181 /* GetAuthorizationStatus.swift in Sources */,
-				OBJ_182 /* HealthChecker.swift in Sources */,
-				OBJ_183 /* KeychainSwift.swift in Sources */,
-				OBJ_184 /* KeychainSwiftAccessOptions.swift in Sources */,
-				OBJ_185 /* Operation.swift in Sources */,
-				OBJ_186 /* QueryStringTransformer.swift in Sources */,
-				OBJ_187 /* Reachability.swift in Sources */,
-				OBJ_188 /* RequestInvoker.swift in Sources */,
-				OBJ_189 /* Response.swift in Sources */,
-				OBJ_190 /* Service.swift in Sources */,
-				OBJ_191 /* TegKeychainConstants.swift in Sources */,
+				OBJ_174 /* AuthorizationChanged.swift in Sources */,
+				OBJ_175 /* AuthorizationController.swift in Sources */,
+				OBJ_176 /* Authorize.swift in Sources */,
+				OBJ_177 /* AuthToken.swift in Sources */,
+				OBJ_178 /* Bootstrap.swift in Sources */,
+				OBJ_179 /* Configuration.swift in Sources */,
+				OBJ_180 /* ConnectionHealthChanged.swift in Sources */,
+				OBJ_181 /* Constants.swift in Sources */,
+				OBJ_182 /* Deauthorize.swift in Sources */,
+				OBJ_183 /* Entity.swift in Sources */,
+				OBJ_184 /* ErrorPayload.swift in Sources */,
+				OBJ_185 /* Event.swift in Sources */,
+				OBJ_186 /* GetAuthorizationStatus.swift in Sources */,
+				OBJ_187 /* HealthChecker.swift in Sources */,
+				OBJ_188 /* KeychainSwift.swift in Sources */,
+				OBJ_189 /* KeychainSwiftAccessOptions.swift in Sources */,
+				OBJ_190 /* Operation.swift in Sources */,
+				OBJ_191 /* QueryStringTransformer.swift in Sources */,
+				OBJ_192 /* Reachability.swift in Sources */,
+				OBJ_193 /* RequestInvoker.swift in Sources */,
+				OBJ_194 /* Response.swift in Sources */,
+				OBJ_195 /* Service.swift in Sources */,
+				OBJ_196 /* TegKeychainConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_201 /* Sources */ = {
+		OBJ_206 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_202 /* Constants.swift in Sources */,
-				OBJ_203 /* CreateMedia.swift in Sources */,
-				OBJ_204 /* CreateSpace.swift in Sources */,
-				OBJ_205 /* CreateUser.swift in Sources */,
-				OBJ_206 /* GetMedia.swift in Sources */,
-				OBJ_207 /* GetUser.swift in Sources */,
-				OBJ_208 /* Link.swift in Sources */,
-				OBJ_209 /* LogSpaceVisits.swift in Sources */,
-				OBJ_210 /* MarkMediaAsUploaded.swift in Sources */,
-				OBJ_211 /* Media.swift in Sources */,
-				OBJ_212 /* Memex.swift in Sources */,
-				OBJ_213 /* ObjectsSet.swift in Sources */,
-				OBJ_214 /* ProcessSpace.swift in Sources */,
-				OBJ_215 /* PullLinks.swift in Sources */,
-				OBJ_216 /* PullMedia.swift in Sources */,
-				OBJ_217 /* PullSpaces.swift in Sources */,
-				OBJ_218 /* PushLinks.swift in Sources */,
-				OBJ_219 /* PushMedia.swift in Sources */,
-				OBJ_220 /* PushSpaces.swift in Sources */,
-				OBJ_221 /* RequestBackup.swift in Sources */,
-				OBJ_222 /* RequestBookmarklet.swift in Sources */,
-				OBJ_223 /* RequestInvite.swift in Sources */,
-				OBJ_224 /* SetUserPassword.swift in Sources */,
-				OBJ_225 /* Space.swift in Sources */,
-				OBJ_226 /* SpaceVisit.swift in Sources */,
-				OBJ_227 /* UpdateSubscriptionReceipt.swift in Sources */,
-				OBJ_228 /* UpdateUser.swift in Sources */,
-				OBJ_229 /* User.swift in Sources */,
-				OBJ_230 /* WebpageMetadata.swift in Sources */,
+				OBJ_207 /* Constants.swift in Sources */,
+				OBJ_208 /* CreateMedia.swift in Sources */,
+				OBJ_209 /* CreateSpace.swift in Sources */,
+				OBJ_210 /* CreateUser.swift in Sources */,
+				OBJ_211 /* GetMedia.swift in Sources */,
+				OBJ_212 /* GetUser.swift in Sources */,
+				OBJ_213 /* Link.swift in Sources */,
+				OBJ_214 /* LogSpaceVisits.swift in Sources */,
+				OBJ_215 /* MarkMediaAsUploaded.swift in Sources */,
+				OBJ_216 /* Media.swift in Sources */,
+				OBJ_217 /* Memex.swift in Sources */,
+				OBJ_218 /* ObjectsSet.swift in Sources */,
+				OBJ_219 /* ProcessSpace.swift in Sources */,
+				OBJ_220 /* PullLinks.swift in Sources */,
+				OBJ_221 /* PullMedia.swift in Sources */,
+				OBJ_222 /* PullSpaces.swift in Sources */,
+				OBJ_223 /* PushLinks.swift in Sources */,
+				OBJ_224 /* PushMedia.swift in Sources */,
+				OBJ_225 /* PushSpaces.swift in Sources */,
+				OBJ_226 /* RequestBackup.swift in Sources */,
+				OBJ_227 /* RequestBookmarklet.swift in Sources */,
+				OBJ_228 /* RequestInvite.swift in Sources */,
+				OBJ_229 /* SetUserPassword.swift in Sources */,
+				OBJ_230 /* Space.swift in Sources */,
+				OBJ_231 /* SpaceVisit.swift in Sources */,
+				OBJ_232 /* UpdateSubscriptionReceipt.swift in Sources */,
+				OBJ_233 /* UpdateUser.swift in Sources */,
+				OBJ_234 /* User.swift in Sources */,
+				OBJ_235 /* WebpageMetadata.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_247 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_248 /* CreateMemexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_163 /* PBXTargetDependency */ = {
+		OBJ_168 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_110 /* Atom */;
-			targetProxy = 79EF35521E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_115 /* Atom */;
+			targetProxy = 79EF35661E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
-		OBJ_195 /* PBXTargetDependency */ = {
+		OBJ_200 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_110 /* Atom */;
-			targetProxy = 79EF35531E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_115 /* Atom */;
+			targetProxy = 79EF35671E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
-		OBJ_196 /* PBXTargetDependency */ = {
+		OBJ_201 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_134 /* ObjectMapper */;
-			targetProxy = 79EF35541E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_139 /* ObjectMapper */;
+			targetProxy = 79EF35681E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
-		OBJ_235 /* PBXTargetDependency */ = {
+		OBJ_240 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_110 /* Atom */;
-			targetProxy = 79EF35551E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_115 /* Atom */;
+			targetProxy = 79EF35691E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
-		OBJ_236 /* PBXTargetDependency */ = {
+		OBJ_241 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_134 /* ObjectMapper */;
-			targetProxy = 79EF35561E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_139 /* ObjectMapper */;
+			targetProxy = 79EF356A1E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
-		OBJ_237 /* PBXTargetDependency */ = {
+		OBJ_242 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_164 /* Sushi */;
-			targetProxy = 79EF35571E6CC90D004376F3 /* PBXContainerItemProxy */;
+			target = OBJ_169 /* Sushi */;
+			targetProxy = 79EF356B1E6CCB5F004376F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_115 /* Atom */;
+			targetProxy = 79EF356C1E6CCB5F004376F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_139 /* ObjectMapper */;
+			targetProxy = 79EF356D1E6CCB5F004376F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_169 /* Sushi */;
+			targetProxy = 79EF356E1E6CCB5F004376F3 /* PBXContainerItemProxy */;
+		};
+		OBJ_257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = OBJ_202 /* MemexSDK */;
+			targetProxy = 79EF356F1E6CCB5F004376F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_112 /* Debug */ = {
+		OBJ_117 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -732,7 +842,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_113 /* Release */ = {
+		OBJ_118 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -752,7 +862,7 @@
 			};
 			name = Release;
 		};
-		OBJ_136 /* Debug */ = {
+		OBJ_141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -772,7 +882,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_137 /* Release */ = {
+		OBJ_142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -792,7 +902,7 @@
 			};
 			name = Release;
 		};
-		OBJ_166 /* Debug */ = {
+		OBJ_171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -812,7 +922,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_167 /* Release */ = {
+		OBJ_172 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -832,7 +942,7 @@
 			};
 			name = Release;
 		};
-		OBJ_199 /* Debug */ = {
+		OBJ_204 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -852,7 +962,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_200 /* Release */ = {
+		OBJ_205 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -869,6 +979,40 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				TARGET_NAME = MemexSDK;
+			};
+			name = Release;
+		};
+		OBJ_245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MemexSDK.xcodeproj/MemexSDKTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = MemexSDKTests;
+			};
+			name = Debug;
+		};
+		OBJ_246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = MemexSDK.xcodeproj/MemexSDKTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				TARGET_NAME = MemexSDKTests;
 			};
 			name = Release;
 		};
@@ -917,38 +1061,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_111 /* Build configuration list for PBXNativeTarget "Atom" */ = {
+		OBJ_116 /* Build configuration list for PBXNativeTarget "Atom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_112 /* Debug */,
-				OBJ_113 /* Release */,
+				OBJ_117 /* Debug */,
+				OBJ_118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_135 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
+		OBJ_140 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_136 /* Debug */,
-				OBJ_137 /* Release */,
+				OBJ_141 /* Debug */,
+				OBJ_142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_165 /* Build configuration list for PBXNativeTarget "Sushi" */ = {
+		OBJ_170 /* Build configuration list for PBXNativeTarget "Sushi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_166 /* Debug */,
-				OBJ_167 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		OBJ_198 /* Build configuration list for PBXNativeTarget "MemexSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_199 /* Debug */,
-				OBJ_200 /* Release */,
+				OBJ_171 /* Debug */,
+				OBJ_172 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -958,6 +1093,24 @@
 			buildConfigurations = (
 				OBJ_3 /* Debug */,
 				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_203 /* Build configuration list for PBXNativeTarget "MemexSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_204 /* Debug */,
+				OBJ_205 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_244 /* Build configuration list for PBXNativeTarget "MemexSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_245 /* Debug */,
+				OBJ_246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
