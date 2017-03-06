@@ -97,11 +97,9 @@
 		OBJ_224 /* PushMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* PushMedia.swift */; };
 		OBJ_225 /* PushSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* PushSpaces.swift */; };
 		OBJ_226 /* RequestBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* RequestBackup.swift */; };
-		OBJ_227 /* RequestBookmarklet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* RequestBookmarklet.swift */; };
 		OBJ_229 /* SetUserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* SetUserPassword.swift */; };
 		OBJ_230 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Space.swift */; };
 		OBJ_231 /* SpaceVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* SpaceVisit.swift */; };
-		OBJ_232 /* UpdateSubscriptionReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* UpdateSubscriptionReceipt.swift */; };
 		OBJ_233 /* UpdateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* UpdateUser.swift */; };
 		OBJ_234 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* User.swift */; };
 		OBJ_235 /* WebpageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* WebpageMetadata.swift */; };
@@ -193,7 +191,6 @@
 		79EF35751E6DFD06004376F3 /* UserOtherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOtherTests.swift; sourceTree = "<group>"; };
 		79EF35761E6DFD06004376F3 /* UserUpdatesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdatesTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		OBJ_100 /* UpdateSubscriptionReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSubscriptionReceipt.swift; sourceTree = "<group>"; };
 		OBJ_101 /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		OBJ_102 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		OBJ_103 /* WebpageMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
@@ -287,7 +284,6 @@
 		OBJ_92 /* PushMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMedia.swift; sourceTree = "<group>"; };
 		OBJ_93 /* PushSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSpaces.swift; sourceTree = "<group>"; };
 		OBJ_94 /* RequestBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBackup.swift; sourceTree = "<group>"; };
-		OBJ_95 /* RequestBookmarklet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBookmarklet.swift; sourceTree = "<group>"; };
 		OBJ_97 /* SetUserPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserPassword.swift; sourceTree = "<group>"; };
 		OBJ_98 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		OBJ_99 /* SpaceVisit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceVisit.swift; sourceTree = "<group>"; };
@@ -345,14 +341,27 @@
 		79EF35721E6DFC6D004376F3 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_102 /* User.swift */,
 				OBJ_78 /* CreateUser.swift */,
 				OBJ_94 /* RequestBackup.swift */,
-				OBJ_95 /* RequestBookmarklet.swift */,
 				OBJ_101 /* UpdateUser.swift */,
+				OBJ_80 /* GetUser.swift */,
 				OBJ_97 /* SetUserPassword.swift */,
-				OBJ_100 /* UpdateSubscriptionReceipt.swift */,
 			);
 			name = Users;
+			sourceTree = "<group>";
+		};
+		79EF357B1E6E018C004376F3 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_84 /* Media.swift */,
+				OBJ_89 /* PullMedia.swift */,
+				OBJ_76 /* CreateMedia.swift */,
+				OBJ_92 /* PushMedia.swift */,
+				OBJ_79 /* GetMedia.swift */,
+				OBJ_83 /* MarkMediaAsUploaded.swift */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 		OBJ_104 /* Tests */ = {
@@ -368,8 +377,8 @@
 			children = (
 				79EF35741E6DFD06004376F3 /* BasicTests.swift */,
 				79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */,
-				79EF35751E6DFD06004376F3 /* UserOtherTests.swift */,
 				79EF35761E6DFD06004376F3 /* UserUpdatesTests.swift */,
+				79EF35751E6DFD06004376F3 /* UserOtherTests.swift */,
 			);
 			name = MemexSDKTests;
 			path = Tests/MemexSDKTests;
@@ -475,28 +484,21 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_75 /* Constants.swift */,
-				79EF35721E6DFC6D004376F3 /* Users */,
-				OBJ_77 /* CreateSpace.swift */,
-				OBJ_76 /* CreateMedia.swift */,
-				OBJ_79 /* GetMedia.swift */,
-				OBJ_80 /* GetUser.swift */,
-				OBJ_81 /* Link.swift */,
-				OBJ_82 /* LogSpaceVisits.swift */,
-				OBJ_83 /* MarkMediaAsUploaded.swift */,
-				OBJ_84 /* Media.swift */,
 				OBJ_85 /* Memex.swift */,
-				OBJ_86 /* ObjectsSet.swift */,
-				OBJ_87 /* ProcessSpace.swift */,
+				79EF35721E6DFC6D004376F3 /* Users */,
+				79EF357B1E6E018C004376F3 /* Media */,
+				OBJ_81 /* Link.swift */,
 				OBJ_88 /* PullLinks.swift */,
-				OBJ_89 /* PullMedia.swift */,
-				OBJ_90 /* PullSpaces.swift */,
 				OBJ_91 /* PushLinks.swift */,
-				OBJ_92 /* PushMedia.swift */,
+				OBJ_77 /* CreateSpace.swift */,
+				OBJ_82 /* LogSpaceVisits.swift */,
+				OBJ_87 /* ProcessSpace.swift */,
+				OBJ_90 /* PullSpaces.swift */,
 				OBJ_93 /* PushSpaces.swift */,
 				OBJ_98 /* Space.swift */,
 				OBJ_99 /* SpaceVisit.swift */,
-				OBJ_102 /* User.swift */,
 				OBJ_103 /* WebpageMetadata.swift */,
+				OBJ_86 /* ObjectsSet.swift */,
 			);
 			name = MemexSDK;
 			path = Sources;
@@ -759,11 +761,9 @@
 				OBJ_224 /* PushMedia.swift in Sources */,
 				OBJ_225 /* PushSpaces.swift in Sources */,
 				OBJ_226 /* RequestBackup.swift in Sources */,
-				OBJ_227 /* RequestBookmarklet.swift in Sources */,
 				OBJ_229 /* SetUserPassword.swift in Sources */,
 				OBJ_230 /* Space.swift in Sources */,
 				OBJ_231 /* SpaceVisit.swift in Sources */,
-				OBJ_232 /* UpdateSubscriptionReceipt.swift in Sources */,
 				OBJ_233 /* UpdateUser.swift in Sources */,
 				OBJ_234 /* User.swift in Sources */,
 				OBJ_235 /* WebpageMetadata.swift in Sources */,

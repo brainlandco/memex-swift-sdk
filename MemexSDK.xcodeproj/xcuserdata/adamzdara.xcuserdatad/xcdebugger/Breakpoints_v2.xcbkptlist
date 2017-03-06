@@ -643,5 +643,101 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MemexSDKTests/UserUpdatesTests.swift"
+            timestampString = "510527024.875641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testGetMyselfUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSDKTests.UserUpdatesTests.(testGetMyselfUser () -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSDKTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Tests/MemexSDKTests/UserUpdatesTests.swift"
+                  timestampString = "510527025.719279"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1944">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSDKTests.UserUpdatesTests.(testGetMyselfUser () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #11)"
+                  moduleName = "MemexSDKTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Tests/MemexSDKTests/UserUpdatesTests.swift"
+                  timestampString = "510527025.723443"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MemexSDKTests/UserUpdatesTests.swift"
+            timestampString = "510527221.497072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "testGetOtherUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSDKTests.UserUpdatesTests.(testGetOtherUser () -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSDKTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Tests/MemexSDKTests/UserUpdatesTests.swift"
+                  timestampString = "510527262.53202"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSDKTests.UserUpdatesTests.(testGetOtherUser () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSDKTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Tests/MemexSDKTests/UserUpdatesTests.swift"
+                  timestampString = "510527262.534655"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

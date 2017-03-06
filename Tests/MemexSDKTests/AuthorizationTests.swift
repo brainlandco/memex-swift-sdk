@@ -53,6 +53,21 @@ class AuthorizationTests: XCTestCase {
     }
   }
   
+  func testUnknownUserAuthorizationWithUserCredentials() {
+    let expectation = self.expectation(description: "")
+    self.memex.authorize(credentials: Credentials(identifier: "someone", secret: "password"),
+                         method: .userCredentials) { (error) in
+                          XCTAssertNotNil(error)
+                          XCTAssertTrue(error! as NSError == Sushi.Error.genericClientError as NSError)
+                          expectation.fulfill()
+    }
+    self.waitForExpectations(timeout: 2) { (error) in
+      if error != nil {
+        XCTFail(error!.localizedDescription)
+      }
+    }
+  }
+  
   func testUnknownUserAuthorization() {
     let authorizationToken = "test_" + String.UUID()
     let expectation = self.expectation(description: "")
@@ -140,5 +155,16 @@ class AuthorizationTests: XCTestCase {
     }
   }
   
+  func testAuthorizationWithTokenRateLimiting() {
+    XCTFail()
+  }
+  
+  func testUniqueEmailUserCreation() {
+    XCTFail()
+  }
+  
+  func testUniqueiCloudTokenUserCreation() {
+    XCTFail()
+  }
   
 }
