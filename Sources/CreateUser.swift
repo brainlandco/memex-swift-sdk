@@ -19,13 +19,9 @@ import ObjectMapper
 public extension Memex {
   
   public func createUser(user: User,
-                         inviteToken: String?,
                          completion: @escaping VoidOutputs) {
     var parameters = [String: Any]()
     parameters["user"] = user.toJSON()
-    if let token = inviteToken {
-      parameters["invite_token"] = token
-    }
     POST("users", parameters: parameters) { response in
       completion(response.error)
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79EF35771E6DFD06004376F3 /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */; };
+		79EF35781E6DFD06004376F3 /* BasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35741E6DFD06004376F3 /* BasicTests.swift */; };
+		79EF35791E6DFD06004376F3 /* UserOtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35751E6DFD06004376F3 /* UserOtherTests.swift */; };
+		79EF357A1E6DFD06004376F3 /* UserUpdatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35761E6DFD06004376F3 /* UserUpdatesTests.swift */; };
 		OBJ_120 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Array+Additions.swift */; };
 		OBJ_121 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Color.swift */; };
 		OBJ_122 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Credentials.swift */; };
@@ -94,7 +98,6 @@
 		OBJ_225 /* PushSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_93 /* PushSpaces.swift */; };
 		OBJ_226 /* RequestBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* RequestBackup.swift */; };
 		OBJ_227 /* RequestBookmarklet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* RequestBookmarklet.swift */; };
-		OBJ_228 /* RequestInvite.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* RequestInvite.swift */; };
 		OBJ_229 /* SetUserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* SetUserPassword.swift */; };
 		OBJ_230 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Space.swift */; };
 		OBJ_231 /* SpaceVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* SpaceVisit.swift */; };
@@ -105,7 +108,6 @@
 		OBJ_237 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
 		OBJ_238 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ObjectMapper.framework */; };
 		OBJ_239 /* Sushi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Sushi.framework */; };
-		OBJ_248 /* CreateMemexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* CreateMemexTests.swift */; };
 		OBJ_250 /* Atom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Atom.framework */; };
 		OBJ_251 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* ObjectMapper.framework */; };
 		OBJ_252 /* Sushi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* Sushi.framework */; };
@@ -186,12 +188,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTests.swift; sourceTree = "<group>"; };
+		79EF35741E6DFD06004376F3 /* BasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTests.swift; sourceTree = "<group>"; };
+		79EF35751E6DFD06004376F3 /* UserOtherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOtherTests.swift; sourceTree = "<group>"; };
+		79EF35761E6DFD06004376F3 /* UserUpdatesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdatesTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		OBJ_100 /* UpdateSubscriptionReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSubscriptionReceipt.swift; sourceTree = "<group>"; };
 		OBJ_101 /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		OBJ_102 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		OBJ_103 /* WebpageMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
-		OBJ_106 /* CreateMemexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMemexTests.swift; sourceTree = "<group>"; };
 		OBJ_107 /* Add */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Add; sourceTree = SOURCE_ROOT; };
 		OBJ_108 /* Build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Build; sourceTree = SOURCE_ROOT; };
 		OBJ_11 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -283,7 +288,6 @@
 		OBJ_93 /* PushSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSpaces.swift; sourceTree = "<group>"; };
 		OBJ_94 /* RequestBackup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBackup.swift; sourceTree = "<group>"; };
 		OBJ_95 /* RequestBookmarklet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBookmarklet.swift; sourceTree = "<group>"; };
-		OBJ_96 /* RequestInvite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInvite.swift; sourceTree = "<group>"; };
 		OBJ_97 /* SetUserPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserPassword.swift; sourceTree = "<group>"; };
 		OBJ_98 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		OBJ_99 /* SpaceVisit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceVisit.swift; sourceTree = "<group>"; };
@@ -338,6 +342,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79EF35721E6DFC6D004376F3 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_78 /* CreateUser.swift */,
+				OBJ_94 /* RequestBackup.swift */,
+				OBJ_95 /* RequestBookmarklet.swift */,
+				OBJ_101 /* UpdateUser.swift */,
+				OBJ_97 /* SetUserPassword.swift */,
+				OBJ_100 /* UpdateSubscriptionReceipt.swift */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
 		OBJ_104 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,7 +366,10 @@
 		OBJ_105 /* MemexSDKTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_106 /* CreateMemexTests.swift */,
+				79EF35741E6DFD06004376F3 /* BasicTests.swift */,
+				79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */,
+				79EF35751E6DFD06004376F3 /* UserOtherTests.swift */,
+				79EF35761E6DFD06004376F3 /* UserUpdatesTests.swift */,
 			);
 			name = MemexSDKTests;
 			path = Tests/MemexSDKTests;
@@ -397,7 +417,7 @@
 			path = "Packages/ObjectMapper-0.1.0/Sources";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -407,7 +427,6 @@
 				OBJ_108 /* Build */,
 				OBJ_109 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* Sushi */ = {
@@ -456,9 +475,9 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_75 /* Constants.swift */,
-				OBJ_76 /* CreateMedia.swift */,
+				79EF35721E6DFC6D004376F3 /* Users */,
 				OBJ_77 /* CreateSpace.swift */,
-				OBJ_78 /* CreateUser.swift */,
+				OBJ_76 /* CreateMedia.swift */,
 				OBJ_79 /* GetMedia.swift */,
 				OBJ_80 /* GetUser.swift */,
 				OBJ_81 /* Link.swift */,
@@ -474,14 +493,8 @@
 				OBJ_91 /* PushLinks.swift */,
 				OBJ_92 /* PushMedia.swift */,
 				OBJ_93 /* PushSpaces.swift */,
-				OBJ_94 /* RequestBackup.swift */,
-				OBJ_95 /* RequestBookmarklet.swift */,
-				OBJ_96 /* RequestInvite.swift */,
-				OBJ_97 /* SetUserPassword.swift */,
 				OBJ_98 /* Space.swift */,
 				OBJ_99 /* SpaceVisit.swift */,
-				OBJ_100 /* UpdateSubscriptionReceipt.swift */,
-				OBJ_101 /* UpdateUser.swift */,
 				OBJ_102 /* User.swift */,
 				OBJ_103 /* WebpageMetadata.swift */,
 			);
@@ -623,7 +636,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_109 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -747,7 +760,6 @@
 				OBJ_225 /* PushSpaces.swift in Sources */,
 				OBJ_226 /* RequestBackup.swift in Sources */,
 				OBJ_227 /* RequestBookmarklet.swift in Sources */,
-				OBJ_228 /* RequestInvite.swift in Sources */,
 				OBJ_229 /* SetUserPassword.swift in Sources */,
 				OBJ_230 /* Space.swift in Sources */,
 				OBJ_231 /* SpaceVisit.swift in Sources */,
@@ -762,7 +774,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_248 /* CreateMemexTests.swift in Sources */,
+				79EF35791E6DFD06004376F3 /* UserOtherTests.swift in Sources */,
+				79EF35781E6DFD06004376F3 /* BasicTests.swift in Sources */,
+				79EF357A1E6DFD06004376F3 /* UserUpdatesTests.swift in Sources */,
+				79EF35771E6DFD06004376F3 /* AuthorizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

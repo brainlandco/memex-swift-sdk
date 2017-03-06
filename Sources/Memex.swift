@@ -12,10 +12,10 @@ import Atom
 
 public class Memex: Sushi.Service {
   
-  public init(key: String, secret: String, environment: Environment = .production) {
+  public init(key: String, secret: String, environment: Environment = .production, verbose: Bool = false) {
     let configuration = Sushi.Configuration(serverURL: Memex.serverURL(forEnvironment: environment),
                                             clientCredentials: Credentials(identifier: key, secret: secret),
-                                            logAllRequests: false,
+                                            logAllRequests: verbose,
                                             authTokenKey: "authToken",
                                             authFirstLaunchKey: "firstLaunch")
     super.init(configuration: configuration)
@@ -24,13 +24,13 @@ public class Memex: Sushi.Service {
   private static func serverURL(forEnvironment environment: Environment) -> URL {
     switch environment{
     case .production:
-      return URL(string: "memex.co/api")!
+      return URL(string: "https://www.memex.co/api/v1")!
     case .staging:
-      return URL(string: "memexapp-staging.herokuapp.com/api")!
+      return URL(string: "https://memexapp-stage.herokuapp.com/api/v1")!
     case .localhost:
-      return URL(string: "localhost:5000")!
+      return URL(string: "http://localhost:5000")!
     case .sandbox:
-      return URL(string: "memexapp-sandbox.herokuapp.com/api")!  //not yet implemented
+      return URL(string: "https://memexapp-sandbox.herokuapp.com/api/v1")!  //not yet implemented
     }
   }
   
