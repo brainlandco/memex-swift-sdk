@@ -16,7 +16,7 @@ public class Memex: Sushi.Service {
     let configuration = Sushi.Configuration(serverURL: Memex.serverURL(forEnvironment: environment),
                                             clientCredentials: Credentials(identifier: key, secret: secret),
                                             logAllRequests: verbose,
-                                            authTokenKey: "authToken",
+                                            authTokenKey: Memex.authToken(forEnvironment: environment),
                                             authFirstLaunchKey: "firstLaunch")
     super.init(configuration: configuration)
   }
@@ -31,6 +31,19 @@ public class Memex: Sushi.Service {
       return URL(string: "http://localhost:5000")!
     case .sandbox:
       return URL(string: "https://memexapp-sandbox.herokuapp.com/api/v1")!  //not yet implemented
+    }
+  }
+  
+  private static func authToken(forEnvironment environment: Environment) -> String {
+    switch environment{
+    case .production:
+      return "SUAuthorizationController.token"
+    case .staging:
+      return "SUAuthorizationController.token.dev"
+    case .localhost:
+      return "SUAuthorizationController.token.dev"
+    case .sandbox:
+      return "SUAuthorizationController.token.dev"
     }
   }
   

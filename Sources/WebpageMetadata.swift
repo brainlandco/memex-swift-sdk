@@ -16,6 +16,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 import Atom
+import CoreGraphics
 
 public class WebpageMetadata: JSONRepresentable {
   

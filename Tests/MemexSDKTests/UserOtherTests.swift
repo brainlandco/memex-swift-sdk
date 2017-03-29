@@ -37,7 +37,7 @@ class UserOtherTests: XCTestCase {
   
   func testBackupRequest() {
     let expectation = self.expectation(description: "")
-    self.prepareAuthorizedUser(email: "test@memex-test.com") { (user) in
+    self.prepareAuthorizedUser(email: "test@memex-te\(String.UUID())st.com") { (user) in
       self.memex.requestBackup { (error) in
         XCTAssertNil(error)
         expectation.fulfill()

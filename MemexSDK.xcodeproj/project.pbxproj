@@ -194,14 +194,13 @@
 		OBJ_101 /* UpdateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUser.swift; sourceTree = "<group>"; };
 		OBJ_102 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		OBJ_103 /* WebpageMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageMetadata.swift; sourceTree = "<group>"; };
-		OBJ_107 /* Add */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Add; sourceTree = SOURCE_ROOT; };
 		OBJ_108 /* Build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Build; sourceTree = SOURCE_ROOT; };
 		OBJ_11 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		OBJ_110 /* Atom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Atom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_111 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_112 /* Sushi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sushi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_113 /* MemexSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MemexSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_114 /* MemexSDKTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = MemexSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_114 /* MemexSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = MemexSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Dictionary+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
 		OBJ_14 /* Dispatch+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dispatch+Additions.swift"; sourceTree = "<group>"; };
@@ -432,7 +431,6 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_104 /* Tests */,
-				OBJ_107 /* Add */,
 				OBJ_108 /* Build */,
 				OBJ_109 /* Products */,
 			);
@@ -630,6 +628,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					OBJ_115 = {
+						ProvisioningStyle = Automatic;
+					};
+					OBJ_139 = {
+						ProvisioningStyle = Automatic;
+					};
+					OBJ_169 = {
+						ProvisioningStyle = Automatic;
+					};
+					OBJ_202 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "MemexSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -840,6 +852,7 @@
 		OBJ_117 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -853,6 +866,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Atom;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Atom;
 			};
 			name = Debug;
@@ -860,6 +875,7 @@
 		OBJ_118 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -873,6 +889,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Atom;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Atom;
 			};
 			name = Release;
@@ -880,6 +898,7 @@
 		OBJ_141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -893,6 +912,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ObjectMapper;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = ObjectMapper;
 			};
 			name = Debug;
@@ -900,6 +920,7 @@
 		OBJ_142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -913,6 +934,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ObjectMapper;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = ObjectMapper;
 			};
 			name = Release;
@@ -920,6 +942,7 @@
 		OBJ_171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -933,6 +956,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sushi;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = Sushi;
 			};
 			name = Debug;
@@ -940,6 +964,7 @@
 		OBJ_172 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -953,6 +978,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Sushi;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = Sushi;
 			};
 			name = Release;
@@ -960,6 +986,7 @@
 		OBJ_204 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -973,6 +1000,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MemexSDK;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDK;
 			};
 			name = Debug;
@@ -980,6 +1008,7 @@
 		OBJ_205 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -993,6 +1022,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MemexSDK;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDK;
 			};
 			name = Release;
@@ -1010,6 +1040,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDKTests;
 			};
 			name = Debug;
@@ -1027,6 +1058,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDKTests;
 			};
 			name = Release;
