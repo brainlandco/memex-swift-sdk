@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791D161F1E8D7F2D00569A7F /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D161E1E8D7F2D00569A7F /* CoreGraphics+Additions.swift */; };
 		79EF35771E6DFD06004376F3 /* AuthorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */; };
 		79EF35781E6DFD06004376F3 /* BasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35741E6DFD06004376F3 /* BasicTests.swift */; };
 		79EF35791E6DFD06004376F3 /* UserOtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF35751E6DFD06004376F3 /* UserOtherTests.swift */; };
@@ -186,6 +187,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		791D161E1E8D7F2D00569A7F /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		79EF35731E6DFD06004376F3 /* AuthorizationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTests.swift; sourceTree = "<group>"; };
 		79EF35741E6DFD06004376F3 /* BasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTests.swift; sourceTree = "<group>"; };
 		79EF35751E6DFD06004376F3 /* UserOtherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOtherTests.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				OBJ_13 /* Dictionary+Additions.swift */,
 				OBJ_14 /* Dispatch+Additions.swift */,
 				OBJ_15 /* Lock.swift */,
+				791D161E1E8D7F2D00569A7F /* CoreGraphics+Additions.swift */,
 				OBJ_16 /* MIMETypes.swift */,
 				OBJ_17 /* NSCalendar+Extension.swift */,
 				OBJ_18 /* NSError+Additions.swift */,
@@ -682,6 +685,7 @@
 				OBJ_130 /* NSLock+Additions.swift in Sources */,
 				OBJ_131 /* NSQualityOfService+Additions.swift in Sources */,
 				OBJ_132 /* NSURL+Additions.swift in Sources */,
+				791D161F1E8D7F2D00569A7F /* CoreGraphics+Additions.swift in Sources */,
 				OBJ_133 /* NSURLRequest+Additions.swift in Sources */,
 				OBJ_134 /* NSURLSession+Additions.swift in Sources */,
 				OBJ_135 /* PropertyNames.swift in Sources */,
