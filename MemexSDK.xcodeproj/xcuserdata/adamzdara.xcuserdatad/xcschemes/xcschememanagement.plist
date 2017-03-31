@@ -2,49 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MemexSDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>OBJ_113</key>
+		<key>79CAA14B1E8EB5DD00EB10CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>OBJ_115</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_137</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_139</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_167</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_169</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_200</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_202</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>OBJ_243</key>
+		<key>79CAA1541E8EB5DE00EB10CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

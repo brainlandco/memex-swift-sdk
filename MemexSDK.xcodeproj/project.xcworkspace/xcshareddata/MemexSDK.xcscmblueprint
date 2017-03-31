@@ -9,12 +9,12 @@
     "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : 9223372036854775807,
     "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C7A6B63-7010-466A-BEDE-BA1A62BE3435",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "53737F61-8C93-4F0B-95D8-2DE15BC1FF55",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "DB9E298218B78224C6B357EA2CAFB47DD00E477C" : "memex-swift-sdk\/Packages\/Sushi-0.2.0\/",
+    "DB9E298218B78224C6B357EA2CAFB47DD00E477C" : "sushi-swift\/",
     "7873F0F78047E647F0FC6414D894F5EFBD126D79" : "memex-swift-sdk\/",
-    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : "memex-swift-sdk\/Packages\/Atom-0.1.0\/",
-    "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : "memex-swift-sdk\/Packages\/ObjectMapper-0.1.0\/"
+    "AFACD3407C4D37A6A2E0610C910FC073AA5A8960" : "atom\/",
+    "2E0A3D1C4F3DFBBC4AD39A705F2AB1393B4765C1" : "object-mapper\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MemexSDK",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
