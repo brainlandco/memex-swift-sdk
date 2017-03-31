@@ -24,7 +24,7 @@ public class Memex: Sushi.Service {
   private static func serverURL(forEnvironment environment: Environment) -> URL {
     switch environment{
     case .production:
-      return URL(string: "https://www.memex.co/api/v1")!
+      return URL(string: "https://memexapp.herokuapp.com/api/v1")!
     case .staging:
       return URL(string: "https://memexapp-stage.herokuapp.com/api/v1")!
     case .localhost:
