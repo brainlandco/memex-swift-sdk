@@ -853,7 +853,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_117 /* Debug */ = {
+		OBJ_117 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -874,9 +874,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Atom;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_118 /* Release */ = {
+		OBJ_118 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -897,9 +897,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Atom;
 			};
-			name = Release;
+			name = Production;
 		};
-		OBJ_141 /* Debug */ = {
+		OBJ_141 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -919,9 +919,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = ObjectMapper;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_142 /* Release */ = {
+		OBJ_142 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -941,9 +941,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = ObjectMapper;
 			};
-			name = Release;
+			name = Production;
 		};
-		OBJ_171 /* Debug */ = {
+		OBJ_171 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -963,9 +963,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = Sushi;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_172 /* Release */ = {
+		OBJ_172 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -985,9 +985,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = Sushi;
 			};
-			name = Release;
+			name = Production;
 		};
-		OBJ_204 /* Debug */ = {
+		OBJ_204 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -1007,9 +1007,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDK;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_205 /* Release */ = {
+		OBJ_205 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -1029,9 +1029,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDK;
 			};
-			name = Release;
+			name = Production;
 		};
-		OBJ_245 /* Debug */ = {
+		OBJ_245 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1047,9 +1047,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDKTests;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_246 /* Release */ = {
+		OBJ_246 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1065,9 +1065,9 @@
 				SDKROOT = iphoneos;
 				TARGET_NAME = MemexSDKTests;
 			};
-			name = Release;
+			name = Production;
 		};
-		OBJ_3 /* Debug */ = {
+		OBJ_3 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1087,9 +1087,9 @@
 				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
-			name = Debug;
+			name = Development;
 		};
-		OBJ_4 /* Release */ = {
+		OBJ_4 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1107,7 +1107,7 @@
 				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
-			name = Release;
+			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1115,56 +1115,56 @@
 		OBJ_116 /* Build configuration list for PBXNativeTarget "Atom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_117 /* Debug */,
-				OBJ_118 /* Release */,
+				OBJ_117 /* Development */,
+				OBJ_118 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 		OBJ_140 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_141 /* Debug */,
-				OBJ_142 /* Release */,
+				OBJ_141 /* Development */,
+				OBJ_142 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 		OBJ_170 /* Build configuration list for PBXNativeTarget "Sushi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_171 /* Debug */,
-				OBJ_172 /* Release */,
+				OBJ_171 /* Development */,
+				OBJ_172 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 		OBJ_2 /* Build configuration list for PBXProject "MemexSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
+				OBJ_3 /* Development */,
+				OBJ_4 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 		OBJ_203 /* Build configuration list for PBXNativeTarget "MemexSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_204 /* Debug */,
-				OBJ_205 /* Release */,
+				OBJ_204 /* Development */,
+				OBJ_205 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 		OBJ_244 /* Build configuration list for PBXNativeTarget "MemexSDKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_245 /* Debug */,
-				OBJ_246 /* Release */,
+				OBJ_245 /* Development */,
+				OBJ_246 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};
