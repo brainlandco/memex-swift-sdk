@@ -21,11 +21,6 @@ public enum Environment: Int {
   case localhost = 3
 }
 
-public enum RepresentationProcessingState: Int {
-  case done = 0
-  case waiting = 1
-}
-
 public enum ObjectState: Int {
   case unknown = -1
   case visible = 0

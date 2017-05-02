@@ -24,11 +24,6 @@ public class Media: JSONRepresentable, ObjectProtocol {
   public var createdAt: Date?
   public var updatedAt: Date?
   public var state: ObjectState?
-  public var createdBy: ManagementEntity?
-  public var managedBy: ManagementEntity?
-  public var managedAt: Date?
-  public var singleSystemManagementRequired: Bool?
-  public var clientIdentifier: String?
   public var metadata: [String: Any]?
   public var dataState: DataState?
   public var tag: String?
@@ -51,11 +46,6 @@ public class Media: JSONRepresentable, ObjectProtocol {
     self.createdAt <- map["created_at"]
     self.updatedAt <- map["updated_at"]
     self.state <- map["state"]
-    self.createdBy <- map["created_by"]
-    self.managedBy <- map["managed_by"]
-    self.managedAt <- map["managed_at"]
-    self.singleSystemManagementRequired <- map["single_system_management_required"]
-    self.clientIdentifier <- map["client_identifier"]
     self.metadata <- (map["metadata"], EncodedJSONTransform())
     self.tag <- map["type"]
     self.dataState <- map["data_state"]

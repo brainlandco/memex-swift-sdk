@@ -26,14 +26,8 @@ public class Link: JSONRepresentable, ObjectProtocol {
   public var updatedAt: Date?
   public var state: ObjectState?
   public var ownerID: Int?
-  public var createdBy: ManagementEntity?
-  public var managedBy: ManagementEntity?
-  public var managedAt: Date?
-  public var singleSystemManagementRequired: Bool?
-  public var clientIdentifier: String?
   public var order: Int?
   public var tagLabel: String?
-  public var preview: Bool?
   public var originSpaceMUID: String?
   public var targetSpaceMUID: String?
   
@@ -51,16 +45,10 @@ public class Link: JSONRepresentable, ObjectProtocol {
     self.updatedAt <- map["updated_at"]
     self.state <- map["state"]
     self.ownerID <- map["owner_id"]
-    self.createdBy <- map["created_by"]
-    self.managedBy <- map["managed_by"]
-    self.managedAt <- map["managed_at"]
-    self.singleSystemManagementRequired <- map["single_system_management_required"]
-    self.clientIdentifier <- map["client_identifier"]
     self.tagLabel <- map["tag_label"]
     self.order <- map["order"]
     self.originSpaceMUID <- map["origin_space_muid"]
     self.targetSpaceMUID <- map["target_space_muid"]
-    self.preview <- map["preview"]
   }
   
 }
