@@ -28,7 +28,7 @@ public class Memex: Sushi.Service {
     case .staging:
       return URL(string: "https://memexapp-stage.herokuapp.com/api/v1")!
     case .localhost:
-      return URL(string: "http://localhost:5000")!
+      return URL(string: "http://10.0.0.38:5000/api/v1")!
     case .sandbox:
       return URL(string: "https://memexapp-sandbox.herokuapp.com/api/v1")!  //not yet implemented
     }
