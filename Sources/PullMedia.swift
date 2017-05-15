@@ -25,7 +25,7 @@ public typealias PullMediaOutputs = (
   _ error: Swift.Error?)->()
 
 
-public extension Memex {
+public extension Spaces {
   
   public func pullMedia(lastModelVersion: Int?,
                         offset: Int?,

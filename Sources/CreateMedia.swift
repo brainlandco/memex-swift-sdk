@@ -16,7 +16,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-public extension Memex {
+public extension Spaces {
   
   public func createMedia(media: Media,
                           completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {

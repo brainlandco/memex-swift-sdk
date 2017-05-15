@@ -29,17 +29,8 @@ public class User: JSONRepresentable {
   public var advanced: Bool?
   public var avatar: Media?
   public var originSpaceMUID: String?
-  public var authorizationToken: String?
   public var createdAt: Date?
   public var updatedAt: Date?
-  public var subscriptionExpiresAt: Date?
-  public var usedBytesCount: Int64 = 0
-  public var availableBytesCount: Int64 = 0
-  public var extraReceivedBytesCount: Int64 = 0
-  public var extraAvailableBytesCount: Int64 = 0
-  public var extraStorageResetsAt: Date?
-  public var reedemCode: String?
-  public var reedemShareURL: URL?
   public override var hashValue: Int {
     return self.ID!.hashValue
   }
@@ -59,16 +50,7 @@ public class User: JSONRepresentable {
     self.fullname <- map["fullname"]
     self.email <- map["email"]
     self.hasPassword <- map["has_password"]
-    self.authorizationToken <- map["icloud_token"]
     self.avatar <- map["avatar"]
-    self.subscriptionExpiresAt <- map["subscription_expires_at"]
-    self.usedBytesCount <- (map["used_bytes_count"], BytesCountTransform())
-    self.availableBytesCount <- (map["available_bytes_count"], BytesCountTransform())
-    self.extraReceivedBytesCount <- (map["extra_received_bytes_count"], BytesCountTransform())
-    self.extraAvailableBytesCount <- (map["extra_available_bytes_count"], BytesCountTransform())
-    self.extraStorageResetsAt <- map["extra_storage_resets_at"]
-    self.reedemCode <- map["reedem_code"]
-    self.reedemShareURL <- map["reedem_share_url"]
     self.advanced <- map["advanced"]
   }
    

@@ -26,7 +26,7 @@ public typealias PullLinksOutputs = (
   _ nextOffset: Int?,
   _ error: Swift.Error?)->()
 
-public extension Memex {
+public extension Spaces {
   
   public func pullLinks(lastModelVersion: Int?,
                         offset: Int?,

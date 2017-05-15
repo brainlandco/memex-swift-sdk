@@ -27,11 +27,6 @@ public enum ObjectState: Int {
   case trashed = 1
 }
 
-public enum ManagementEntity: Int {
-  case user = 0
-  case system = 1
-}
-
 public enum DataState: Int {
   case unknown = -1
   case waitingForNewUploadURL = 0
@@ -54,9 +49,4 @@ public enum Error: Int, Swift.Error {
   case invalidInvitationToken
 }
 
-
-public enum PresentationStyle: Int {
-  case list = 0
-  case grid = 1
-}
 

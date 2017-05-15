@@ -25,7 +25,7 @@ public typealias PullSpacesOutputs = (
   _ error: Swift.Error?)->()
 
 
-public extension Memex {
+public extension Spaces {
   
   public func pullSpaces(lastModelVersion: Int?,
                          offset: Int?,

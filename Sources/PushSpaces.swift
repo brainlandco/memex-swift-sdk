@@ -21,7 +21,7 @@ public typealias PushOutputs = (
   _ modelVersion: Int?,
   _ error: Swift.Error?)->()
 
-public extension Memex {
+public extension Spaces {
   
   public func pushSpaces(items: [Space],
                          completion: @escaping PushOutputs) {

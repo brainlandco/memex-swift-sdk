@@ -10,7 +10,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-public extension Memex {
+public extension Spaces {
   
   public func createSpace(space: Space,
                           process: Bool,

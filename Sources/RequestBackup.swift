@@ -15,7 +15,7 @@
 import Foundation
 import Sushi
 
-public extension Memex {
+public extension Spaces {
   
   public func requestBackup(completion: @escaping VoidOutputs) {
     GET("users/self/backup") { response in
