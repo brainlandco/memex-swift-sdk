@@ -10,13 +10,13 @@ import Foundation
 import Sushi
 import Atom
 
-public class Memex: Sushi.Service {
+public class Spaces: Sushi.Service {
   
-  public init(key: String, secret: String, environment: Environment = .production, verbose: Bool = false) {
-    let configuration = Sushi.Configuration(serverURL: Memex.serverURL(forEnvironment: environment),
-                                            clientCredentials: Credentials(identifier: key, secret: secret),
+  public init(appToken: String, environment: Environment = .production, verbose: Bool = false) {
+    let configuration = Sushi.Configuration(serverURL: Spaces.serverURL(forEnvironment: environment),
+                                            appToken: appToken,
                                             logAllRequests: verbose,
-                                            authTokenKey: Memex.authToken(forEnvironment: environment),
+                                            authTokenKey: Spaces.authToken(forEnvironment: environment),
                                             authFirstLaunchKey: "firstLaunch")
     super.init(configuration: configuration)
   }

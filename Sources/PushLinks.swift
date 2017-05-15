@@ -16,7 +16,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-public extension Memex {
+public extension Spaces {
   
   public func pushLinks(items: [Link],
                         completion: @escaping PushOutputs) {

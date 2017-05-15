@@ -16,7 +16,7 @@ import Foundation
 import Sushi
 import ObjectMapper
 
-public extension Memex {
+public extension Spaces {
   
   public func getUser(userID: Int?,
                       completion: @escaping (_ user: User?, _ error: Swift.Error?)->()) {
