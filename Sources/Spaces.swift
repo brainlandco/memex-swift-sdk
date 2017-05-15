@@ -10,6 +10,8 @@ import Foundation
 import Sushi
 import Atom
 
+public typealias Memex = Spaces
+
 public class Spaces: Sushi.Service {
   
   public init(appToken: String, environment: Environment = .production, verbose: Bool = false) {

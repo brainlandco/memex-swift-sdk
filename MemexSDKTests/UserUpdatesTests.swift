@@ -13,8 +13,7 @@ import Sushi
 
 class UserUpdatesTests: XCTestCase {
   
-  let memex = Memex(key: "XsL3i4Kleu2yoqfahMZMBWLCDwH3chKwPZpyDb5I",
-                    secret: "0wB9WKyrTvnxB3VwuMNditWfpDM6amE1803V4FHJ",
+  let memex = Memex(appToken: "XsL3i4Kleu2yoqfahMZMBWLCDwH3chKwPZpyDb5I",
                     environment: .staging,
                     verbose: true)
   
