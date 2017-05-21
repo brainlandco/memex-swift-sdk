@@ -34,9 +34,6 @@ public class Spaces {
                                     userInfo: nil)
     NotificationCenter.default.post(notification)
   }
-
-  
-  
   
   private static func serverURL(forEnvironment environment: Environment) -> URL {
     switch environment{

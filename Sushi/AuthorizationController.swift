@@ -26,7 +26,7 @@ public class AuthorizationController {
   init(spaces: Spaces) {
     self.spaces = spaces
     self.secretStore = KeychainSwift()
-    self.tokenKey = self.spaces?.configuration.authTokenKey ?? "authToken"
+    self.tokenKey = spaces.configuration.authTokenKey
   }
   
   // MARK: Bootstrap
@@ -66,7 +66,7 @@ public class AuthorizationController {
                          completionHandler: @escaping TokenResponse) {
     self.authorizeWithBodyParameters(bodyParameters: [
       "secrets": [
-        "uuid": UUID
+        "icloudUUID": UUID
       ]
       ],
                                      completionHandler: completionHandler)
@@ -75,7 +75,7 @@ public class AuthorizationController {
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
     self.spaces?.requestor.request(
       method: .POST,
-      path: "auth/user",
+      path: "auth/login",
       queryStringParameters: nil,
       bodyParameters: bodyParameters,
       completionHandler: { [weak self] content, code, error in
@@ -117,7 +117,6 @@ public class AuthorizationController {
       completion(token)
     }
   }
-  
   
   private func persistToken(token: String?) {
     do {

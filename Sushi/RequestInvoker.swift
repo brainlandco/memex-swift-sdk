@@ -19,11 +19,11 @@ public class RequestInvoker {
   // MARK: General
   
   public func request(
-           method: HTTPMethod,
-           path: String,
-           queryStringParameters: [String: Any]? = nil,
-           bodyParameters: [String: Any]? = nil,
-           completionHandler: @escaping RequestCompletion) {
+    method: HTTPMethod,
+    path: String,
+    queryStringParameters: [String: Any]? = nil,
+    bodyParameters: [String: Any]? = nil,
+    completionHandler: @escaping RequestCompletion) {
     do {
       let request = try self.buildRequest(
         method: method,
@@ -38,16 +38,16 @@ public class RequestInvoker {
   }
   
   private func buildRequest(
-           method: HTTPMethod,
-           path: String,
-           queryStringParameters: [String: Any]?,
-           bodyParameters: [String: Any]?,
-           userToken: String?) throws -> URLRequest {
+    method: HTTPMethod,
+    path: String,
+    queryStringParameters: [String: Any]?,
+    bodyParameters: [String: Any]?,
+    userToken: String?) throws -> URLRequest {
     let base = self.spaces!.configuration.serverURL.appendingPathComponent(path)
     var path = "\(base.absoluteString)"
     if let query = queryStringParameters, !query.isEmpty {
       if let queryString = self.spaces!.queryStringTransformer.queryStringFromParameters(parameters: queryStringParameters,
-                                                                                                error: nil) {
+                                                                                         error: nil) {
         path = "\(path)?\(queryString)"
       }
     }

@@ -11,9 +11,9 @@ public class Configuration {
   
   public init(serverURL: URL,
               appToken: String,
-              logAllRequests: Bool = false,
-              authTokenKey: String = "SUAuthorizationController.token",
-              authFirstLaunchKey: String = "TPRMAuthorizationManagerFirstLaunch") {
+              logAllRequests: Bool,
+              authTokenKey: String,
+              authFirstLaunchKey: String) {
     self.serverURL = serverURL
     self.appToken = appToken
     self.logAllRequests = logAllRequests
