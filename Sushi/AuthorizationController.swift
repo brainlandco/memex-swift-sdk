@@ -52,22 +52,8 @@ public class AuthorizationController {
   func authorizeWithCredentials(credentials: Credentials,
                                 completionHandler: @escaping TokenResponse) {
     self.authorizeWithBodyParameters(bodyParameters: [
-      "user": [
-        "email": credentials.identifier
-      ],
-      "secrets": [
-        "password": credentials.secret
-      ]
-      ],
-                                     completionHandler: completionHandler)
-  }
-  
-  func authorizeWithUUID(UUID: String,
-                         completionHandler: @escaping TokenResponse) {
-    self.authorizeWithBodyParameters(bodyParameters: [
-      "secrets": [
-        "icloudUUID": UUID
-      ]
+      "email": credentials.identifier,
+      "password": credentials.secret
       ],
                                      completionHandler: completionHandler)
   }

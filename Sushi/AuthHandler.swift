@@ -2,7 +2,7 @@
 
 public extension Spaces {
   
-  public func loginUserWithCredentials(
+  public func loginUserWithUserCredentials(
     credentials: Credentials,
     completion: @escaping VoidOutputs) {
     let completion = { (token: String?, error: Swift.Error?) -> Void in
@@ -14,20 +14,6 @@ public extension Spaces {
     }
     self.auth.authorizeWithCredentials(credentials: credentials,
                                        completionHandler: completion)
-  }
-  
-  public func loginUserWithiCloud(
-    token: String,
-    completion: @escaping VoidOutputs) {
-    let completion = { (token: String?, error: Swift.Error?) -> Void in
-      if error == nil {
-        completion(nil)
-      } else {
-        completion(error)
-      }
-    }
-    self.auth.authorizeWithUUID(UUID: token,
-                                completionHandler: completion)
   }
   
   public func logout(
