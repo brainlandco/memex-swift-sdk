@@ -22,10 +22,7 @@ Memex is new form of your external memory.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MemexSwiftSDK/Classes/**/*'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.source_files = 'MemexSwiftSDK/Classes/**/**/*.{swift}'
 
   s.dependency 'ObjectMapper', '~> 2.2'
   s.dependency 'ReachabilitySwift', '~> 3'
