@@ -9,7 +9,6 @@
 @testable import MemexSDK
 import XCTest
 import Atom
-import Sushi
 
 class AuthorizationTests: XCTestCase {
   
@@ -43,7 +42,7 @@ class AuthorizationTests: XCTestCase {
     let expectation = self.expectation(description: "")
     self.memex.createUser(user: user) { (error) in
       XCTAssertNotNil(error)
-      XCTAssertTrue(error! as NSError == Sushi.Error.genericClientError as NSError)
+      XCTAssertTrue(error! as NSError == Error.genericClientError as NSError)
       expectation.fulfill()
     }
     self.waitForExpectations(timeout: 2) { (error) in
@@ -58,7 +57,7 @@ class AuthorizationTests: XCTestCase {
     self.memex.authorize(credentials: Credentials(identifier: "someone", secret: "password"),
                          method: .userCredentials) { (error) in
                           XCTAssertNotNil(error)
-                          XCTAssertTrue(error! as NSError == Sushi.Error.genericClientError as NSError)
+                          XCTAssertTrue(error! as NSError == Error.genericClientError as NSError)
                           expectation.fulfill()
     }
     self.waitForExpectations(timeout: 2) { (error) in
@@ -74,7 +73,7 @@ class AuthorizationTests: XCTestCase {
     self.memex.authorize(credentials: Credentials(identifier: authorizationToken, secret: nil),
                          method: .iCloudToken) { (error) in
                             XCTAssertNotNil(error)
-                            XCTAssertTrue(error! as NSError == Sushi.Error.genericClientError as NSError)
+                            XCTAssertTrue(error! as NSError == Error.genericClientError as NSError)
                             expectation.fulfill()
     }
     self.waitForExpectations(timeout: 2) { (error) in

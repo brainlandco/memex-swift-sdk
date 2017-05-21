@@ -1,13 +1,5 @@
-//
-//  RMCreateSpaceOperation.swift
-//  Memex
-//
-//  Created by Adam Zdara on 21/02/2017.
-//  Copyright © 2017 Adam Zdara. All rights reserved.
-//
 
 import Foundation
-import Sushi
 import ObjectMapper
 
 public extension Spaces {

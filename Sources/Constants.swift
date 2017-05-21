@@ -1,16 +1,3 @@
-/**
- *
- * Copyright (c) 2016, Adam Zdara.
- * Created by: Adam Zdara on 05/05/16
- *
- * All rights reserved. This source code can be used only for purposes specified
- * by the given license contract signed by the rightful deputy of Adam Zdara.
- * This source code can be used only by the owner of the license.
- *
- * Any disputes arising in respect of this agreement (license) shall be brought
- * before the Municipal Court of Prague.
- *
- */
 
 import Foundation
 
@@ -47,6 +34,64 @@ public enum Error: Int, Swift.Error {
   case notAuthorized
   case invalidData
   case invalidInvitationToken
+  
+  case genericClientError
+  case JSONParsingError
+  
+  case genericServerError
 }
+
+
+
+public typealias VoidOutputs = (_ error: Swift.Error?)->()
+
+public typealias RequestCompletion = (_ content: [String: Any]?,
+  _ code: Int?,
+  _ error: Swift.Error?)->()
+
+
+public enum HTTPMethod: String {
+  case GET = "GET"
+  case POST = "POST"
+  case DELETE = "DELETE"
+  case PUT = "PUT"
+  case HEAD = "HEAD"
+  case PATCH = "PATCH"
+}
+
+public struct StandardHTTPHeader {
+  static let userAgent = "User-Agent"
+  static let authorization = "Authorization"
+  static let contentType = "Content-Type"
+}
+
+public struct AuthTypes {
+  static let basic = "Basic"
+  static let bearer = "Bearer"
+}
+
+public enum AuthorizationMethod {
+  case userCredentials
+  case iCloudToken
+}
+
+public enum AuthorizationStatus: Int {
+  case unknown = -1
+  case notAuthorized = 0
+  case authorized = 1
+}
+
+struct Permissions: OptionSet {
+  let rawValue: Int
+  init(rawValue: Int) {
+    self.rawValue = rawValue
+  }
+  static let none       = Permissions(rawValue: 0)
+  static let publicAccess     = Permissions(rawValue: 1 << 0)
+  static let userRead   = Permissions(rawValue: 1 << 1)
+  static let userWrite  = Permissions(rawValue: 1 << 2)
+  static let userAll: Permissions = [userRead, userWrite]
+}
+
 
 

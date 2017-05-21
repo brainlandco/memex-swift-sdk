@@ -1,21 +1,13 @@
-//
-//  Memex.swift
-//  MemexSDK
-//
-//  Created by Adam Zdara on 03/03/2017.
-//  Copyright © 2017 MemexApp. All rights reserved.
-//
 
 import Foundation
-import Sushi
 import Atom
 
 public typealias Memex = Spaces
 
-public class Spaces: Sushi.Service {
+public class Spaces: Service {
   
   public init(appToken: String, environment: Environment = .production, verbose: Bool = false) {
-    let configuration = Sushi.Configuration(serverURL: Spaces.serverURL(forEnvironment: environment),
+    let configuration = Configuration(serverURL: Spaces.serverURL(forEnvironment: environment),
                                             appToken: appToken,
                                             logAllRequests: verbose,
                                             authTokenKey: Spaces.authToken(forEnvironment: environment),

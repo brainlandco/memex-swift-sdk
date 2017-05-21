@@ -9,7 +9,6 @@
 @testable import MemexSDK
 import XCTest
 import Atom
-import Sushi
 
 class UserOtherTests: XCTestCase {
   

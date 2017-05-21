@@ -1,10 +1,3 @@
-//
-//  MemexSDK.h
-//  MemexSDK
-//
-//  Created by Adam Zdara on 31/03/2017.
-//  Copyright © 2017 Adam Zdara. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
