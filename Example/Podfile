@@ -1,0 +1,9 @@
+use_frameworks!
+target 'MemexSwiftSDK_Tests' do
+  pod 'MemexSwiftSDK', :path => '../'
+  
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'ReachabilitySwift', '~> 3'
+  pod 'KeychainSwift', '~> 8.0'
+  
+end
