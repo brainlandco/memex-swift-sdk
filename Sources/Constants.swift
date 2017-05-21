@@ -63,33 +63,4 @@ public struct StandardHTTPHeader {
   static let contentType = "Content-Type"
 }
 
-public struct AuthTypes {
-  static let basic = "Basic"
-  static let bearer = "Bearer"
-}
-
-public enum AuthorizationMethod {
-  case userCredentials
-  case iCloudToken
-}
-
-public enum AuthorizationStatus: Int {
-  case unknown = -1
-  case notAuthorized = 0
-  case authorized = 1
-}
-
-struct Permissions: OptionSet {
-  let rawValue: Int
-  init(rawValue: Int) {
-    self.rawValue = rawValue
-  }
-  static let none       = Permissions(rawValue: 0)
-  static let publicAccess     = Permissions(rawValue: 1 << 0)
-  static let userRead   = Permissions(rawValue: 1 << 1)
-  static let userWrite  = Permissions(rawValue: 1 << 2)
-  static let userAll: Permissions = [userRead, userWrite]
-}
-
-
 

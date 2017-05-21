@@ -1,7 +1,5 @@
 
 import Foundation
-
-import Foundation
 import ObjectMapper
 
 public typealias PullLinksOutputs = (
@@ -32,6 +30,16 @@ public extension Spaces {
           let hasMore = response.metadata?["has_more"] as? Bool
           let nextOffset = response.metadata?["next_offset"] as? Int
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
+    }
+  }
+  
+  public func pushLinks(items: [Link],
+                        completion: @escaping PushOutputs) {
+    POST("links/batched",
+         parameters:["data": items.toJSON()]) { response in
+          let oldModelVersion = response.metadata?["old_model_version"] as? Int
+          let modelVersion = response.metadata?["model_version"] as? Int
+          completion(oldModelVersion, modelVersion, response.error)
     }
   }
 
