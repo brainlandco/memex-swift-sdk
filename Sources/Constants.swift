@@ -3,9 +3,8 @@ import Foundation
 
 public enum Environment: Int {
   case production = 0
-  case sandbox = 1
-  case staging = 2
-  case localhost = 3
+  case staging = 1
+  case local = 2
 }
 
 public enum ObjectState: Int {
@@ -21,7 +20,7 @@ public enum DataState: Int {
   case dataValid = 2
 }
 
-public enum Error: Int, Swift.Error {
+public enum MemexError: Int, Error {
   case generic
   case serverMaintanance
   case missingID
@@ -40,7 +39,6 @@ public enum Error: Int, Swift.Error {
   
   case genericServerError
 }
-
 
 
 public typealias VoidOutputs = (_ error: Swift.Error?)->()

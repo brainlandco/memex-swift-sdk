@@ -1,5 +1,5 @@
 
-public extension Service {
+public extension Spaces {
   
   public func deauthorize(
     completion: VoidOutputs) {

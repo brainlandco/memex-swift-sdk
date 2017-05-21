@@ -1,6 +1,5 @@
 
 import Foundation
-import Atom
 
 public class AuthorizationController {
   
@@ -14,7 +13,7 @@ public class AuthorizationController {
       self.persistToken(token: self.internalUserToken)
     }
   }
-  weak var service: Service?
+  weak var spaces: Spaces?
   let tokenKey: String
   public var userToken: String? {
     return self.syncLock.withCriticalScope {
@@ -24,10 +23,10 @@ public class AuthorizationController {
   
   // MARK: Lifecycle
   
-  init(service: Service) {
-    self.service = service
+  init(spaces: Spaces) {
+    self.spaces = spaces
     self.secretStore = KeychainSwift()
-    self.tokenKey = self.service?.configuration.authTokenKey ?? "authToken"
+    self.tokenKey = self.spaces?.configuration.authTokenKey ?? "authToken"
   }
   
   // MARK: Bootstrap
@@ -38,7 +37,7 @@ public class AuthorizationController {
       self.restorePersistedToken { token in
         if self.internalUserToken != token {
           self.internalUserToken = token
-          self.service?.emit(event: AuthorizationStatusChangedEvent(token: token))
+          self.spaces?.emit(event: AuthorizationStatusChangedEvent(token: token))
         }
         self.syncLock.unlock()
       }
@@ -74,7 +73,7 @@ public class AuthorizationController {
   }
   
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
-    self.service?.requestor.request(
+    self.spaces?.requestor.request(
       method: .POST,
       path: "auth/user",
       queryStringParameters: nil,
@@ -128,7 +127,7 @@ public class AuthorizationController {
           if self.secretStore.lastResultCode != noErr {
             NSLog("Failed to write token to Keychain: \(self.secretStore.lastResultCode).")
           }
-          throw Error.generic
+          throw MemexError.generic
         }
       } else {
         self.secretStore.delete(self.tokenKey)

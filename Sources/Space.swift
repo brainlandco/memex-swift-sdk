@@ -1,6 +1,6 @@
+
 import Foundation
 import ObjectMapper
-import Atom
 
 public class Space: JSONRepresentable, ObjectProtocol {
   

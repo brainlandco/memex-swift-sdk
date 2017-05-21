@@ -1,5 +1,5 @@
 
-public extension Service {
+public extension Spaces {
   
   func bootstrap(allowDeauthorization: Bool,
                  completion: @escaping VoidOutputs) {

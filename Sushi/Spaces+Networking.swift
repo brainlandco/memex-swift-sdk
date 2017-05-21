@@ -2,7 +2,7 @@
 import Foundation
 import ObjectMapper
 
-public extension Service {
+public extension Spaces {
   
   // MARK: Requesting
   

@@ -1,19 +1,18 @@
 
 import Foundation
-import Atom
 import ObjectMapper
 
 public class RequestInvoker {
   
   // MARK: Lifecycle
   
-  weak var service: Service?
+  weak var spaces: Spaces?
   var session: URLSession
   
   // MARK: Lifecycle
   
-  init(service: Service) {
-    self.service = service
+  init(spaces: Spaces) {
+    self.spaces = spaces
     self.session = URLSession(configuration: URLSessionConfiguration.default)
   }
   
@@ -31,10 +30,10 @@ public class RequestInvoker {
         path: path,
         queryStringParameters: queryStringParameters,
         bodyParameters: bodyParameters,
-        userToken: self.service!.auth.userToken)
+        userToken: self.spaces!.auth.userToken)
       self.invokeRequest(request: request, allowDeauthorization: true, completionHandler: completionHandler)
     } catch {
-      completionHandler(nil, nil, Error.JSONParsingError)
+      completionHandler(nil, nil, MemexError.JSONParsingError)
     }
   }
   
@@ -44,10 +43,10 @@ public class RequestInvoker {
            queryStringParameters: [String: Any]?,
            bodyParameters: [String: Any]?,
            userToken: String?) throws -> URLRequest {
-    let base = self.service!.configuration.serverURL.appendingPathComponent(path)
+    let base = self.spaces!.configuration.serverURL.appendingPathComponent(path)
     var path = "\(base.absoluteString)"
     if let query = queryStringParameters, !query.isEmpty {
-      if let queryString = self.service!.queryStringTransformer.queryStringFromParameters(parameters: queryStringParameters,
+      if let queryString = self.spaces!.queryStringTransformer.queryStringFromParameters(parameters: queryStringParameters,
                                                                                                 error: nil) {
         path = "\(path)?\(queryString)"
       }
@@ -59,7 +58,7 @@ public class RequestInvoker {
     if let userToken = userToken {
       request.setValue(userToken, forHTTPHeaderField: "X-User-Token")
     }
-    request.setValue(self.service!.configuration.appToken, forHTTPHeaderField: "X-App-Token")
+    request.setValue(self.spaces!.configuration.appToken, forHTTPHeaderField: "X-App-Token")
     if let body = bodyParameters {
       request.setValue(MIMETypes.JSON, forHTTPHeaderField: StandardHTTPHeader.contentType)
       let data = try JSONSerialization.data(withJSONObject: body, options: [])
@@ -101,7 +100,7 @@ public class RequestInvoker {
     var printLog = false
     switch code {
     case 200..<300:
-      printLog = printLog || self.service!.configuration.logAllRequests
+      printLog = printLog || self.spaces!.configuration.logAllRequests
       if data.count == 0 {
         completionHandler(nil, code, nil)
       } else {
@@ -109,7 +108,7 @@ public class RequestInvoker {
         do {
           content = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
         } catch {
-          completionHandler(nil, code, Error.JSONParsingError)
+          completionHandler(nil, code, MemexError.JSONParsingError)
           return
         }
         
@@ -148,22 +147,22 @@ public class RequestInvoker {
       }
       if notAuthorized {
         if allowDeauthorization {
-          self.service!.auth.deauthorize()
+          self.spaces!.auth.deauthorize()
         }
-        completionHandler(nil, code, Error.notAuthorized)
+        completionHandler(nil, code, MemexError.notAuthorized)
       } else {
         if code == 404 {
-          completionHandler(nil, code, Error.endpointNotFound)
+          completionHandler(nil, code, MemexError.endpointNotFound)
         } else {
-          completionHandler(nil, code, Error.genericClientError)
+          completionHandler(nil, code, MemexError.genericClientError)
         }
       }
     default:
       if code == 503 {
-        self.service?.healthChecker.observedEnabledMaintanance()
-        completionHandler(nil, code, Error.serverMaintanance)
+        self.spaces?.healthChecker.observedEnabledMaintanance()
+        completionHandler(nil, code, MemexError.serverMaintanance)
       } else {
-        completionHandler(nil, code, Error.genericServerError)
+        completionHandler(nil, code, MemexError.genericServerError)
       }
     }
   }

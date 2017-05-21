@@ -1,5 +1,5 @@
 
-public extension Service {
+public extension Spaces {
   
   typealias Outputs = (_ userToken: String?, _ error: Error?)->()
   

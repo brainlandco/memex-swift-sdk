@@ -1,6 +1,5 @@
 
 import Foundation
-import Atom
 
 public class Configuration {
   

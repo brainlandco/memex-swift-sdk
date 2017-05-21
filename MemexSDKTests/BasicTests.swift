@@ -1,10 +1,3 @@
-//
-//  CreateMemex.swift
-//  MemexSDK
-//
-//  Created by Adam Zdara on 05/03/2017.
-//
-//
 
 @testable import MemexSDK
 import XCTest

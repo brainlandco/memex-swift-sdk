@@ -1,7 +1,6 @@
 
-import Atom
 
-public extension Service {
+public extension Spaces {
   
   public func authorize(
     credentials: Credentials,

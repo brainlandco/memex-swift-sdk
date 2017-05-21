@@ -1,7 +1,6 @@
 
 import Foundation
 import ObjectMapper
-import Atom
 import CoreGraphics
 
 public class WebpageMetadata: JSONRepresentable {
