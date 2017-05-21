@@ -1,0 +1,33 @@
+{
+  "name": "MemexSwiftSDK",
+  "version": "1.0.0",
+  "summary": "Memex platform SDK.",
+  "description": "Memex platform SDK",
+  "homepage": "https://github.com/memexapp/memex-swift-sdk",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "adamzdara": "zdaraa@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/memexapp/memex-swift-sdk.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MemexSwiftSDK/Classes/**/*",
+  "dependencies": {
+    "ObjectMapper": [
+      "~> 2.2"
+    ],
+    "ReachabilitySwift": [
+      "~> 3"
+    ],
+    "KeychainSwift": [
+      "~> 8.0"
+    ]
+  }
+}
