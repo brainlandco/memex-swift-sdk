@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MemexSwiftSDK'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'Memex platform SDK.'
 
   s.description      = <<-DESC
