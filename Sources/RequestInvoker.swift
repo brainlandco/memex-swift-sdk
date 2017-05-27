@@ -186,10 +186,13 @@ public class RequestInvoker {
   func logRequest(request: URLRequest, response: URLResponse?, resposneData: Data?) {
     if let httpResponse = response as? HTTPURLResponse, let data = resposneData {
       let code = httpResponse.statusCode
-      let contentString = String(data: data, encoding: String.Encoding.utf8)
-      print("\n\nREQUEST:\n\n\(request.toCURL())\nRESPONSE:\n\nResponse Code: \(code)\nResponse Body:\n\(contentString)\n\n-------------")
+      var contentString = String(data: data, encoding: String.Encoding.utf8)
+      if contentString == nil {
+        contentString = "nil"
+      }
+      NSLog("\n\nREQUEST:\n\n\(request.toCURL())\nRESPONSE:\n\nResponse Code: \(code)\nResponse Body:\n\(contentString!)\n\n-------------")
     } else {
-      print("\n\nREQUEST:\n\n\(request.toCURL())")
+      NSLog("\n\nREQUEST:\n\n\(request.toCURL())")
     }
   }
 }
