@@ -16,10 +16,16 @@ public typealias PushOutputs = (
   _ error: Swift.Error?)->()
 
 
+public enum ProcessingMode: String {
+  case No = "no"
+  case Async = "async"
+  case Sync = "sync"
+}
+
 public extension Spaces {
   
   public func createSpace(space: Space,
-                          process: Bool,
+                          process: ProcessingMode,
                           autodump: Bool,
                           completion: @escaping (_ spaceMUID: String?, _ error: Swift.Error?)->()) {
     var spaceJSON = space.toJSON()
@@ -27,7 +33,7 @@ public extension Spaces {
       media.toJSON()
     }
     let parameters: [String: Any] = ["space": spaceJSON,
-                                     "process": process,
+                                     "process": process.rawValue,
                                      "autodump": autodump]
     POST("spaces", parameters: parameters ) { response in
       let space = response.contentDictionary?["space"] as? [String: Any]
