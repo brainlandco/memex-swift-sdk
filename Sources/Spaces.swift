@@ -38,9 +38,9 @@ public class Spaces {
   private static func serverURL(forEnvironment environment: Environment) -> URL {
     switch environment{
     case .production:
-      return URL(string: "https://mmx-spaces-prod.herokuapp.com")!
+      return URL(string: "https://mmx-spaces-api-prod.herokuapp.com")!
     case .staging:
-      return URL(string: "https://mmx-spaces-stage.herokuapp.com")!
+      return URL(string: "https://mmx-spaces-api-stage.herokuapp.com")!
     case .local:
       return URL(string: "http://10.0.0.38:5000")!
     }
