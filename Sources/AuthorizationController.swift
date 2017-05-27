@@ -53,8 +53,12 @@ public class AuthorizationController {
   func authorizeWithCredentials(credentials: Credentials,
                                 completionHandler: @escaping TokenResponse) {
     self.authorizeWithBodyParameters(bodyParameters: [
-      "email": credentials.identifier,
-      "password": credentials.secret
+      "identity": [
+        "email": credentials.identifier
+      ],
+      "secret": [
+        "password": credentials.secret
+      ]
       ],
                                      completionHandler: completionHandler)
   }
@@ -62,7 +66,7 @@ public class AuthorizationController {
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
     self.spaces?.requestor.request(
       method: .POST,
-      path: "auth/login",
+      path: "users/request-token",
       queryStringParameters: nil,
       bodyParameters: bodyParameters,
       completionHandler: { [weak self] content, code, error in
