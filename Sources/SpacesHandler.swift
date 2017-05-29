@@ -44,7 +44,7 @@ public extension Spaces {
   public func pushSpaces(items: [Space],
                          completion: @escaping PushOutputs) {
     POST("spaces/multiple",
-         parameters:["data": items.toJSON()]) { response in
+         parameters:["spaces": items.toJSON()]) { response in
           let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
           let modelVersion = response.contentDictionary?["model_version"] as? Int
           completion(oldModelVersion, modelVersion, response.error)
