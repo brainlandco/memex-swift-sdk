@@ -4,21 +4,21 @@ import Foundation
 public class Configuration {
   
   let serverURL: URL
-  let appToken: String!
+  let appToken: String
   let logAllRequests: Bool
-  let authTokenKey: String!
-  let authFirstLaunchKey: String!
+  let userTokenKey: String
+  let allowDeauthorization: Bool
   
   public init(serverURL: URL,
               appToken: String,
               logAllRequests: Bool,
-              authTokenKey: String,
-              authFirstLaunchKey: String) {
+              userTokenKey: String,
+              allowDeauthorization: Bool) {
     self.serverURL = serverURL
     self.appToken = appToken
     self.logAllRequests = logAllRequests
-    self.authTokenKey = authTokenKey
-    self.authFirstLaunchKey = authFirstLaunchKey
+    self.userTokenKey = userTokenKey
+    self.allowDeauthorization = allowDeauthorization
   }
   
 }

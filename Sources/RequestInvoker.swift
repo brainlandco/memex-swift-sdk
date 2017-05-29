@@ -31,7 +31,9 @@ public class RequestInvoker {
         queryStringParameters: queryStringParameters,
         bodyParameters: bodyParameters,
         userToken: self.spaces!.auth.userToken)
-      self.invokeRequest(request: request, allowDeauthorization: true, completionHandler: completionHandler)
+      self.invokeRequest(request: request,
+                         allowDeauthorization: self.spaces?.configuration.allowDeauthorization ?? false,
+                         completionHandler: completionHandler)
     } catch {
       completionHandler(nil, nil, MemexError.JSONParsingError)
     }

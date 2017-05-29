@@ -27,7 +27,7 @@ public class AuthorizationController {
   init(spaces: Spaces) {
     self.spaces = spaces
     self.secretStore = KeychainSwift()
-    self.tokenKey = spaces.configuration.authTokenKey
+    self.tokenKey = spaces.configuration.userTokenKey
   }
   
   // MARK: Bootstrap

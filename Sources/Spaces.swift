@@ -15,12 +15,16 @@ public class Spaces {
   
   // MARK: Executables
 
-  public init(appToken: String, environment: Environment = .production, verbose: Bool = false) {
+  public init(appToken: String,
+              environment: Environment = .production,
+              verbose: Bool = false,
+              userTokenKey: String? = nil,
+              allowDeauthorization: Bool = true) {
     self.configuration = Configuration(serverURL: Spaces.serverURL(forEnvironment: environment),
                                       appToken: appToken,
                                       logAllRequests: verbose,
-                                      authTokenKey: Spaces.authToken(forEnvironment: environment),
-                                      authFirstLaunchKey: "firstLaunch")
+                                      userTokenKey: userTokenKey != nil ? userTokenKey! : Spaces.authToken(forEnvironment: environment),
+                                      allowDeauthorization: allowDeauthorization)
     
     self.queryStringTransformer = QueryStringTransformer()
     
