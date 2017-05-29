@@ -35,7 +35,7 @@ public extension Spaces {
   
   public func pushLinks(items: [Link],
                         completion: @escaping PushOutputs) {
-    POST("links/batched",
+    POST("links/multiple",
          parameters:["data": items.toJSON()]) { response in
           let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
           let modelVersion = response.contentDictionary?["model_version"] as? Int

@@ -26,7 +26,7 @@ public extension Spaces {
   
   public func pushMedia(items: [Media],
                         completion: @escaping PushOutputs) {
-    POST("media/batched",
+    POST("media/multiple",
          parameters:["data": items.toJSON()]) { response in
           let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
           let modelVersion = response.contentDictionary?["model_version"] as? Int
