@@ -53,11 +53,11 @@ public class Spaces {
   private static func authToken(forEnvironment environment: Environment) -> String {
     switch environment{
     case .production:
-      return "SUAuthorizationController.token"
+      return "userToken.prod"
     case .staging:
-      return "SUAuthorizationController.token.dev"
+      return "userToken.stage"
     case .local:
-      return "SUAuthorizationController.token.dev"
+      return "userToken.local"
     }
   }
   
