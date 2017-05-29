@@ -31,7 +31,7 @@ public extension Spaces {
     let id = userID == User.Constants.myselfUserID ? "self" : "\(userID!)"
     GET("users/\(id)",
     parameters: nil) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["user"]), response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
     }
   }
   

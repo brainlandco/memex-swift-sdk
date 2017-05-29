@@ -24,11 +24,11 @@ public extension Spaces {
     }
     GET("users/self/links",
         parameters: parameters) { [weak self] response in
-          let items: [Link]? = self?.entitiesFromArray(array: response.data)
-          let modelVersion = response.metadata?["model_version"] as? Int
-          let totalItems = response.metadata?["total"] as? Int
-          let hasMore = response.metadata?["has_more"] as? Bool
-          let nextOffset = response.metadata?["next_offset"] as? Int
+          let items: [Link]? = self?.entitiesFromArray(array: response.contentDictionary?["links"])
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
+          let totalItems = response.contentDictionary?["total"] as? Int
+          let hasMore = response.contentDictionary?["has_more"] as? Bool
+          let nextOffset = response.contentDictionary?["next_offset"] as? Int
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }
@@ -37,8 +37,8 @@ public extension Spaces {
                         completion: @escaping PushOutputs) {
     POST("links/batched",
          parameters:["data": items.toJSON()]) { response in
-          let oldModelVersion = response.metadata?["old_model_version"] as? Int
-          let modelVersion = response.metadata?["model_version"] as? Int
+          let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
           completion(oldModelVersion, modelVersion, response.error)
     }
   }

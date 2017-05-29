@@ -19,7 +19,7 @@ public extension Spaces {
          parameters: [
           "media": Mapper<Media>().toJSON(media)
     ]) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["media"]),
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]),
                  response.error)
     }
   }
@@ -28,8 +28,8 @@ public extension Spaces {
                         completion: @escaping PushOutputs) {
     POST("media/batched",
          parameters:["data": items.toJSON()]) { response in
-          let oldModelVersion = response.metadata?["old_model_version"] as? Int
-          let modelVersion = response.metadata?["model_version"] as? Int
+          let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
           completion(oldModelVersion, modelVersion, response.error)
     }
   }
@@ -46,11 +46,11 @@ public extension Spaces {
     }
     GET("users/self/media",
         parameters: parameters) { [weak self] response in
-          let items: [Media]? = self?.entitiesFromArray(array: response.data)
-          let modelVersion = response.metadata?["model_version"] as? Int
-          let totalItems = response.metadata?["total"] as? Int
-          let hasMore = response.metadata?["has_more"] as? Bool
-          let nextOffset = response.metadata?["next_offset"] as? Int
+          let items: [Media]? = self?.entitiesFromArray(array: response.contentDictionary?["media"])
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
+          let totalItems = response.contentDictionary?["total"] as? Int
+          let hasMore = response.contentDictionary?["has_more"] as? Bool
+          let nextOffset = response.contentDictionary?["next_offset"] as? Int
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }
@@ -58,7 +58,7 @@ public extension Spaces {
   public func getMedia(media: Media,
                        completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     GET("media/\(media.MUID!)") { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.dataDictionary?["media"]), response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]), response.error)
     }
   }
   

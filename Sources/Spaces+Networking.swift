@@ -81,9 +81,6 @@ public extension Spaces {
     response.content = content as AnyObject?
     if let error = error {
       response.error = error
-    } else {
-      response.data = content?["data"]
-      response.metadata = content?["meta"] as? [String: Any]
     }
     responseHandler?(response)
   }
