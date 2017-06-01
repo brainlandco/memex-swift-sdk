@@ -22,7 +22,7 @@ public extension Spaces {
     if let value = offset {
       parameters["offset"] = value
     }
-    GET("users/self/links",
+    GET("links",
         parameters: parameters) { [weak self] response in
           let items: [Link]? = self?.entitiesFromArray(array: response.contentDictionary?["links"])
           let modelVersion = response.contentDictionary?["model_version"] as? Int

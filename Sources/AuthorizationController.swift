@@ -38,7 +38,7 @@ public class AuthorizationController {
       self.restorePersistedToken { token in
         if self.internalUserToken != token {
           self.internalUserToken = token
-          self.spaces?.emit(event: AuthorizationStatusChangedEvent(token: token))
+          self.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: token))
         }
         self.syncLock.unlock()
       }
@@ -63,6 +63,16 @@ public class AuthorizationController {
                                      completionHandler: completionHandler)
   }
   
+  func authorizeWithOnboardingToken(token: String,
+                                    completionHandler: @escaping TokenResponse) {
+    self.authorizeWithBodyParameters(bodyParameters: [
+      "secret": [
+        "onboarding_token": token
+      ]
+      ],
+                                     completionHandler: completionHandler)
+  }
+  
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
     self.spaces?.requestor.request(
       method: .POST,
@@ -70,10 +80,14 @@ public class AuthorizationController {
       queryStringParameters: nil,
       bodyParameters: bodyParameters,
       completionHandler: { [weak self] content, code, error in
+        guard let strongSelf = self else { return };
         let token = content?["token"] as? String
         if error == nil {
-          self?.syncLock.withCriticalScope {
-            self?.internalUserToken = token
+          strongSelf.syncLock.withCriticalScope {
+            if strongSelf.internalUserToken != token {
+              strongSelf.internalUserToken = token
+              strongSelf.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: token))
+            }
           }
         }
         completionHandler(token, error)
@@ -82,7 +96,10 @@ public class AuthorizationController {
   
   func deauthorize() {
     self.syncLock.withCriticalScope {
-      self.internalUserToken = nil
+      if (self.internalUserToken != nil) {
+        self.internalUserToken = nil
+        self.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: nil))
+      }
     }
   }
   

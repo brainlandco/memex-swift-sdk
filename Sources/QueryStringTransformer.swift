@@ -62,7 +62,7 @@ class QueryStringTransformer {
         queryItems += self.queryItemsFromObject(object: nestedValue, key:"\(key)[]" as AnyObject!)
       }
     } else {
-      queryItems.append(URLQueryItem(name:key as! String, value:object as! String?))
+      queryItems.append(URLQueryItem(name:key as! String, value:"\(object!)"))
     }
     return queryItems
   }

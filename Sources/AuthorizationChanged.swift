@@ -1,13 +1,16 @@
-
 import Foundation
 
 public class AuthorizationStatusChangedEvent: Event {
   
-  let token: String?
+  public struct Constants {
+    public static let key = "AuthorizationStatusChangedEvent"
+  }
   
-  init(token: String?) {
-    self.token = token
-    super.init(name: "AuthorizationStatusChangedEvent")
+  public let userToken: String?
+  
+  init(userToken: String?) {
+    self.userToken = userToken
+    super.init(name: Constants.key)
   }
   
 }

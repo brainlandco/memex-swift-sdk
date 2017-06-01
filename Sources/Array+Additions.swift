@@ -1,6 +1,6 @@
 
-public extension Array {
-  public mutating func removeObject<U: Equatable>(object: U) -> U? {
+extension Array {
+  mutating func removeObject<U: Equatable>(object: U) -> U? {
     var foundIndex: Int?
     for (index, other) in self.enumerated() {
       if let to = other as? U {

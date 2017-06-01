@@ -18,9 +18,11 @@ public extension Spaces {
   }
   
   public func createUser(user: User,
+                         onboardingToken: String? = nil,
                          completion: @escaping VoidOutputs) {
     var parameters = [String: Any]()
     parameters["user"] = user.toJSON()
+    parameters["onboarding_token"] = onboardingToken
     POST("users", parameters: parameters) { response in
       completion(response.error)
     }

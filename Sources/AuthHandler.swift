@@ -16,6 +16,20 @@ public extension Spaces {
                                        completionHandler: completion)
   }
   
+  public func loginUserWithOnboardingToken(
+    token: String,
+    completion: @escaping VoidOutputs) {
+    let completion = { (token: String?, error: Swift.Error?) -> Void in
+      if error == nil {
+        completion(nil)
+      } else {
+        completion(error)
+      }
+    }
+    self.auth.authorizeWithOnboardingToken(token: token,
+                                           completionHandler: completion)
+  }
+  
   public func logout(
     completion: VoidOutputs) {
     self.auth.deauthorize()

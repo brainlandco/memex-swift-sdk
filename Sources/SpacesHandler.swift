@@ -17,9 +17,9 @@ public typealias PushOutputs = (
 
 
 public enum ProcessingMode: String {
-  case No = "no"
-  case Async = "async"
-  case Sync = "sync"
+  case no = "no"
+  case async = "async"
+  case sync = "sync"
 }
 
 public extension Spaces {
@@ -61,7 +61,7 @@ public extension Spaces {
     if let value = offset {
       parameters["offset"] = value
     }
-    GET("users/self/spaces",
+    GET("spaces",
         parameters: parameters) { [weak self] response in
           let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
           let modelVersion = response.contentDictionary?["model_version"] as? Int
@@ -79,6 +79,16 @@ public extension Spaces {
           "spaces": Mapper<SpaceVisit>().toJSONArray(visits)
     ]) { response in
       completion(response.error)
+    }
+  }
+  
+  public func getSpacesAbstract(muids: [String],
+                                completion: @escaping (_ caption: String?, _ error: Swift.Error?)->()) {
+    POST("spaces/abstract",
+         parameters: [
+          "space_MUIDs": muids
+    ]) { response in
+      completion(response.contentDictionary?["caption"] as? String, response.error)
     }
   }
 }

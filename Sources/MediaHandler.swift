@@ -44,7 +44,7 @@ public extension Spaces {
     if let value = offset {
       parameters["offset"] = value
     }
-    GET("users/self/media",
+    GET("media",
         parameters: parameters) { [weak self] response in
           let items: [Media]? = self?.entitiesFromArray(array: response.contentDictionary?["media"])
           let modelVersion = response.contentDictionary?["model_version"] as? Int
