@@ -41,6 +41,10 @@ public enum MemexError: Int, Error {
 }
 
 
+/**
+ - parameters:
+   - error: Error if something wrong happens
+ */
 public typealias VoidOutputs = (_ error: Swift.Error?)->()
 
 public typealias RequestCompletion = (_ content: [String: Any]?,
