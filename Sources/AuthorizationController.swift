@@ -32,7 +32,7 @@ public class AuthorizationController {
   
   // MARK: Bootstrap
   
-  func bootstrap(allowDeauthorization: Bool, completionHandler: @escaping ()->()) {
+  func bootstrap(completionHandler: @escaping ()->()) {
     dispatch_async_on_main {
       self.syncLock.lock()
       self.restorePersistedToken { token in

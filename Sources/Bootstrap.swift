@@ -1,8 +1,7 @@
 
 public extension Spaces {
   
-  func bootstrap(allowDeauthorization: Bool,
-                 completion: @escaping VoidOutputs) {
+  func prepare(completion: @escaping VoidOutputs) {
     if self.healthChecker == nil {
       self.healthChecker = HealthChecker(URL: self.configuration.serverURL,
                                          didChangeState: { [weak self] offline, maintanance in
@@ -11,7 +10,7 @@ public extension Spaces {
     } else {
       self.healthChecker.startMaintananceObserver(restart: true)
     }
-    self.auth.bootstrap(allowDeauthorization: allowDeauthorization) {
+    self.auth.bootstrap() {
       completion(nil)
     }
   }
