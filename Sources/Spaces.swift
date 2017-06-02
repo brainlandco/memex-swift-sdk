@@ -7,7 +7,7 @@ public class Spaces {
   
   // MARK: Data
   
-  public let configuration: Configuration
+  let configuration: Configuration
   var auth: AuthorizationController!
   var requestor: RequestInvoker!
   let queryStringTransformer: QueryStringTransformer

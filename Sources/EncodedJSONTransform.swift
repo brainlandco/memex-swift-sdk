@@ -2,14 +2,14 @@
 import Foundation
 import ObjectMapper
 
-public class EncodedJSONTransform: TransformType {
+class EncodedJSONTransform: TransformType {
   
-  public typealias Object = [String: Any]
-  public typealias JSON = String
+  typealias Object = [String: Any]
+  typealias JSON = String
   
-  public init() {}
+  init() {}
   
-  public func transformFromJSON(_ value: Any?) -> [String: Any]? {
+  func transformFromJSON(_ value: Any?) -> [String: Any]? {
     if let string = value as? String {
       do {
         let data = string.data(using: String.Encoding.utf8)!
@@ -23,7 +23,7 @@ public class EncodedJSONTransform: TransformType {
     return nil
   }
   
-  public func transformToJSON(_ value: [String: Any]?) -> String? {
+  func transformToJSON(_ value: [String: Any]?) -> String? {
     if let value = value {
       let data = try! JSONSerialization.data(withJSONObject: value, options: [])
       let string = String(data: data, encoding: String.Encoding.utf8)

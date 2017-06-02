@@ -2,7 +2,7 @@
 import Foundation
 import ObjectMapper
 
-public class RequestInvoker {
+class RequestInvoker {
   
   // MARK: Lifecycle
   
@@ -18,7 +18,7 @@ public class RequestInvoker {
   
   // MARK: General
   
-  public func request(
+  func request(
     method: HTTPMethod,
     path: String,
     queryStringParameters: [String: Any]? = nil,
@@ -58,11 +58,11 @@ public class RequestInvoker {
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
     if let userToken = userToken {
-      request.setValue(userToken, forHTTPHeaderField: "X-User-Token")
+      request.setValue(userToken, forHTTPHeaderField: HTTPHeader.userToken)
     }
-    request.setValue(self.spaces!.configuration.appToken, forHTTPHeaderField: "X-App-Token")
+    request.setValue(self.spaces!.configuration.appToken, forHTTPHeaderField: HTTPHeader.appToken)
     if let body = bodyParameters {
-      request.setValue(MIMETypes.JSON, forHTTPHeaderField: StandardHTTPHeader.contentType)
+      request.setValue(MIMETypes.JSON, forHTTPHeaderField: HTTPHeader.contentType)
       let data = try JSONSerialization.data(withJSONObject: body, options: [])
       request.httpBody = data
     }

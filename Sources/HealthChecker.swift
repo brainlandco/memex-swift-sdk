@@ -1,4 +1,3 @@
-
 import Foundation
 import ReachabilitySwift
 
@@ -48,7 +47,7 @@ class HealthChecker: NSObject {
       }
       try self.reachability.startNotifier()
     } catch {
-      print("Unable to setup Reachability")
+      NSLog("Unable to setup Reachability")
     }
   }
   
@@ -87,7 +86,7 @@ class HealthChecker: NSObject {
   }
   
   func checkMaintanance() {
-    print("Will check maintanance status (attempt: \(self.attemptsCount))")
+    NSLog("Will check maintanance status (attempt: \(self.attemptsCount))")
     let task = URLSession.shared.dataTask(with: self.observedURL) { (data, response, error) in
       self.lock.withCriticalScope(block: {
         if error == nil {

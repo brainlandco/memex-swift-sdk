@@ -2,7 +2,7 @@
 import Foundation
 import KeychainSwift
 
-public class AuthorizationController {
+class AuthorizationController {
   
   // MARK: Properties
   
@@ -16,7 +16,7 @@ public class AuthorizationController {
   }
   weak var spaces: Spaces?
   let tokenKey: String
-  public var userToken: String? {
+  var userToken: String? {
     return self.syncLock.withCriticalScope {
       self.internalUserToken
     }

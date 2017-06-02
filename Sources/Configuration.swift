@@ -1,7 +1,7 @@
 
 import Foundation
 
-public class Configuration {
+class Configuration {
   
   let serverURL: URL
   let appToken: String
@@ -9,7 +9,7 @@ public class Configuration {
   let userTokenKey: String
   let allowDeauthorization: Bool
   
-  public init(serverURL: URL,
+  init(serverURL: URL,
               appToken: String,
               logAllRequests: Bool,
               userTokenKey: String,

@@ -2,9 +2,13 @@
 import Foundation
 import ObjectMapper
 
+/// Defines object that describes each visit of space
 public class SpaceVisit: JSONRepresentable {
   
+  /// MUID of space that was visited
   public var spaceMUID: String?
+  
+  /// Timestamp of visit
   public var visitedAt: Date?
   
   public required init() {

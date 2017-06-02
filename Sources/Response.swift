@@ -1,15 +1,15 @@
 
 import Foundation
 
-public class Response {
+class Response {
   
-  public var content: Any?
-  public var contentDictionary: [String: Any]? {
+  var content: Any?
+  var contentDictionary: [String: Any]? {
     return self.content as? [String: Any]
   }
-  public var error: Swift.Error?
+  var error: Swift.Error?
   
-  public init() {
+  init() {
   }
   
 }

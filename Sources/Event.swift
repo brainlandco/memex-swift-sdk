@@ -1,6 +1,7 @@
 
 import Foundation
 
+/// Base Event/Notification class
 public class Event {
   
   let name: String

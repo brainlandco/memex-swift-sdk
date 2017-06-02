@@ -6,6 +6,7 @@ public protocol JSONRepresentableProtocol {
   init()
 }
 
+/// Base entity object
 open class JSONRepresentable: NSObject, Mappable, JSONRepresentableProtocol {
   
   public required override init() {
