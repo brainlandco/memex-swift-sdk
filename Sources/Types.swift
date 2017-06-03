@@ -63,6 +63,51 @@ public enum MemexError: Int, Error {
 public typealias VoidOutputs = (_ error: Swift.Error?)->()
 
 
+/**
+ Structure of response of pull method
+ 
+ - parameter items: Set of items
+ - parameter modelVersion: Pulled model verion. Can be stored and next time used and downloaded only diff of changes.
+ - parameter totalItems: Total number of all items (all pages)
+ - parameter hasMore: Flag if there is more pages
+ - parameter nextOffset: Next page offset
+ - parameter error: Error if something wrong happens
+ 
+ */
+public typealias PullOutputs<T> = (
+  _ items: [T]?,
+  _ modelVersion: Int?,
+  _ totalItems: Int?,
+  _ hasMore: Bool?,
+  _ nextOffset: Int?,
+  _ error: Swift.Error?)->()
+
+
+/**
+ Structure of response of push method
+ 
+ - parameter oldModelVersion: User model version before changes were applied
+ - parameter modelVersion: User model version after changes were applied
+ - parameter error: Error if something wrong happens
+ 
+ */
+public typealias PushOutputs = (
+  _ oldModelVersion: Int?,
+  _ modelVersion: Int?,
+  _ error: Swift.Error?)->()
+
+
+/// Space processing mode tells when will be space processed (eg. webpage thumbnail and summary will be generated)
+public enum ProcessingMode: String {
+  /// No processing is required
+  case no = "no"
+  /// Processing will be performed asynchrounously after response is delivered
+  case async = "async"
+  /// Processing results will be included in response
+  case sync = "sync"
+}
+
+
 typealias RequestCompletion = (_ content: [String: Any]?,
   _ code: Int?,
   _ error: Swift.Error?)->()

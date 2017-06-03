@@ -1,19 +1,20 @@
 import Foundation
 import ObjectMapper
 
-public typealias PullLinksOutputs = (
-  _ items: [Link]?,
-  _ modelVersion: Int?,
-  _ totalItems: Int?,
-  _ hasMore: Bool?,
-  _ nextOffset: Int?,
-  _ error: Swift.Error?)->()
 
 public extension Spaces {
   
+  /**
+   Method for fetching all accessible links.
+   
+   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
+   - parameter offset: There can be only limited number of items in response so pagination offset can be sometimes needed.
+   - parameter completion: Completion block.
+   
+   */
   public func pullLinks(lastModelVersion: Int?,
                         offset: Int?,
-                        completion: @escaping PullLinksOutputs) {
+                        completion: @escaping PullOutputs<Link>) {
     var parameters = [String: Any]()
     if let value = lastModelVersion {
       parameters["last_model_version"] = value
@@ -32,6 +33,14 @@ public extension Spaces {
     }
   }
   
+  
+  /**
+   This method allows you to sync multiple links
+   
+   - parameter items: Set of new or changed links
+   - parameter completion: Completion block
+   
+   */
   public func pushLinks(items: [Link],
                         completion: @escaping PushOutputs) {
     POST("links/multiple",

@@ -32,7 +32,7 @@
 		79F8EBCF1ED23C46005874BE /* ColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA21ED23C46005874BE /* ColorTransform.swift */; };
 		79F8EBD01ED23C46005874BE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA31ED23C46005874BE /* Configuration.swift */; };
 		79F8EBD11ED23C46005874BE /* ConnectionHealthChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA41ED23C46005874BE /* ConnectionHealthChanged.swift */; };
-		79F8EBD21ED23C46005874BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA51ED23C46005874BE /* Constants.swift */; };
+		79F8EBD21ED23C46005874BE /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA51ED23C46005874BE /* Types.swift */; };
 		79F8EBD31ED23C46005874BE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA61ED23C46005874BE /* Credentials.swift */; };
 		79F8EBD41ED23C46005874BE /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA71ED23C46005874BE /* CustomOperators.swift */; };
 		79F8EBD51ED23C46005874BE /* DecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F8EBA81ED23C46005874BE /* DecimalNumberTransform.swift */; };
@@ -197,7 +197,7 @@
 		79F8EBA21ED23C46005874BE /* ColorTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTransform.swift; sourceTree = "<group>"; };
 		79F8EBA31ED23C46005874BE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		79F8EBA41ED23C46005874BE /* ConnectionHealthChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHealthChanged.swift; sourceTree = "<group>"; };
-		79F8EBA51ED23C46005874BE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		79F8EBA51ED23C46005874BE /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		79F8EBA61ED23C46005874BE /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		79F8EBA71ED23C46005874BE /* CustomOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		79F8EBA81ED23C46005874BE /* DecimalNumberTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalNumberTransform.swift; sourceTree = "<group>"; };
@@ -421,7 +421,7 @@
 				79F8EBA21ED23C46005874BE /* ColorTransform.swift */,
 				79F8EBA31ED23C46005874BE /* Configuration.swift */,
 				79F8EBA41ED23C46005874BE /* ConnectionHealthChanged.swift */,
-				79F8EBA51ED23C46005874BE /* Constants.swift */,
+				79F8EBA51ED23C46005874BE /* Types.swift */,
 				79F8EBA61ED23C46005874BE /* Credentials.swift */,
 				79F8EBA71ED23C46005874BE /* CustomOperators.swift */,
 				79F8EBA81ED23C46005874BE /* DecimalNumberTransform.swift */,
@@ -785,7 +785,7 @@
 				79F8EBCA1ED23C46005874BE /* AuthorizationController.swift in Sources */,
 				B074E6AE0699389F5122F034CA91CC8E /* MemexSwiftSDK-dummy.m in Sources */,
 				79F8EBE61ED23C46005874BE /* ObjectProtocol.swift in Sources */,
-				79F8EBD21ED23C46005874BE /* Constants.swift in Sources */,
+				79F8EBD21ED23C46005874BE /* Types.swift in Sources */,
 				79F8EBEC1ED23C46005874BE /* Spaces.swift in Sources */,
 				79F8EBDB1ED23C46005874BE /* Event.swift in Sources */,
 				79F8EBDC1ED23C46005874BE /* HealthChecker.swift in Sources */,

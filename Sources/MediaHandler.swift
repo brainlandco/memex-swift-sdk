@@ -1,17 +1,18 @@
 import Foundation
 import ObjectMapper
 
-public typealias PullMediaOutputs = (
-  _ items: [Media]?,
-  _ modelVersion: Int?,
-  _ totalItems: Int?,
-  _ hasMore: Bool?,
-  _ nextOffset: Int?,
-  _ error: Swift.Error?)->()
-
 
 public extension Spaces {
   
+  /**
+   New media creation. If there is some data that needs to be uploaded put it to dataUploadURL and call markMediaAsUploaded.
+   
+   - parameter media: New space object
+   - parameter completion: Completion block
+   - parameter media: Media object with valid dataUploadURL
+   - parameter error: Error if something wrong happens
+   
+   */
   public func createMedia(media: Media,
                           completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     POST("media",
@@ -23,6 +24,27 @@ public extension Spaces {
     }
   }
   
+  /**
+   Marks media data as uploaded. It means that data was uploaded to dataUploadURL and dataState now can change to valid state.
+   
+   - parameter media: Media object with existing MUID.
+   - parameter completion: Completion block with error if operation cant be finished.
+   
+   */
+  public func markMediaAsUploaded(media: Media,
+                                  completion: @escaping VoidOutputs) {
+    POST("media/\(media.MUID!)") { response in
+      completion(response.error)
+    }
+  }
+  
+  /**
+   This method allows you to sync multiple media.
+   
+   - parameter items: Set of new or changed links
+   - parameter completion: Completion block
+   
+   */
   public func pushMedia(items: [Media],
                         completion: @escaping PushOutputs) {
     POST("media/multiple",
@@ -33,9 +55,17 @@ public extension Spaces {
     }
   }
   
+  /**
+   Method for fetching all accessible media.
+   
+   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
+   - parameter offset: There can be only limited number of items in response so pagination offset can be sometimes needed.
+   - parameter completion: Completion block.
+   
+   */
   public func pullMedia(lastModelVersion: Int?,
                         offset: Int?,
-                        completion: @escaping PullMediaOutputs) {
+                        completion: @escaping PullOutputs<Media>) {
     var parameters = [String: Any]()
     if let value = lastModelVersion {
       parameters["last_model_version"] = value
@@ -54,17 +84,19 @@ public extension Spaces {
     }
   }
   
+  /**
+   Returns media object. It can be used when dataDownloadURL is expired and new is needed.
+   
+   - parameter media: Media object with existing MUID.
+   - parameter completion: Completion block.
+   - parameter media: Renewed media object
+   - parameter error: Error if something wrong happens
+   
+   */
   public func getMedia(media: Media,
                        completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     GET("media/\(media.MUID!)") { [weak self] response in
       completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]), response.error)
-    }
-  }
-  
-  public func markMediaAsUploaded(media: Media,
-                                  completion: @escaping VoidOutputs) {
-    POST("media/\(media.MUID!)") { response in
-      completion(response.error)
     }
   }
   
