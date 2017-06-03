@@ -1,7 +1,18 @@
-
 import Foundation
 import ObjectMapper
 
+
+/**
+ Structure of response of pull method
+ 
+ - parameter items: Set of items
+ - parameter modelVersion: Pulled model verion. Can be stored and next time used and downloaded only diff of changes.
+ - parameter totalItems: Total number of all items (all pages)
+ - parameter hasMore: Flag if there is more pages
+ - parameter nextOffset: Next page offset
+ - parameter error: Error if something wrong happens
+ 
+ */
 public typealias PullSpacesOutputs = (
   _ items: [Space]?,
   _ modelVersion: Int?,
@@ -10,20 +21,45 @@ public typealias PullSpacesOutputs = (
   _ nextOffset: Int?,
   _ error: Swift.Error?)->()
 
+
+/**
+ Structure of response of push method
+ 
+ - parameter oldModelVersion: User model version before changes were applied
+ - parameter modelVersion: User model version after changes were applied
+ - parameter error: Error if something wrong happens
+ 
+ */
 public typealias PushOutputs = (
   _ oldModelVersion: Int?,
   _ modelVersion: Int?,
   _ error: Swift.Error?)->()
 
 
+/// Space processing mode tells when will be space processed (eg. webpage thumbnail and summary will be generated)
 public enum ProcessingMode: String {
+  /// No processing is required
   case no = "no"
+  /// Processing will be performed asynchrounously after response is delivered
   case async = "async"
+  /// Processing results will be included in response
   case sync = "sync"
 }
 
 public extension Spaces {
   
+  
+  /**
+   New space creation.
+   
+   - parameter space: New space object
+   - parameter process: Tells if/how you want to process this space.
+   - parameter autodump: If true it will automatically link space with most related already existing space
+   - parameter completion: Completion block
+   - parameter spaceMUID: MUID of created space
+   - parameter error: Error if something wrong happens
+   
+   */
   public func createSpace(space: Space,
                           process: ProcessingMode,
                           autodump: Bool,
@@ -41,6 +77,14 @@ public extension Spaces {
     }
   }
   
+  
+  /**
+   If you want create multiple spaces or sync your local model then this method is for you.
+   
+   - parameter items: Set of new or changed spaces
+   - parameter completion: Completion block
+   
+   */
   public func pushSpaces(items: [Space],
                          completion: @escaping PushOutputs) {
     POST("spaces/multiple",
@@ -51,6 +95,14 @@ public extension Spaces {
     }
   }
   
+  /**
+   Method for fetching all accessible spaces.
+   
+   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
+   - parameter offset: There can be only limited number of spaces in response so pagination offset can be sometimes needed.
+   - parameter completion: Completion block.
+   
+   */
   public func pullSpaces(lastModelVersion: Int?,
                          offset: Int?,
                          completion: @escaping PullSpacesOutputs) {
@@ -72,6 +124,14 @@ public extension Spaces {
     }
   }
   
+  
+  /**
+   Logs space visits
+   
+   - parameter visits: Array of space visits. Can contain multiple spaces with same MUID.
+   - parameter completion: Completion block that returns error if something wrong happens.
+   
+   */
   public func logSpaceVisits(visits: [SpaceVisit],
                              completion: @escaping VoidOutputs) {
     POST("spaces/log-visits",
@@ -82,6 +142,15 @@ public extension Spaces {
     }
   }
   
+  /**
+   Returns abstraction (caption) for set of spaces
+   
+   - parameter muids: Set of space MUIDs for that will be caption generated
+   - parameter completion: Completion block
+   - parameter caption: Automatically generated caption
+   - parameter error: Error if something wrong happens
+   
+   */
   public func getSpacesAbstract(muids: [String],
                                 completion: @escaping (_ caption: String?, _ error: Swift.Error?)->()) {
     POST("spaces/abstract",
