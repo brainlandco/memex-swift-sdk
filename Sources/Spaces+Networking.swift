@@ -2,13 +2,13 @@
 import Foundation
 import ObjectMapper
 
-public extension Spaces {
+extension Spaces {
   
   // MARK: Requesting
   
-  public typealias ResponseHandlerClosure = (_ response: Response)->()
+  typealias ResponseHandlerClosure = (_ response: Response)->()
   
-  public func HEAD(endpoint: String,
+  func HEAD(endpoint: String,
                    parameters: [String: Any]? = nil,
                    completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
@@ -21,7 +21,7 @@ public extension Spaces {
       })
   }
   
-  public func GET(_ endpoint: String,
+  func GET(_ endpoint: String,
                   parameters: [String: Any]? = nil,
                   completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
@@ -34,7 +34,7 @@ public extension Spaces {
       })
   }
   
-  public func POST(_ endpoint: String,
+  func POST(_ endpoint: String,
                    parameters: [String: Any]? = nil,
                    completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
@@ -47,7 +47,7 @@ public extension Spaces {
       })
   }
   
-  public func PUT(_ endpoint: String,
+  func PUT(_ endpoint: String,
                   parameters: [String: Any]? = nil,
                   completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
@@ -60,7 +60,7 @@ public extension Spaces {
       })
   }
   
-  public func DELETE(_ endpoint: String,
+  func DELETE(_ endpoint: String,
                      parameters: [String: Any]? = nil,
                      completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
@@ -87,22 +87,22 @@ public extension Spaces {
   
   // MARK: Helpers
   
-  public func dictionaryFromObject<T: JSONRepresentable>(object: T?) -> Any?? {
+  func dictionaryFromObject<T: JSONRepresentable>(object: T?) -> Any?? {
     guard let object = object else { return nil }
     return Mapper<T>().toJSON(object)
   }
   
-  public func dictionaryFromEntity<T: JSONRepresentable>(array: [T]?) -> Any?? {
+  func dictionaryFromEntity<T: JSONRepresentable>(array: [T]?) -> Any?? {
     guard let array = array else { return nil }
     return Mapper<T>().toJSONArray(array)
   }
   
-  public func entityFromDictionary<T: JSONRepresentable>(dictionary: Any?) -> T? {
+  func entityFromDictionary<T: JSONRepresentable>(dictionary: Any?) -> T? {
     guard let castedDictionary = dictionary as? [String: Any] else { return nil }
     return Mapper<T>().map(JSON: castedDictionary)
   }
   
-  public func entitiesFromArray<T: JSONRepresentable>(array: Any?) -> [T]? {
+  func entitiesFromArray<T: JSONRepresentable>(array: Any?) -> [T]? {
     guard let castedArray = array as? [[String: Any]] else { return nil }
     
     var entitites = [T]()
@@ -115,7 +115,7 @@ public extension Spaces {
     return entitites
   }
   
-  public func parametersFromPagination(pagination: [String: Any]?) -> [String: Any] {
+  func parametersFromPagination(pagination: [String: Any]?) -> [String: Any] {
     var parameters = [String: Any]()
     if let pagination = pagination {
       parameters["pagination"] = pagination
@@ -123,7 +123,7 @@ public extension Spaces {
     return parameters
   }
   
-  public func paginationFromMetadata(metadata: [String: Any]?) -> [String: Any]? {
+  func paginationFromMetadata(metadata: [String: Any]?) -> [String: Any]? {
     let pagination = metadata?["pagination"] as? [String: Any]
     if pagination?.isEmpty == true {
       return nil
@@ -132,7 +132,7 @@ public extension Spaces {
     }
   }
   
-  public func nextPageParameters(metadata: [String: Any]?) -> [String: Any]? {
+  func nextPageParameters(metadata: [String: Any]?) -> [String: Any]? {
     return self.paginationFromMetadata(metadata: metadata)?["next_page_params"] as? [String: Any]
   }
   

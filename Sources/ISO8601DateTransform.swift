@@ -2,10 +2,10 @@
 import Foundation
 import ObjectMapper
 
-public class ISO8601DateTransform: TransformType {
+class ISO8601DateTransform: TransformType {
   
-  public typealias Object = Date
-  public typealias JSON = String
+  typealias Object = Date
+  typealias JSON = String
 
   static let standardDateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -20,10 +20,10 @@ public class ISO8601DateTransform: TransformType {
     return formatter
   }()
   
-  public init() {
+  init() {
   }
   
-  public func transformFromJSON(_ value: Any?) -> Date? {
+  func transformFromJSON(_ value: Any?) -> Date? {
     if let dateString = value as? String {
       if let date = ISO8601DateTransform.decimalDateFormatter.date(from: dateString) {
         return date
@@ -34,7 +34,7 @@ public class ISO8601DateTransform: TransformType {
     return nil
   }
   
-  public func transformToJSON(_ value: Date?) -> String? {
+  func transformToJSON(_ value: Date?) -> String? {
     if let date = value {
       return ISO8601DateTransform.decimalDateFormatter.string(from: date)
     }

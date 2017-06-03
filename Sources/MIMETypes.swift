@@ -1,8 +1,10 @@
 
 import Foundation
 
+/// Structure that defines various type of MIME types
 public struct MIMETypes {
   
+  /// Plain text mime type
   public static let Text = "text/plain"
   public static let ImagePNG = "image/png"
   public static let ImageJPEG = "image/jpeg"
@@ -10,12 +12,8 @@ public struct MIMETypes {
   public static let Sketch = "image/sketch"
   public static let JSON = "application/json"
   public static let PDF = "application/pdf"
-  public static let MSWord = "application/msword"
-  public static let MSExcel = "application/x-xls"
-  public static let MSExcel2 = "application/vnd.ms-excel.sheet.macroenabled.12"
-  public static let MSExcel3 = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-  public static let MSPowerpoint = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
   
+  /// Determines mime type based on file extension (eg. .json -> application/json)
   public static func mimeTypeFromExtension(fileExtension: String) -> String? {
     switch fileExtension {
     case "txt":
@@ -37,6 +35,7 @@ public struct MIMETypes {
     }
   }
   
+  /// Provides human readable names for mime types
   public static func captionFromType(string: String) -> String? {
     switch string {
     case self.Text:

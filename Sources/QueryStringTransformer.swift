@@ -2,7 +2,7 @@
 import Foundation
 
 
-public extension URL {
+extension URL {
   
   static func queryStringFromQueryItems(items: [URLQueryItem], encoding: String.Encoding) -> String {
     let components = items.map { item in

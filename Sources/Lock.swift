@@ -2,7 +2,7 @@
 import Foundation
 
 
-public class Lock {
+class Lock {
   
   // MARK: Properties
   
@@ -10,29 +10,28 @@ public class Lock {
   
   // MARK: Lifecycle
   
-  public init() {
+  init() {
     self.semaphore = DispatchSemaphore(value: 1)
   }
   
   // MARK: General
   
-  public func lock() {
+  func lock() {
     let _ = self.semaphore.wait(timeout: DispatchTime.distantFuture)
   }
   
-  public func unlock() {
+  func unlock() {
     self.semaphore.signal()
   }
   
-  public func withCriticalScope<T>(block: () -> T) -> T {
+  func withCriticalScope<T>(block: () -> T) -> T {
     self.lock()
     let value = block()
     self.unlock()
     return value
   }
   
-  
-  public func withCriticalScope(block: () -> ()) {
+  func withCriticalScope(block: () -> ()) {
     self.lock()
     block()
     self.unlock()

@@ -3,7 +3,7 @@ import Foundation
 
 extension URLRequest {
   
-  public func toCURL() -> String {
+  func toCURL() -> String {
     var command = "curl -i -v -L "
     command += "-X \(self.httpMethod!) "
     if self.httpMethod == "PUT" || self.httpMethod == "POST" {
