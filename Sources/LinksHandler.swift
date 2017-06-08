@@ -33,6 +33,22 @@ public extension Spaces {
     }
   }
   
+  /**
+   Method for getting space links
+   
+   - parameter muid: MUID of space or 'origin'
+   - parameter completion: Completion block.
+   - parameter links: Fetched space links.
+   - parameter error: Error message if something wrong happens.
+   
+   */
+  public func getSpaceLinks(muid: String,
+                       completion: @escaping (_ space: [Link]?, _ error: Swift.Error?)->()) {
+    GET("spaces/\(muid)/links") { [weak self] response in
+      let links: [Link]? = self?.entitiesFromArray(array: response.contentDictionary?["links"])
+      completion(links, response.error)
+    }
+  }
   
   /**
    This method allows you to sync multiple links
@@ -50,7 +66,7 @@ public extension Spaces {
           completion(oldModelVersion, modelVersion, response.error)
     }
   }
-
+  
 }
 
 

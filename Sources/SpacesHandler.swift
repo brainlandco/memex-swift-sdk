@@ -52,6 +52,23 @@ public extension Spaces {
   }
   
   /**
+   Method for getting specific space
+   
+   - parameter muid: MUID of space or 'origin'
+   - parameter completion: Completion block.
+   - parameter space: Fetched space.
+   - parameter error: Error message if something wrong happens.
+   
+   */
+  public func getSpace(muid: String,
+                       completion: @escaping (_ space: Space?, _ error: Swift.Error?)->()) {
+    GET("spaces/\(muid)") { [weak self] response in
+      let space: Space? = self?.entityFromDictionary(dictionary: response.contentDictionary?["space"])
+      completion(space, response.error)
+    }
+  }
+  
+  /**
    Method for fetching all accessible spaces.
    
    - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
