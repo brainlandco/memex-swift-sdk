@@ -5,19 +5,21 @@ import ObjectMapper
 /// Object that represents oriented link between two spaces
 public class Link: JSONRepresentable, ObjectProtocol {
   
-  /// Link unique identifier
+  /// Unique identifier
   public var MUID: String?
   /// Creation timestamp
   public var createdAt: Date?
   /// Timestamp of last update
   public var updatedAt: Date?
-  /// Visibility state of link
+  /// Timestamp of last visit
+  public var visitedAt: Date?
+  /// Visibility state
   public var state: ObjectState?
   /// Owner user ID
   public var ownerID: Int?
   /// Index that is used for sorting of links in space
   public var order: Int?
-  /// origin space MUID
+  /// Origin space MUID
   public var originSpaceMUID: String?
   /// Target space MUID
   public var targetSpaceMUID: String?
