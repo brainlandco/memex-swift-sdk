@@ -6,6 +6,40 @@ public extension Spaces {
   
   
   /**
+   Method for fetching all accessible spaces.
+   
+   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
+   - parameter offset: There can be only limited number of spaces in response so pagination offset can be sometimes needed.
+   - parameter limit: There can be only limited number of items in response so pagination offset can be sometimes needed.
+   - parameter completion: Completion block.
+   
+   */
+  public func pullSpaces(lastModelVersion: Int?,
+                         offset: Int?,
+                         completion: @escaping PullOutputs<Space>) {
+    var parameters = [String: Any]()
+    if let value = lastModelVersion {
+      parameters["last_model_version"] = value
+    }
+    if let value = offset {
+      parameters["offset"] = value
+    }
+    if let value = limit {
+      parameters["limit"] = value
+    }
+    GET("spaces",
+        parameters: parameters) { [weak self] response in
+          let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
+          let totalItems = response.contentDictionary?["total"] as? Int
+          let hasMore = response.contentDictionary?["has_more"] as? Bool
+          let nextOffset = response.contentDictionary?["next_offset"] as? Int
+          completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
+    }
+  }
+  
+  
+  /**
    New space creation.
    
    - parameter space: New space object
@@ -19,7 +53,7 @@ public extension Spaces {
   public func createSpace(space: Space,
                           process: ProcessingMode,
                           autodump: Bool,
-                          completion: @escaping (_ spaceMUID: String?, _ error: Swift.Error?)->()) {
+                          completion: @escaping (_ space: Space?, _ error: Swift.Error?)->()) {
     var spaceJSON = space.toJSON()
     spaceJSON["representations"] = space.representations.flatMap { media in
       media.toJSON()
@@ -28,8 +62,8 @@ public extension Spaces {
                                      "process": process.rawValue,
                                      "autodump": autodump]
     POST("spaces", parameters: parameters ) { response in
-      let space = response.contentDictionary?["space"] as? [String: Any]
-      completion(space?["muid"] as? String, response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["space"]),
+                 response.error)
     }
   }
   
@@ -38,13 +72,20 @@ public extension Spaces {
    If you want create multiple spaces or sync your local model then this method is for you.
    
    - parameter items: Set of new or changed spaces
+   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
    - parameter completion: Completion block
    
    */
   public func pushSpaces(items: [Space],
+                         removeToken: String? = nil,
                          completion: @escaping PushOutputs) {
+    var parameters = [String: Any]()
+    parameters["spaces"] = items.toJSON()
+    if let value = removeToken {
+      parameters["remove_token"] = value
+    }
     POST("spaces/multiple",
-         parameters:["spaces": items.toJSON()]) { response in
+         parameters:parameters) { response in
           let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
           let modelVersion = response.contentDictionary?["model_version"] as? Int
           completion(oldModelVersion, modelVersion, response.error)
@@ -63,43 +104,14 @@ public extension Spaces {
   public func getSpace(muid: String,
                        completion: @escaping (_ space: Space?, _ error: Swift.Error?)->()) {
     GET("spaces/\(muid)") { [weak self] response in
-      let space: Space? = self?.entityFromDictionary(dictionary: response.contentDictionary?["space"])
-      completion(space, response.error)
-    }
-  }
-  
-  /**
-   Method for fetching all accessible spaces.
-   
-   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
-   - parameter offset: There can be only limited number of spaces in response so pagination offset can be sometimes needed.
-   - parameter completion: Completion block.
-   
-   */
-  public func pullSpaces(lastModelVersion: Int?,
-                         offset: Int?,
-                         completion: @escaping PullOutputs<Space>) {
-    var parameters = [String: Any]()
-    if let value = lastModelVersion {
-      parameters["last_model_version"] = value
-    }
-    if let value = offset {
-      parameters["offset"] = value
-    }
-    GET("spaces",
-        parameters: parameters) { [weak self] response in
-          let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          let totalItems = response.contentDictionary?["total"] as? Int
-          let hasMore = response.contentDictionary?["has_more"] as? Bool
-          let nextOffset = response.contentDictionary?["next_offset"] as? Int
-          completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["space"]),
+                 response.error)
     }
   }
   
   
   /**
-   Logs space visits
+   Log space visits
    
    - parameter visits: Array of space visits. Can contain multiple spaces with same MUID.
    - parameter completion: Completion block that returns error if something wrong happens.

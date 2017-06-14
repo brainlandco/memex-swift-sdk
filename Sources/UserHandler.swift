@@ -1,7 +1,24 @@
 import Foundation
 import ObjectMapper
 
+
 public extension Spaces {
+  
+  /**
+   Returns user object based on his ID.
+   
+   - parameter userID: User ID (pass nil if you want to get yourself)
+   - parameter completion: Completion block
+   
+   */
+  public func getUser(userID: Int?,
+                      completion: @escaping UserOutputs) {
+    let id = userID == User.Constants.myselfUserID ? "self" : "\(userID!)"
+    GET("users/\(id)",
+    parameters: nil) { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
+    }
+  }
   
   /**
    User creation. There are two possible ways how to create and authenticate user classical
@@ -37,16 +54,16 @@ public extension Spaces {
    ```
    - parameter user: User object
    - parameter onboardingToken: Onboarding token. This token can be used for authentication.
-   - parameter completion: Completion block that returns error if something wrong happens.
+   - parameter completion: Completion block
    */
   public func createUser(user: User,
                          onboardingToken: String? = nil,
-                         completion: @escaping VoidOutputs) {
+                         completion: @escaping UserOutputs) {
     var parameters = [String: Any]()
     parameters["user"] = user.toJSON()
     parameters["onboarding_token"] = onboardingToken
-    POST("users", parameters: parameters) { response in
-      completion(response.error)
+    POST("users", parameters: parameters) { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
     }
   }
   
@@ -66,39 +83,23 @@ public extension Spaces {
    ```
    
    - parameter user: User object with updated values
-   - parameter completion: Completion block that returns error if something wrong happens.
+   - parameter completion: Completion block
    
    */
   public func updateUser(user: User,
-                         completion: @escaping VoidOutputs) {
+                         completion: @escaping UserOutputs) {
     var userParams = Mapper<User>().toJSON(user)
     userParams["avatar"] = nil
     if let avatar_muid = user.avatar?.MUID {
       userParams["avatar_muid"] = avatar_muid
     }
     POST("users/self",
-         parameters: ["user": userParams]) { response in
-          completion(response.error)
+         parameters: ["user": userParams]) { [weak self] response in
+          completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
     }
   }
   
-  /**
-   Returns user object based on his ID.
-   
-   - parameter userID: User ID (pass nil if you want to get yourself)
-   - parameter completion: Completion block
-   - parameter user: User object. Includes all properties if yourself otherwise it is reduced only tu public records.
-   - parameter error: Error message if something wrong happens.
-   
-   */
-  public func getUser(userID: Int?,
-                      completion: @escaping (_ user: User?, _ error: Swift.Error?)->()) {
-    let id = userID == User.Constants.myselfUserID ? "self" : "\(userID!)"
-    GET("users/\(id)",
-    parameters: nil) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
-    }
-  }
+ 
   
   /**
    Sets/changes authenticated user password.

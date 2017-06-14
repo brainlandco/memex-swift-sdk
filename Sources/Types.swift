@@ -49,6 +49,13 @@ public enum MemexError: Int, Error {
  */
 public typealias VoidOutputs = (_ error: Swift.Error?)->()
 
+/**
+ - parameter user: User object. Includes all properties if yourself otherwise it is reduced only tu public records.
+ - parameter error: Error message if something wrong happens.
+ */
+public typealias UserOutputs = (_ user: User?, _ error: Swift.Error?)->()
+
+
 
 /**
  Structure of response of pull method
