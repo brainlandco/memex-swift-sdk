@@ -2,35 +2,45 @@
 import Foundation
 import ObjectMapper
 
+/// Defines known space types
+public enum SpaceTypes: String {
+  /// Origin is simillar to collection but defines entry point into users spaces (root)
+  case origin = "com.memex.origin"
+  /// Collection of links to spaces
+  case collection = "com.memex.media.collection"
+  /// Space that represents web link
+  case webPage = "com.memex.media.webpage"
+  /// Graphical kind of space
+  case image = "com.memex.media.image"
+  /// Textual kind of space
+  case text = "com.memex.media.text"
+}
+
 /// Object that represents memex space, place that bundles links or atomic media in representation set
 public class Space: JSONRepresentable, ObjectProtocol {
   
-  /// Space unique identifier
+  /// Unique identifier
   public var MUID: String?
-  /// Timestamp of space creation
+  /// Creation timestamp
   public var createdAt: Date?
-  /// Timestamp of last change of space
+  /// Timestamp of last update
   public var updatedAt: Date?
-  /// Visibility state of space
+  /// Timestamp of last vsit
+  public var visitedAt: Date?
+  /// Visibility state
   public var state: ObjectState?
-  /// Caption of space
-  public var caption: String?
-  /// Tint color of space
-  public var color: Color?
-  /// Type identifier of space, (eg. com.memex.media.collection)
-  public var typeIdentifier: String?
-  /// Flag if space was seen or not
-  public var unread: Bool?
   /// Owner user ID
   public var ownerID: Int?
+  /// Type (eg. com.memex.media.collection, etc.)
+  public var spaceType: SpaceTypes?
+  /// Caption
+  public var caption: String?
+  /// Tint color
+  public var color: Color?
   /// Set of media that represents space (eg webpage space is represented by url, thumbnail, summary)
   public var representations: [Media]?
-  /// Latitude of place where was object created
-  public var latitude: Double?
-  /// Longitude of place where was object created
-  public var longitude: Double?
-  /// Activity vector (vector)
-  public var activity: Int?
+  /// Unread flag (if user needs to be notified about changes)
+  public var unread: Bool?
   public override var hashValue: Int {
     return self.MUID!.hashValue
   }
@@ -49,12 +59,9 @@ public class Space: JSONRepresentable, ObjectProtocol {
     self.updatedAt <- map["updated_at"]
     self.state <- map["state"]
     self.caption <- map["tag_label"]
-    self.latitude <- map["latitude"]
-    self.longitude <- map["longitude"]
-    self.activity <- map["activity"]
     self.unread <- map["unread"]
     self.color <- map["tag_color"]
-    self.typeIdentifier <- map["type_identifier"]
+    self.spaceType <- map["type_identifier"]
     self.ownerID <- map["owner_id"]
   }
   

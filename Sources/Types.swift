@@ -23,19 +23,6 @@ public enum ObjectState: Int {
 }
 
 
-/// Data state of Media object
-public enum DataState: Int {
-  /// Unknown
-  case unknown = -1
-  /// Client is waiting for server to provide data upload URL
-  case waitingForNewUploadURL = 0
-  /// Client can upload data to dataUploadURL
-  case readyForDataUpload = 1
-  /// Data that is in dataDownloadURL or embedData is valid for usage
-  case dataValid = 2
-}
-
-
 /**
  Set of errors that can be returned by SDK
  */

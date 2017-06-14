@@ -11,8 +11,6 @@ public class Link: JSONRepresentable, ObjectProtocol {
   public var createdAt: Date?
   /// Timestamp of last update
   public var updatedAt: Date?
-  /// Timestamp of last visit
-  public var visitedAt: Date?
   /// Visibility state
   public var state: ObjectState?
   /// Owner user ID
