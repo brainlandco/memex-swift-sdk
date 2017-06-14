@@ -48,8 +48,10 @@ public class User: JSONRepresentable {
     self.updatedAt <- map["updated_at"]
     self.fullname <- map["fullname"]
     self.email <- map["email"]
-    self.hasPassword <- map["has_password"]
+    self.password <- map["password"]
     self.avatar <- map["avatar"]
+    self.originSpaceMUID <- map["origin_space_muid"]
+    self.hasPassword <- map["has_password"]
     self.advanced <- map["advanced"]
   }
    

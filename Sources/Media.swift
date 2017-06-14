@@ -37,14 +37,12 @@ public class Media: JSONRepresentable, ObjectProtocol {
   public var updatedAt: Date?
   /// Visibility state
   public var state: ObjectState?
+  /// Owner user ID
+  public var ownerID: Int?
   /// JSON encodec dictionary of media metadata eg. size, encoding, etc.
   public var metadata: [String: Any]?
   /// Type of media
   public var mediaType: MediaType?
-  /// Owner user ID
-  public var ownerID: Int?
-  /// If media represents any space then its MUID is present
-  public var representedSpaceMUID: String?
   /// Validity of media data
   public var dataState: MediaDataState?
   /// Embed media binary data (only if small enough, otherwise use dataDownloadURL and dataUploadURL)
@@ -53,6 +51,9 @@ public class Media: JSONRepresentable, ObjectProtocol {
   public var dataDownloadURL: URL?
   /// Upload link for new data. After data is uploaded it is needed to call mark media as uploaded function.
   public var dataUploadURL: URL?
+  /// If media represents any space then its MUID is present
+  public var representedSpaceMUID: String?
+  
   public override var hashValue: Int {
     return self.MUID!.hashValue
   }
@@ -73,11 +74,11 @@ public class Media: JSONRepresentable, ObjectProtocol {
     self.metadata <- (map["metadata"], EncodedJSONTransform())
     self.mediaType <- map["type"]
     self.ownerID <- map["owner_id"]
-    self.representedSpaceMUID <- map["represented_space_muid"]
     self.dataState <- map["data_state"]
     self.embededData <- map["embeded_data"]
     self.dataDownloadURL <- map["data_download_url"]
     self.dataUploadURL <- map["data_upload_url"]
+    self.representedSpaceMUID <- map["represented_space_muid"]
   }
 
 }
