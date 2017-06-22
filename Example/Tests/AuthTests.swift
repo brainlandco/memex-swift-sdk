@@ -4,6 +4,18 @@ import MemexSwiftSDK
 
 class AuthTests: BaseTestCase {
   
+  func testIsLoggedIn() {
+    let expectation1 = expectation(description: "default")
+    self.prepareSDK { (memex) in
+      memex.isLoggedIn(completion: { (loggedIn, error) in
+        XCTAssertNil(error, "request failed")
+        XCTAssertTrue(loggedIn == false, "wrong value")
+        expectation1.fulfill()
+      })
+    }
+    waitForExpectations(timeout: 10, handler: nil)
+  }
+  
   func testInvalidCredentialsLogin() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex) in
@@ -37,6 +49,7 @@ class AuthTests: BaseTestCase {
       memex.createUser(user: user, onboardingToken: nil, completion: { (user, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertNotNil(user, "missing user")
+        XCTAssertTrue(user?.hasPassword == true, "wrong hasPassword")
         memex.loginUserWithUserCredentials(credentials: credentials, completion: { (error) in
           XCTAssertNil(error, "request failed")
           expectation1.fulfill()
@@ -55,6 +68,7 @@ class AuthTests: BaseTestCase {
       memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (user, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertNotNil(user, "missing user")
+        XCTAssertTrue(user?.hasPassword == false, "wrong hasPassword")
         memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (error) in
           XCTAssertNil(error, "request failed")
           expectation1.fulfill()

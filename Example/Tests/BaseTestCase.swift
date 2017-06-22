@@ -14,7 +14,10 @@ class BaseTestCase: XCTestCase {
     self.memex = Memex(appToken: Constants.appToken, environment: .staging, verbose: true)
     memex.prepare { error in
       XCTAssertNil(error, "nonnil error")
-      completion(self.memex)
+      self.memex.logout { error in
+        XCTAssertNil(error, "nonnil error")
+        completion(self.memex)
+      }
     }
   }
   
