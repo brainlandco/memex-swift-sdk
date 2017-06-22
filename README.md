@@ -123,7 +123,7 @@ In your AppDelegate.swift or any place where you bootstrap your libraries place 
 
 ```swift
 let memex = Memex(appToken: "<YOUR APP TOKEN>")
-memex.prepare {
+memex.prepare { error in
   // memex object is ready for usage
 }
 ```

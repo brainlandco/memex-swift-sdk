@@ -16,6 +16,7 @@ public extension Spaces {
    */
   public func pullSpaces(lastModelVersion: Int?,
                          offset: Int?,
+                         limit: Int? = nil,
                          completion: @escaping PullOutputs<Space>) {
     var parameters = [String: Any]()
     if let value = lastModelVersion {
@@ -61,7 +62,7 @@ public extension Spaces {
     let parameters: [String: Any] = ["space": spaceJSON,
                                      "process": process.rawValue,
                                      "autodump": autodump]
-    POST("spaces", parameters: parameters ) { response in
+    POST("spaces", parameters: parameters ) { [weak self] response in
       completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["space"]),
                  response.error)
     }

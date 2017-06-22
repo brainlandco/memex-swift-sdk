@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* BaseTestCase.swift */; };
+		796DCEC41EFC4FE500A2BE09 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC31EFC4FE500A2BE09 /* AuthTests.swift */; };
+		796DCEC61EFC615700A2BE09 /* AppTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */; };
 		D8583F73A246BDB68AB54657 /* Pods_MemexSwiftSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6BCB058CFBD3F2EE6A2504 /* Pods_MemexSwiftSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -15,11 +17,13 @@
 		04F1B5B18CBBC46FFA522DE6 /* Pods-MemexSwiftSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemexSwiftSDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemexSwiftSDK_Tests/Pods-MemexSwiftSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MemexSwiftSDK_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemexSwiftSDK_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A23AF129EF050739580BD00B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B06B856B8150F934BAE6ED9F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		796DCEC31EFC4FE500A2BE09 /* AuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
+		796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTokenTests.swift; sourceTree = "<group>"; };
+		A23AF129EF050739580BD00B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B06B856B8150F934BAE6ED9F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E5813D45C2D1931CC245BB4F /* Pods-MemexSwiftSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemexSwiftSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemexSwiftSDK_Tests/Pods-MemexSwiftSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F2A58A5391C4808D521772F2 /* MemexSwiftSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MemexSwiftSDK.podspec; path = ../MemexSwiftSDK.podspec; sourceTree = "<group>"; };
+		F2A58A5391C4808D521772F2 /* MemexSwiftSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MemexSwiftSDK.podspec; path = ../MemexSwiftSDK.podspec; sourceTree = "<group>"; };
 		FC6BCB058CFBD3F2EE6A2504 /* Pods_MemexSwiftSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemexSwiftSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,7 +70,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				796DCEC31EFC4FE500A2BE09 /* AuthTests.swift */,
+				607FACEB1AFB9204008FA782 /* BaseTestCase.swift */,
+				796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -131,10 +137,6 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
@@ -223,7 +225,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* BaseTestCase.swift in Sources */,
+				796DCEC41EFC4FE500A2BE09 /* AuthTests.swift in Sources */,
+				796DCEC61EFC615700A2BE09 /* AppTokenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

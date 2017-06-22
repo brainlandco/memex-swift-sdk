@@ -41,8 +41,8 @@ class AuthorizationController {
           self.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: token))
         }
         self.syncLock.unlock()
+        completionHandler()
       }
-      completionHandler()
     }
   }
   
