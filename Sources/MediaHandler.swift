@@ -108,7 +108,7 @@ public extension Spaces {
    */
   public func markMediaAsUploaded(mediaMUID: String,
                                   completion: @escaping VoidOutputs) {
-    POST("media/\(mediaMUID)") { response in
+    POST("media/\(mediaMUID)/mark-as-uploaded") { response in
       completion(response.error)
     }
   }

@@ -9,19 +9,19 @@ class AppTokenTests: BaseTestCase {
     prepareSDK { memex in
       expectation1.fulfill()
     }
-    waitForExpectations(timeout: 2, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testValidAppToken() {
     let expectation1 = expectation(description: "default")
-    prepareSDK { memex in
+    self.prepareSDK { memex, myself in
       let user = User()
       memex.createUser(user: user, onboardingToken: UUID().uuidString, completion: { (user, error) in
         XCTAssertNil(error, "request failed")
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 5, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testInvalidAppToken() {
@@ -35,7 +35,7 @@ class AppTokenTests: BaseTestCase {
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 5, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
 }

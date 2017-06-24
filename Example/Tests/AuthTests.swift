@@ -6,42 +6,42 @@ class AuthTests: BaseTestCase {
   
   func testIsLoggedIn() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       memex.isLoggedIn(completion: { (loggedIn, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertTrue(loggedIn == false, "wrong value")
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testInvalidCredentialsLogin() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       memex.loginUserWithUserCredentials(credentials: Credentials(identifier: UUID().uuidString, secret: UUID().uuidString), completion: { (error) in
         XCTAssertNotNil(error, "request succeeded")
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testInvalidOnboardingTokenLogin() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       memex.loginUserWithOnboardingToken(token: UUID().uuidString, completion: { (error) in
         XCTAssertNotNil(error, "request succeeded")
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
 
   func testValidCredentialsLogin() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
       let user = User()
       user.email = credentials.identifier
@@ -56,13 +56,13 @@ class AuthTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   
   func testValidOnboardingTokenLogin() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let onboardingToken = UUID().uuidString
       let user = User()
       memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (user, error) in
@@ -75,7 +75,7 @@ class AuthTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
 }

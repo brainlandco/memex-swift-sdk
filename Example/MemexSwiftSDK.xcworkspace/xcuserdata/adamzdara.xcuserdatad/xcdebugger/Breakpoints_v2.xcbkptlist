@@ -577,5 +577,653 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520004864.938687"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "testEmbededDataCreation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520006048.996199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005721.49968"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "183">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005721.502693"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1756">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520005646.860424"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.022723"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.025881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.031835"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520005647.737191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520005648.713958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.037061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.040795"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.04402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520005649.920704"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.048492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "203">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #3)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.052263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #4)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.055233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520005732.241231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "testCreationWithUpload()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.05975"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.062997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testMediaCreationWithUpload () -&gt; ()).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520005755.066094"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Sources/MediaHandler.swift"
+            timestampString = "520005855.987051"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "markMediaAsUploaded(mediaMUID:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK.Spaces.markMediaAsUploaded (mediaMUID : Swift.String, completion : (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MemexSwiftSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/MediaHandler.swift"
+                  timestampString = "520005909.776187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK.Spaces.(markMediaAsUploaded (mediaMUID : Swift.String, completion : (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "MemexSwiftSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/MediaHandler.swift"
+                  timestampString = "520005909.779465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520006481.544635"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "testPushPull()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006508.235635"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "471">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(implicit closure #5)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006508.23877"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(implicit closure #6)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006508.241925"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520006463.479187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "testPushPull()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006684.558522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006684.561218"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520006684.56606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520006633.450892"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "testPushPull()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520007110.774195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "141">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520007110.776866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.MediaTests.(testPushPull () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/MediaTests.swift"
+                  timestampString = "520007110.78015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/MediaTests.swift"
+            timestampString = "520006780.018506"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "testPushPull()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/BaseTestCase.swift"
+            timestampString = "520006800.28887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "prepareSDK(authorize:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.BaseTestCase.(prepareSDK (authorize : Swift.Bool, completion : (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1).(closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/BaseTestCase.swift"
+                  timestampString = "520007110.789421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.BaseTestCase.(prepareSDK (authorize : Swift.Bool, completion : (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/BaseTestCase.swift"
+                  timestampString = "520007110.793257"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK_Tests.BaseTestCase.(prepareSDK (authorize : Swift.Bool, completion : (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/BaseTestCase.swift"
+                  timestampString = "520007110.797231"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

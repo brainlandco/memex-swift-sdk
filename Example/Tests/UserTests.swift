@@ -6,7 +6,7 @@ class UserTests: BaseTestCase {
   
   func testUserCreation() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
       let user = User()
       user.email = credentials.identifier
@@ -27,12 +27,12 @@ class UserTests: BaseTestCase {
         expectation1.fulfill()
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testGetUser() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
       let user = User()
       user.email = credentials.identifier
@@ -58,13 +58,13 @@ class UserTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   
   func testUpdateUser() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
       let user = User()
       user.email = credentials.identifier
@@ -86,12 +86,12 @@ class UserTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testSetPasswordUser() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let onboardingToken = UUID().uuidString
       let user = User()
       memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (newUser, error) in
@@ -110,12 +110,12 @@ class UserTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
   func testChangePasswordUser() {
     let expectation1 = expectation(description: "default")
-    self.prepareSDK { (memex) in
+    self.prepareSDK { (memex, myself) in
       let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
       let user = User()
       user.email = credentials.identifier
@@ -137,7 +137,7 @@ class UserTests: BaseTestCase {
         })
       })
     }
-    waitForExpectations(timeout: 10, handler: nil)
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
 }
