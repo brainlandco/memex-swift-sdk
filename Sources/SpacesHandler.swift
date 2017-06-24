@@ -68,7 +68,6 @@ public extension Spaces {
     }
   }
   
-  
   /**
    If you want create multiple spaces or sync your local model then this method is for you.
    
@@ -109,7 +108,6 @@ public extension Spaces {
                  response.error)
     }
   }
-  
   
   /**
    Log space visits
