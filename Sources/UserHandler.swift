@@ -5,24 +5,8 @@ import ObjectMapper
 public extension Spaces {
   
   /**
-   Returns user object based on his ID.
-   
-   - parameter userID: User ID (pass nil if you want to get yourself)
-   - parameter completion: Completion block
-   
-   */
-  public func getUser(userID: Int?,
-                      completion: @escaping UserOutputs) {
-    let id = (userID == User.Constants.myselfUserID || userID == nil) ? "self" : "\(userID!)"
-    GET("users/\(id)",
-    parameters: nil) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
-    }
-  }
-  
-  /**
    User creation. There are two possible ways how to create and authenticate user classical
-   using email & password and second using onboarding token that allows to create "anonymous" user 
+   using email & password and second using onboarding token that allows to create "anonymous" user
    without email, name, password.
    
    Example of traditional method:
@@ -31,10 +15,10 @@ public extension Spaces {
    user.email = "me@host.com"
    user.password = "password"
    memex.createUser(user) { error in
-     guard error == nil else {
-       // failed
-     }
-     // succeeded
+   guard error == nil else {
+   // failed
+   }
+   // succeeded
    }
    
    ```
@@ -45,10 +29,10 @@ public extension Spaces {
    let user = new User()
    user.fullname = "Optional Fullname"
    memex.createUser(user, onboardingToken) { error in
-     guard error == nil else {
-       // failed
-     }
-     // succeeded
+   guard error == nil else {
+   // failed
+   }
+   // succeeded
    }
    
    ```
@@ -66,6 +50,23 @@ public extension Spaces {
       completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
     }
   }
+  
+  /**
+   Returns user object based on his ID.
+   
+   - parameter userID: User ID (pass nil if you want to get yourself)
+   - parameter completion: Completion block
+   
+   */
+  public func getUser(userID: Int?,
+                      completion: @escaping UserOutputs) {
+    let id = (userID == User.Constants.myselfUserID || userID == nil) ? "self" : "\(userID!)"
+    GET("users/\(id)",
+    parameters: nil) { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
+    }
+  }
+  
   
   /**
    Updates user (only myself). For password change use setUserPassword method.

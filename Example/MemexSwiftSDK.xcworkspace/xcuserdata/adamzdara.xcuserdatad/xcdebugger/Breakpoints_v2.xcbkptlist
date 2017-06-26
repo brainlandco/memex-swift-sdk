@@ -297,70 +297,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Sources/UserHandler.swift"
-            timestampString = "519854384.693685"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "createUser(user:onboardingToken:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Sources/UserHandler.swift"
-            timestampString = "519854403.76963"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "createUser(user:onboardingToken:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK.Spaces.createUser (user : MemexSwiftSDK.User, onboardingToken : Swift.Optional&lt;Swift.String&gt;, completion : (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MemexSwiftSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/UserHandler.swift"
-                  timestampString = "519854516.693015"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "668">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK.Spaces.(createUser (user : MemexSwiftSDK.User, onboardingToken : Swift.Optional&lt;Swift.String&gt;, completion : (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "MemexSwiftSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/UserHandler.swift"
-                  timestampString = "519854516.694671"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../Sources/Spaces+Networking.swift"
             timestampString = "519854432.978273"
             startingColumnNumber = "9223372036854775807"
@@ -905,54 +841,6 @@
                   startingLineNumber = "36"
                   endingLineNumber = "36"
                   offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Sources/MediaHandler.swift"
-            timestampString = "520005855.987051"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "markMediaAsUploaded(mediaMUID:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK.Spaces.markMediaAsUploaded (mediaMUID : Swift.String, completion : (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "MemexSwiftSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/MediaHandler.swift"
-                  timestampString = "520005909.776187"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "43">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK.Spaces.(markMediaAsUploaded (mediaMUID : Swift.String, completion : (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "MemexSwiftSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/MediaHandler.swift"
-                  timestampString = "520005909.779465"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>

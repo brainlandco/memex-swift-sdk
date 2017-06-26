@@ -6,41 +6,6 @@ public extension Spaces {
   
   
   /**
-   Method for fetching all accessible spaces.
-   
-   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
-   - parameter offset: There can be only limited number of spaces in response so pagination offset can be sometimes needed.
-   - parameter limit: There can be only limited number of items in response so pagination offset can be sometimes needed.
-   - parameter completion: Completion block.
-   
-   */
-  public func pullSpaces(lastModelVersion: Int?,
-                         offset: Int?,
-                         limit: Int? = nil,
-                         completion: @escaping PullOutputs<Space>) {
-    var parameters = [String: Any]()
-    if let value = lastModelVersion {
-      parameters["last_model_version"] = value
-    }
-    if let value = offset {
-      parameters["offset"] = value
-    }
-    if let value = limit {
-      parameters["limit"] = value
-    }
-    GET("spaces",
-        parameters: parameters) { [weak self] response in
-          let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          let totalItems = response.contentDictionary?["total"] as? Int
-          let hasMore = response.contentDictionary?["has_more"] as? Bool
-          let nextOffset = response.contentDictionary?["next_offset"] as? Int
-          completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
-    }
-  }
-  
-  
-  /**
    New space creation.
    
    - parameter space: New space object
@@ -68,29 +33,6 @@ public extension Spaces {
     }
   }
   
-  /**
-   If you want create multiple spaces or sync your local model then this method is for you.
-   
-   - parameter items: Set of new or changed spaces
-   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
-   - parameter completion: Completion block
-   
-   */
-  public func pushSpaces(items: [Space],
-                         removeToken: String? = nil,
-                         completion: @escaping PushOutputs) {
-    var parameters = [String: Any]()
-    parameters["spaces"] = items.toJSON()
-    if let value = removeToken {
-      parameters["remove_token"] = value
-    }
-    POST("spaces/multiple",
-         parameters:parameters) { response in
-          let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          completion(oldModelVersion, modelVersion, response.error)
-    }
-  }
   
   /**
    Method for getting specific space
@@ -144,6 +86,66 @@ public extension Spaces {
       completion(response.contentDictionary?["caption"] as? String, response.error)
     }
   }
+  
+  /**
+   If you want create multiple spaces or sync your local model then this method is for you.
+   
+   - parameter items: Set of new or changed spaces
+   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
+   - parameter completion: Completion block
+   
+   */
+  public func pushSpaces(items: [Space],
+                         removeToken: String? = nil,
+                         completion: @escaping PushOutputs) {
+    var parameters = [String: Any]()
+    parameters["spaces"] = items.toJSON()
+    if let value = removeToken {
+      parameters["remove_token"] = value
+    }
+    POST("spaces/multiple",
+         parameters:parameters) { response in
+          let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
+          completion(oldModelVersion, modelVersion, response.error)
+    }
+  }
+  
+  /**
+   Method for fetching all accessible spaces.
+   
+   - parameter lastModelVersion: Last user model version that was fetched (allows diff downlaods)
+   - parameter offset: There can be only limited number of spaces in response so pagination offset can be sometimes needed.
+   - parameter limit: There can be only limited number of items in response so pagination offset can be sometimes needed.
+   - parameter completion: Completion block.
+   
+   */
+  public func pullSpaces(lastModelVersion: Int?,
+                         offset: Int?,
+                         limit: Int? = nil,
+                         completion: @escaping PullOutputs<Space>) {
+    var parameters = [String: Any]()
+    if let value = lastModelVersion {
+      parameters["last_model_version"] = value
+    }
+    if let value = offset {
+      parameters["offset"] = value
+    }
+    if let value = limit {
+      parameters["limit"] = value
+    }
+    GET("spaces",
+        parameters: parameters) { [weak self] response in
+          let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
+          let modelVersion = response.contentDictionary?["model_version"] as? Int
+          let totalItems = response.contentDictionary?["total"] as? Int
+          let hasMore = response.contentDictionary?["has_more"] as? Bool
+          let nextOffset = response.contentDictionary?["next_offset"] as? Int
+          completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
+    }
+  }
+  
+  
 }
 
 
