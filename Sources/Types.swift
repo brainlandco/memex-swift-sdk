@@ -41,6 +41,8 @@ public enum MemexError: Int, Error {
   case notAuthorized
   /// Endpoint not found 404
   case endpointNotFound
+  /// Item already exists
+  case alreadyExists
 }
 
 

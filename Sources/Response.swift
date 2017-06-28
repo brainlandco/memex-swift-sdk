@@ -8,6 +8,7 @@ class Response {
     return self.content as? [String: Any]
   }
   var error: Swift.Error?
+  var httpErrorCode: Int?
   
   init() {
   }

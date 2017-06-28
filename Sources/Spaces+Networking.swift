@@ -82,6 +82,7 @@ extension Spaces {
     if let error = error {
       response.error = error
     }
+    response.httpErrorCode = code
     responseHandler?(response)
   }
   

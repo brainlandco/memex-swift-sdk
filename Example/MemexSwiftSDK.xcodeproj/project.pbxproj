@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* BaseTestCase.swift */; };
 		7911E3BA1F01882300FFF584 /* LinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7911E3B91F01882300FFF584 /* LinksTests.swift */; };
-		7911E3BC1F0428FF00FFF584 /* DEPLOYMENT.md in Sources */ = {isa = PBXBuildFile; fileRef = 7911E3BB1F0428FF00FFF584 /* DEPLOYMENT.md */; };
 		796DCEC41EFC4FE500A2BE09 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC31EFC4FE500A2BE09 /* AuthTests.swift */; };
 		796DCEC61EFC615700A2BE09 /* AppTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */; };
 		796DCEC81EFC629B00A2BE09 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC71EFC629B00A2BE09 /* UserTests.swift */; };
@@ -24,7 +23,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		7911E3B91F01882300FFF584 /* LinksTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTests.swift; sourceTree = "<group>"; };
-		7911E3BB1F0428FF00FFF584 /* DEPLOYMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = DEPLOYMENT.md; sourceTree = "<group>"; };
+		7911E3BD1F0429FB00FFF584 /* DEPLOYMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = DEPLOYMENT.md; path = ../DEPLOYMENT.md; sourceTree = "<group>"; };
 		796DCEC31EFC4FE500A2BE09 /* AuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTokenTests.swift; sourceTree = "<group>"; };
 		796DCEC71EFC629B00A2BE09 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
@@ -106,7 +105,7 @@
 				F2A58A5391C4808D521772F2 /* MemexSwiftSDK.podspec */,
 				B06B856B8150F934BAE6ED9F /* README.md */,
 				A23AF129EF050739580BD00B /* LICENSE */,
-				7911E3BB1F0428FF00FFF584 /* DEPLOYMENT.md */,
+				7911E3BD1F0429FB00FFF584 /* DEPLOYMENT.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -245,7 +244,6 @@
 				796DCEC81EFC629B00A2BE09 /* UserTests.swift in Sources */,
 				796DCECA1EFEA0F000A2BE09 /* MediaTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* BaseTestCase.swift in Sources */,
-				7911E3BC1F0428FF00FFF584 /* DEPLOYMENT.md in Sources */,
 				796DCEC41EFC4FE500A2BE09 /* AuthTests.swift in Sources */,
 				796DCEC61EFC615700A2BE09 /* AppTokenTests.swift in Sources */,
 			);

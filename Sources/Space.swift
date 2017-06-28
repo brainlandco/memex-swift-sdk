@@ -3,7 +3,7 @@ import Foundation
 import ObjectMapper
 
 /// Defines known space types
-public enum SpaceTypes: String {
+public enum SpaceType: String {
   /// Origin is simillar to collection but defines entry point into users spaces (root)
   case origin = "com.memex.origin"
   /// Collection of links to spaces
@@ -32,7 +32,7 @@ public class Space: JSONRepresentable, ObjectProtocol {
   /// Owner user ID
   public var ownerID: Int?
   /// Type (eg. com.memex.media.collection, etc.)
-  public var spaceType: SpaceTypes?
+  public var spaceType: SpaceType?
   /// Caption
   public var caption: String?
   /// Tint color
