@@ -47,7 +47,7 @@ public extension Spaces {
     parameters["user"] = user.toJSON()
     parameters["onboarding_token"] = onboardingToken
     POST("users", parameters: parameters) { [weak self] response in
-      if (response.httpErrorCode = 409) {
+      if (response.httpErrorCode == 409) {
         completion(nil, MemexError.alreadyExists)
         return
       }
