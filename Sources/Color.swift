@@ -25,7 +25,7 @@ public class Color {
   
   public init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) {
     self.red = red
-    self.green = red
+    self.green = green
     self.blue = blue
     self.alpha = alpha
   }
