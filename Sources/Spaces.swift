@@ -14,17 +14,18 @@ public class Spaces {
   var healthChecker: HealthChecker!
   
   // MARK: Executables
-
+  
   public init(appToken: String,
               environment: Environment = .production,
+              url: URL? = nil,
               verbose: Bool = false,
               userTokenKey: String? = nil,
               allowDeauthorization: Bool = true) {
-    self.configuration = Configuration(serverURL: Spaces.serverURL(forEnvironment: environment),
-                                      appToken: appToken,
-                                      logAllRequests: verbose,
-                                      userTokenKey: userTokenKey != nil ? userTokenKey! : Spaces.authToken(forEnvironment: environment),
-                                      allowDeauthorization: allowDeauthorization)
+    self.configuration = Configuration(serverURL: url != nil ? url! : Spaces.serverURL(forEnvironment: environment),
+                                       appToken: appToken,
+                                       logAllRequests: verbose,
+                                       userTokenKey: userTokenKey != nil ? userTokenKey! : Spaces.authToken(forEnvironment: environment),
+                                       allowDeauthorization: allowDeauthorization)
     
     self.queryStringTransformer = QueryStringTransformer()
     
@@ -46,7 +47,7 @@ public class Spaces {
     case .staging:
       return URL(string: "https://mmx-spaces-api-stage.herokuapp.com")!
     case .local:
-      return URL(string: "http://10.0.0.38:5000")!
+      return URL(string: "http://localhost:8081")!
     }
   }
   

@@ -6,7 +6,7 @@ class AppTokenTests: BaseTestCase {
   
   func testPrepare() {
     let expectation1 = expectation(description: "default")
-    prepareSDK { memex in
+    prepareSDK { memex, myself  in
       expectation1.fulfill()
     }
     waitForExpectations(timeout: Constants.timeout, handler: nil)

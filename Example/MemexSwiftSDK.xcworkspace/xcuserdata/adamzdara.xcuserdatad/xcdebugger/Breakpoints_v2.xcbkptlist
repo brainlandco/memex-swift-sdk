@@ -520,7 +520,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520004864.938687"
+            timestampString = "528966258.69794"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520006048.996199"
+            timestampString = "528966258.698568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "testCreationWithUpload()"
             landmarkType = "7">
             <Locations>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520005646.860424"
+            timestampString = "528966258.699037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "testCreationWithUpload()"
             landmarkType = "7">
             <Locations>
@@ -647,11 +647,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520005647.737191"
+            timestampString = "528966258.69948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "testCreationWithUpload()"
             landmarkType = "7">
          </BreakpointContent>
@@ -663,11 +663,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520005648.713958"
+            timestampString = "528966258.699913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "testCreationWithUpload()"
             landmarkType = "7">
             <Locations>
@@ -726,11 +726,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520005649.920704"
+            timestampString = "528966258.70034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "testCreationWithUpload()"
             landmarkType = "7">
             <Locations>
@@ -789,7 +789,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520005732.241231"
+            timestampString = "528966258.700774"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -852,11 +852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520006481.544635"
+            timestampString = "528966258.701211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "testPushPull()"
             landmarkType = "7">
             <Locations>
@@ -915,11 +915,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520006463.479187"
+            timestampString = "528966258.701644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "testPushPull()"
             landmarkType = "7">
             <Locations>
@@ -978,11 +978,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520006633.450892"
+            timestampString = "528966258.702071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "testPushPull()"
             landmarkType = "7">
             <Locations>
@@ -1041,11 +1041,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/MediaTests.swift"
-            timestampString = "520006780.018506"
+            timestampString = "528966258.702495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "testPushPull()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1057,7 +1057,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/BaseTestCase.swift"
-            timestampString = "520006800.28887"
+            timestampString = "528966258.702919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -1531,7 +1531,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "520195834.000485"
+            timestampString = "528966258.703178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -1594,11 +1594,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "520196386.747349"
+            timestampString = "528966258.703226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "testPushPull()"
             landmarkType = "7">
             <Locations>
@@ -1657,11 +1657,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "520196386.747349"
+            timestampString = "528966258.703269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "testPushPull()"
             landmarkType = "7">
             <Locations>
@@ -1723,69 +1723,6 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
                   endingLineNumber = "67"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tests/LinksTests.swift"
-            timestampString = "520196386.747349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "testGetSpaceLinks()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK_Tests.LinksTests.(testGetSpaceLinks () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1)"
-                  moduleName = "MemexSwiftSDK_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/LinksTests.swift"
-                  timestampString = "520196280.019191"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK_Tests.LinksTests.(testGetSpaceLinks () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #1)"
-                  moduleName = "MemexSwiftSDK_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/LinksTests.swift"
-                  timestampString = "520196280.022765"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemexSwiftSDK_Tests.LinksTests.(testGetSpaceLinks () -&gt; ()).(closure #1).(closure #1).(closure #1).(closure #1).(implicit closure #2)"
-                  moduleName = "MemexSwiftSDK_Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/LinksTests.swift"
-                  timestampString = "520196280.026855"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>

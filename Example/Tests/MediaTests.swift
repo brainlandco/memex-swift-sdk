@@ -34,6 +34,7 @@ class MediaTests: BaseTestCase {
       media.dataState = .waitingForNewUploadURL
       memex.createMedia(media: media, completion: { (newMedia, error) in
         XCTAssertNil(error, "request failed")
+        XCTAssertNotNil(newMedia, "missing media")
         XCTAssertNil(newMedia?.embededData, "non nil data")
         XCTAssertNotNil(newMedia?.dataUploadURL, "nil data upload url")
         XCTAssertTrue(newMedia?.dataState == .readyForDataUpload, "wrong data state")

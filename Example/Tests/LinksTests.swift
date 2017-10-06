@@ -50,9 +50,10 @@ class LinksTests: BaseTestCase {
           XCTAssertNil(error, "request failed")
           memex.getSpaceLinks(muid: space.MUID!, completion: { (links, error) in
             XCTAssertNil(error, "request failed")
+            XCTAssertTrue(links != nil, "nil links and no error")
             XCTAssertTrue(links?.count == 1, "wrong number of links")
-            let getLink = links!.first!
-            XCTAssertTrue(getLink.MUID == link.MUID, "wrong number of links")
+            let getLink = links?.first
+            XCTAssertTrue(getLink?.MUID == link.MUID, "wrong number of links")
             expectation1.fulfill()
           })
         })

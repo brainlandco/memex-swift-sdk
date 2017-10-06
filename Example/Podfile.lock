@@ -1,28 +1,28 @@
 PODS:
-  - KeychainSwift (8.0.2)
-  - MemexSwiftSDK (1.0.0):
-    - KeychainSwift (~> 8.0)
-    - ObjectMapper (~> 2.2)
-    - ReachabilitySwift (~> 3)
-  - ObjectMapper (2.2.5)
-  - ReachabilitySwift (3)
+  - KeychainSwift (9.0.2)
+  - MemexSwiftSDK (1.1.11):
+    - KeychainSwift (~> 9.0)
+    - ObjectMapper (~> 3.0.0)
+    - ReachabilitySwift (~> 4.0-beta2)
+  - ObjectMapper (3.0.0)
+  - ReachabilitySwift (4.0-beta2)
 
 DEPENDENCIES:
-  - KeychainSwift (~> 8.0)
+  - KeychainSwift (~> 9.0)
   - MemexSwiftSDK (from `../`)
-  - ObjectMapper (~> 2.2)
-  - ReachabilitySwift (~> 3)
+  - ObjectMapper (~> 3.0.0)
+  - ReachabilitySwift (~> 4.0-beta2)
 
 EXTERNAL SOURCES:
   MemexSwiftSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
-  MemexSwiftSDK: b17445e3c0b7c1271d7e5e1a230fe70cfe217909
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
-  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  KeychainSwift: 3ab1d428d0dbff59cd056f1d0bfc640b36c2b081
+  MemexSwiftSDK: 97c908c345402eb488cd826333d49fbf0f9b3c30
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  ReachabilitySwift: d2e9cf75db8b2140bef42db5dafc6269d46cc137
 
-PODFILE CHECKSUM: 2336744b71bf6a2b4e942e65a53b605e3b575377
+PODFILE CHECKSUM: 418bbd3e4413a644058ee37fea73d185d8f58bdb
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

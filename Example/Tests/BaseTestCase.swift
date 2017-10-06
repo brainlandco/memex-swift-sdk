@@ -7,12 +7,12 @@ class BaseTestCase: XCTestCase {
   var memex: Memex!
   
   struct Constants {
-    static let appToken = "c82070e09366bc37f7da0a275895955a7ec8d3c0"
+    static let appToken = "memexAPPtest"
     static let timeout: TimeInterval = 30
   }
   
   func prepareSDK(authorize: Bool = false, completion: @escaping (_ memex: Memex, _ myself: User?) -> ()) {
-    self.memex = Memex(appToken: Constants.appToken, environment: .staging, verbose: true)
+    self.memex = Memex(appToken: Constants.appToken, environment: .local, verbose: true)
     self.memex.prepare { error in
       XCTAssertNil(error, "nonnil error")
       self.memex.logout { error in

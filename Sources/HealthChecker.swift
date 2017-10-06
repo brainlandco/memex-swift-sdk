@@ -1,5 +1,5 @@
 import Foundation
-import ReachabilitySwift
+import Reachability
 
 class HealthChecker: NSObject {
   

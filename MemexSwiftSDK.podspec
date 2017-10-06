@@ -24,8 +24,8 @@ Memex is new form of your external memory.
 
   s.source_files = "Sources/*.swift"
 
-  s.dependency 'ObjectMapper', '~> 2.2'
-  s.dependency 'ReachabilitySwift', '~> 3'
-  s.dependency 'KeychainSwift', '~> 8.0'
+  s.dependency 'ObjectMapper', '~> 3.0.0'
+  s.dependency 'ReachabilitySwift', '~> 4.0-beta2'
+  s.dependency 'KeychainSwift', '~> 9.0'
 
 end

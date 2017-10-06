@@ -1,33 +1,33 @@
 {
   "name": "MemexSwiftSDK",
-  "version": "1.0.0",
+  "version": "1.1.11",
   "summary": "Memex platform SDK.",
-  "description": "Memex platform SDK",
+  "description": "Memex is new form of your external memory.",
   "homepage": "https://github.com/memexapp/memex-swift-sdk",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "adamzdara": "zdaraa@gmail.com"
+    "Adam Zdara": "zdaraa@gmail.com"
   },
   "source": {
     "git": "https://github.com/memexapp/memex-swift-sdk.git",
-    "tag": "1.0.0"
+    "tag": "1.1.11"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MemexSwiftSDK/Classes/**/*",
+  "source_files": "Sources/*.swift",
   "dependencies": {
     "ObjectMapper": [
-      "~> 2.2"
+      "~> 3.0.0"
     ],
     "ReachabilitySwift": [
-      "~> 3"
+      "~> 4.0-beta2"
     ],
     "KeychainSwift": [
-      "~> 8.0"
+      "~> 9.0"
     ]
   }
 }
