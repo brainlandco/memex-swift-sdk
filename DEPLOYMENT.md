@@ -1,5 +1,4 @@
-edit MemexSwiftSDK.podspec
-set the new version to 1.1.9
+edit MemexSwiftSDK.podspec adn change set the new version to 1.1.9
 pod lib lint
 
 git add -A && git commit -m '1.1.9'
