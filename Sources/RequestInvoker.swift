@@ -121,6 +121,7 @@ class RequestInvoker {
       self.processResponseErrorWithCode(code: code,
                                         data: data,
                                         allowDeauthorization: allowDeauthorization,
+                                        request: request,
                                         completionHandler: completionHandler)
     }
     if printLog {
@@ -132,6 +133,7 @@ class RequestInvoker {
     code: Int,
     data: Data?,
     allowDeauthorization: Bool,
+    request: URLRequest,
     completionHandler: RequestCompletion) {
     
     let errorPayload = self.errorPayloadFromData(data: data)
@@ -140,7 +142,7 @@ class RequestInvoker {
     case 400..<500:
       var notAuthorized = false
       if let errorPayload = errorPayload, let errorCode = errorPayload.code {
-        if errorCode == 401 || errorCode == 402 || errorCode == 403 || errorCode == 404 {
+        if errorCode == 401 || errorCode == 402 || errorCode == 403 {
           notAuthorized = true
         }
       }
@@ -149,7 +151,11 @@ class RequestInvoker {
       }
       if notAuthorized {
         if allowDeauthorization {
-          self.spaces!.auth.deauthorize()
+          let requestedToken = request.allHTTPHeaderFields?[HTTPHeader.userToken]
+          let currentToken = self.spaces!.auth.userToken
+          if requestedToken == currentToken {
+            self.spaces!.auth.deauthorize()
+          }
         }
         completionHandler(nil, code, MemexError.notAuthorized)
       } else {
@@ -186,15 +192,22 @@ class RequestInvoker {
   }
   
   func logRequest(request: URLRequest, response: URLResponse?, resposneData: Data?) {
+    var mutableRequest = request
+    if mutableRequest.allHTTPHeaderFields?[HTTPHeader.userToken] != nil {
+      mutableRequest.allHTTPHeaderFields?[HTTPHeader.userToken] = "<USER TOKEN>"
+    }
+    if mutableRequest.allHTTPHeaderFields?[HTTPHeader.appToken] != nil {
+      mutableRequest.allHTTPHeaderFields?[HTTPHeader.appToken]  = "<APP TOKEN>"
+    }
     if let httpResponse = response as? HTTPURLResponse, let data = resposneData {
       let code = httpResponse.statusCode
       var contentString = String(data: data, encoding: String.Encoding.utf8)
       if contentString == nil {
         contentString = "nil"
       }
-      NSLog("\n\nREQUEST:\n\n\(request.toCURL())\nRESPONSE:\n\nResponse Code: \(code)\nResponse Body:\n\(contentString!)\n\n-------------")
+      NSLog("\n\nREQUEST:\n\n\(mutableRequest.toCURL())\nRESPONSE:\n\nResponse Code: \(code)\nResponse Body:\n\(contentString!)\n\n-------------")
     } else {
-      NSLog("\n\nREQUEST:\n\n\(request.toCURL())")
+      NSLog("\n\nREQUEST:\n\n\(mutableRequest.toCURL())")
     }
   }
 }

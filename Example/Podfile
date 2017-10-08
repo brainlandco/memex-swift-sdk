@@ -5,5 +5,4 @@ target 'MemexSwiftSDK_Tests' do
   pod 'ObjectMapper', '~> 3.0.0'
   pod 'ReachabilitySwift', '~> 4.0-beta2'
   pod 'KeychainSwift', '~> 9.0'
-  
 end
