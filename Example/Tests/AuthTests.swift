@@ -42,7 +42,7 @@ class AuthTests: BaseTestCase {
   func testValidCredentialsLogin() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
+      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
       let user = User()
       user.email = credentials.identifier
       user.password = credentials.secret

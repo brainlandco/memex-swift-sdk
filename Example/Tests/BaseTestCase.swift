@@ -11,6 +11,14 @@ class BaseTestCase: XCTestCase {
     static let timeout: TimeInterval = 30
   }
   
+  func mockEmail() -> String {
+    return "\(UUID().uuidString)@memex.co"
+  }
+  
+  func mockPassword() -> String {
+    return "\(UUID().uuidString)\(UUID().uuidString.lowercased())"
+  }
+  
   func prepareSDK(authorize: Bool = false, completion: @escaping (_ memex: Memex, _ myself: User?) -> ()) {
     self.memex = Memex(appToken: Constants.appToken, environment: .local, verbose: true)
     self.memex.prepare { error in

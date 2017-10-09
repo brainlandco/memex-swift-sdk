@@ -5,7 +5,7 @@ import MemexSwiftSDK
 class MediaTests: BaseTestCase {
   
   func testEmbededDataCreation() {
-    let expectation1 = expectation(description: "default")
+    let expectation1 =  expectation(description: "default")
     self.prepareSDK(authorize: true) { (memex, myself) in
       let media = Media()
       media.dataState = .dataValid

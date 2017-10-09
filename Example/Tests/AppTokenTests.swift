@@ -38,4 +38,23 @@ class AppTokenTests: BaseTestCase {
     waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
+//
+//  func testLogoutUser() {
+//    let expectation1 = expectation(description: "default")
+//    self.prepareSDK { (memex, myself) in
+//      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
+//      let user = User()
+//      user.email = credentials.identifier
+//      user.password = credentials.secret
+//      memex.createUser(user: user, onboardingToken: nil, completion: { (newUser, error) in
+//        XCTAssertNil(error, "request failed")
+//        memex.loginUserWithUserCredentials(credentials: credentials, completion: { (error) in
+//          XCTAssertNil(error, "request failed")
+//          let newCredentials = Credentials(identifier: credentials.identifier, secret: self.mockPassword())
+//
+//        })
+//      })
+//    }
+//    waitForExpectations(timeout: Constants.timeout, handler: nil)
+//  }
 }

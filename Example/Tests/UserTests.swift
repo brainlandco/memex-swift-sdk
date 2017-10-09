@@ -7,7 +7,7 @@ class UserTests: BaseTestCase {
   func testUserCreation() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
+      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
       let user = User()
       user.email = credentials.identifier
       user.password = credentials.secret
@@ -33,7 +33,7 @@ class UserTests: BaseTestCase {
   func testGetUser() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
+      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
       let user = User()
       user.email = credentials.identifier
       user.password = credentials.secret
@@ -65,7 +65,7 @@ class UserTests: BaseTestCase {
   func testUpdateUser() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
+      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
       let user = User()
       user.email = credentials.identifier
       user.password = credentials.secret
@@ -75,7 +75,7 @@ class UserTests: BaseTestCase {
         XCTAssertNotNil(newUser?.ID, "missing ID")
         memex.loginUserWithUserCredentials(credentials: credentials, completion: { (error) in
           XCTAssertNil(error, "request failed")
-          newUser?.email = UUID().uuidString
+          newUser?.email = self.mockEmail()
           newUser?.fullname = UUID().uuidString
           memex.updateUser(user: newUser!, completion: { (updatedUser, error) in
             XCTAssertNil(error, "request failed")
@@ -99,7 +99,7 @@ class UserTests: BaseTestCase {
         XCTAssertTrue(newUser?.hasPassword == false, "has password after creation")
         memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (error) in
           XCTAssertNil(error, "request failed")
-          memex.setUserPassword(oldPassword: nil, newPassword: "xxx", completion: { (error) in
+          memex.setUserPassword(oldPassword: nil, newPassword: self.mockPassword(), completion: { (error) in
             XCTAssertNil(error, "request failed")
             memex.getUser(userID: nil, completion: { (updatedUser, error) in
               XCTAssertNil(error, "request failed")
@@ -116,7 +116,7 @@ class UserTests: BaseTestCase {
   func testChangePasswordUser() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      let credentials = Credentials(identifier: UUID().uuidString, secret: UUID().uuidString)
+      let credentials = Credentials(identifier: self.mockEmail(), secret: self.mockPassword())
       let user = User()
       user.email = credentials.identifier
       user.password = credentials.secret
@@ -124,7 +124,7 @@ class UserTests: BaseTestCase {
         XCTAssertNil(error, "request failed")
         memex.loginUserWithUserCredentials(credentials: credentials, completion: { (error) in
           XCTAssertNil(error, "request failed")
-          let newCredentials = Credentials(identifier: credentials.identifier, secret: UUID().uuidString)
+          let newCredentials = Credentials(identifier: credentials.identifier, secret: self.mockPassword())
           memex.setUserPassword(oldPassword: credentials.secret, newPassword: newCredentials.secret, completion: { (error) in
             memex.logout(completion: { (error) in
               XCTAssertNil(error, "request failed")
