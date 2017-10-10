@@ -48,7 +48,7 @@ class AuthorizationController {
   
   // MARK: Authorization
   
-  typealias TokenResponse = (_ token: String?, _ error: Swift.Error?)->()
+  typealias TokenResponse = (_ token: String?, _ retryToken: String?, _ error: Swift.Error?)->()
   
   func authorizeWithCredentials(credentials: Credentials,
                                 completionHandler: @escaping TokenResponse) {
@@ -73,15 +73,26 @@ class AuthorizationController {
                                      completionHandler: completionHandler)
   }
   
+  func authorizeWithRetryToken(retryToken: String,
+                               completionHandler: @escaping TokenResponse) {
+    self.authorizeWithBodyParameters(bodyParameters: [
+      "identity": [
+        "retry_token": retryToken
+      ]
+      ],
+                                     completionHandler: completionHandler)
+  }
+  
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
     self.spaces?.requestor.request(
       method: .POST,
-      path: "users/request-token",
+      path: "sessions/create",
       queryStringParameters: nil,
       bodyParameters: bodyParameters,
       completionHandler: { [weak self] content, code, error in
         guard let strongSelf = self else { return };
         let token = content?["token"] as? String
+        let retryToken = content?["retry_token"] as? String
         if error == nil {
           strongSelf.syncLock.withCriticalScope {
             if strongSelf.internalUserToken != token {
@@ -90,17 +101,34 @@ class AuthorizationController {
             }
           }
         }
-        completionHandler(token, error)
+        completionHandler(token, retryToken, error)
     })
   }
   
-  func deauthorize() {
+  func deauthorize(completionHandler: @escaping VoidOutputs) {
+    var authorized = false;
     self.syncLock.withCriticalScope {
-      if (self.internalUserToken != nil) {
-        self.internalUserToken = nil
-        self.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: nil))
-      }
+      authorized = self.internalUserToken != nil
     }
+    if !authorized {
+      completionHandler(nil)
+      return
+    }
+    self.spaces?.requestor.request(
+      method: .POST,
+      path: "sessions/invalidate",
+      queryStringParameters: nil,
+      bodyParameters: nil,
+      allowDeauthorization: false,
+      completionHandler: { [weak self] content, code, error in
+        self?.syncLock.withCriticalScope {
+          if (self?.internalUserToken != nil) {
+            self?.internalUserToken = nil
+            self?.spaces?.emit(event: AuthorizationStatusChangedEvent(userToken: nil))
+          }
+        }
+        completionHandler(error)
+    })
   }
   
   // MARK: Access Token Persistency

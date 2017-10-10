@@ -127,6 +127,81 @@ public extension Spaces {
   }
   
   /**
+   Request password reset.
+   
+   - parameter email: Email for request account
+   - parameter completion: Completion block that returns error if action fails
+   
+   */
+  public func requestPasswordReset(email: String,
+                                   completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["email"] = email
+    POST("users/self/request-password-reset",
+         parameters: parameters) { response in
+          completion(response.error)
+    }
+  }
+  
+  /**
+   Reset password.
+   
+   - parameter resetToken: Password reset token that was recevied by email
+   - parameter newPassword: New password
+   - parameter completion: Completion block that returns error if action fails
+   
+   */
+  public func resetPassword(resetToken: String,
+                            newPassword: String,
+                            completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["token"] = resetToken
+    parameters["new_password"] = newPassword
+    POST("users/self/reset-password",
+         parameters: parameters) { response in
+          completion(response.error)
+    }
+  }
+  
+  
+  /**
+   Request contact verification.
+   
+   - parameter type: Contact type
+   - parameter completion: Completion block that returns error if action fails
+   
+   */
+  public func requestContactVerification(type: ContactType,
+                                         completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["type"] = type.rawValue
+    POST("users/self/contacts/request-verification",
+         parameters: parameters) { response in
+          completion(response.error)
+    }
+  }
+  
+  /**
+   Verify user contact
+   
+   - parameter type: Contact type
+   - parameter verificationToken: Verification token
+   - parameter completion: Completion block that returns error if action fails
+   
+   */
+  public func verifyContact(type: ContactType,
+                            verificationToken: String,
+                            completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["token"] = verificationToken
+    parameters["type"] = type.rawValue
+    POST("users/self/contacts/verify",
+         parameters: parameters) { response in
+          completion(response.error)
+    }
+  }
+  
+  /**
    Requests user backup. If this method requires to have setup email.
    
    - parameter completion: Completion block that returns error if action fails

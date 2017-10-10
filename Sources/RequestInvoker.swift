@@ -23,6 +23,7 @@ class RequestInvoker {
     path: String,
     queryStringParameters: [String: Any]? = nil,
     bodyParameters: [String: Any]? = nil,
+    allowDeauthorization: Bool? = nil,
     completionHandler: @escaping RequestCompletion) {
     do {
       let request = try self.buildRequest(
@@ -32,7 +33,7 @@ class RequestInvoker {
         bodyParameters: bodyParameters,
         userToken: self.spaces!.auth.userToken)
       self.invokeRequest(request: request,
-                         allowDeauthorization: self.spaces?.configuration.allowDeauthorization ?? false,
+                         allowDeauthorization: allowDeauthorization ?? self.spaces?.configuration.allowDeauthorization ?? false,
                          completionHandler: completionHandler)
     } catch {
       completionHandler(nil, nil, MemexError.JSONParsingError)
@@ -154,7 +155,11 @@ class RequestInvoker {
           let requestedToken = request.allHTTPHeaderFields?[HTTPHeader.userToken]
           let currentToken = self.spaces!.auth.userToken
           if requestedToken == currentToken {
-            self.spaces!.auth.deauthorize()
+            self.spaces!.auth.deauthorize(completionHandler: { (error) in
+              if error != nil {
+                NSLog("Session invalidation failed")
+              }
+            })
           }
         }
         completionHandler(nil, code, MemexError.notAuthorized)

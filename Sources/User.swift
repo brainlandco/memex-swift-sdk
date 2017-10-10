@@ -20,12 +20,18 @@ public class User: JSONRepresentable {
   public var fullname: String?
   /// User email
   public var email: String?
+  /// Email Verification Flag
+  public var isEmailVerified: Bool?
   /// User full name in format (FirstName LastName)
   public var password: String?
+  /// Date of last password change
+  public var passwordChangedAt: Date?
   /// Avatar of user.
   public var avatar: Media?
   /// MUID of users origin space (root, entry point)
   public var originSpaceMUID: String?
+  /// Two Factor Authorization Flag
+  public var isTFAEnabled: Bool?
   /// Flag that tells if user set his password or he can be only authenticated using onboarding token
   public var hasPassword: Bool?
   /// Flag that tells if user has enabled advanced features. This will be in future replaced with full feature flags set.
@@ -52,7 +58,8 @@ public class User: JSONRepresentable {
     self.avatar <- map["avatar"]
     self.originSpaceMUID <- map["origin_space_muid"]
     self.hasPassword <- map["has_password"]
-    self.advanced <- map["advanced"]
+    self.isEmailVerified <- map["is_email_verified"]
+    self.passwordChangedAt <- map["password_cahnged_at"]
   }
    
 }

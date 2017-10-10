@@ -45,11 +45,25 @@ public enum MemexError: Int, Error {
   case alreadyExists
 }
 
+/// user contact type
+public enum ContactType: String {
+  /// Email Address
+  case email = "email"
+  /// Phone NUmber
+  case phone = "phone"
+}
+
 
 /**
  - parameter error: Error if something wrong happens
  */
 public typealias VoidOutputs = (_ error: Swift.Error?)->()
+
+/**
+ - parameter retryToken: Authorization retry token
+ - parameter error: Error if something wrong happens
+ */
+public typealias RetryOutputs = (_ retryToken: String?, _ error: Swift.Error?)->()
 
 /**
  - parameter user: User object. Includes all properties if yourself otherwise it is reduced only tu public records.
@@ -123,5 +137,7 @@ struct HTTPHeader {
   static let userToken = "X-User-Token"
   static let appToken = "X-App-Token"
 }
+
+
 
 

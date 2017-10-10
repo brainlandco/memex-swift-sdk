@@ -32,7 +32,7 @@ class BaseTestCase: XCTestCase {
           let onboardingToken = UUID().uuidString
           self.memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (newUser, error) in
             XCTAssertNil(error, "nonnil error")
-            self.memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (error) in
+            self.memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (retryToken, error) in
               XCTAssertNil(error, "nonnil error")
               completion(self.memex, newUser)
             })

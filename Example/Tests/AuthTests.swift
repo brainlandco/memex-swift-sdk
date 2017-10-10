@@ -19,7 +19,7 @@ class AuthTests: BaseTestCase {
   func testInvalidCredentialsLogin() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      memex.loginUserWithUserCredentials(credentials: Credentials(identifier: UUID().uuidString, secret: UUID().uuidString), completion: { (error) in
+      memex.loginUserWithUserCredentials(credentials: Credentials(identifier: UUID().uuidString, secret: UUID().uuidString), completion: { (retryToken, error) in
         XCTAssertNotNil(error, "request succeeded")
         expectation1.fulfill()
       })
@@ -30,7 +30,7 @@ class AuthTests: BaseTestCase {
   func testInvalidOnboardingTokenLogin() {
     let expectation1 = expectation(description: "default")
     self.prepareSDK { (memex, myself) in
-      memex.loginUserWithOnboardingToken(token: UUID().uuidString, completion: { (error) in
+      memex.loginUserWithOnboardingToken(token: UUID().uuidString, completion: { (retryToken, error) in
         XCTAssertNotNil(error, "request succeeded")
         expectation1.fulfill()
       })
@@ -50,7 +50,7 @@ class AuthTests: BaseTestCase {
         XCTAssertNil(error, "request failed")
         XCTAssertNotNil(user, "missing user")
         XCTAssertTrue(user?.hasPassword == true, "wrong hasPassword")
-        memex.loginUserWithUserCredentials(credentials: credentials, completion: { (error) in
+        memex.loginUserWithUserCredentials(credentials: credentials, completion: { (retryToken, error) in
           XCTAssertNil(error, "request failed")
           expectation1.fulfill()
         })
@@ -69,7 +69,7 @@ class AuthTests: BaseTestCase {
         XCTAssertNil(error, "request failed")
         XCTAssertNotNil(user, "missing user")
         XCTAssertTrue(user?.hasPassword == false, "wrong hasPassword")
-        memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (error) in
+        memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (retryToken, error) in
           XCTAssertNil(error, "request failed")
           expectation1.fulfill()
         })

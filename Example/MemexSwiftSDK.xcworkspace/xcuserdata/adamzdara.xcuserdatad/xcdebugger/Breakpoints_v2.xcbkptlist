@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthHandler.swift"
-            timestampString = "519852759.964538"
+            timestampString = "529321005.109211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "519852826.113937"
+            timestampString = "529321005.109653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "authorizeWithBodyParameters(bodyParameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "519852854.254804"
+            timestampString = "529321005.109758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "authorizeWithBodyParameters(bodyParameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852870.430793"
+            timestampString = "529321005.109846"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "invokeRequest(request:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852873.542929"
+            timestampString = "529321005.109932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "invokeRequest(request:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,12 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852885.726378"
+            timestampString = "529321005.110008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "request(method:path:queryStringParameters:bodyParameters:completionHandler:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "request(method:path:queryStringParameters:bodyParameters:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -186,12 +186,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852887.926933"
+            timestampString = "529321005.110163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "request(method:path:queryStringParameters:bodyParameters:completionHandler:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "request(method:path:queryStringParameters:bodyParameters:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -202,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852909.817921"
+            timestampString = "529321005.11032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "request(method:path:queryStringParameters:bodyParameters:completionHandler:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "request(method:path:queryStringParameters:bodyParameters:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852921.524894"
+            timestampString = "529321005.110382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "buildRequest(method:path:queryStringParameters:bodyParameters:userToken:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519852925.693706"
+            timestampString = "529321005.110462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "buildRequest(method:path:queryStringParameters:bodyParameters:userToken:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "519853013.649802"
+            timestampString = "529321005.110534"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "519853022.81744"
+            timestampString = "529321005.110596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "519853049.242753"
+            timestampString = "529321005.110675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519854471.929507"
+            timestampString = "529321005.110838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "processResponseWithRequest(request:response:data:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/RequestInvoker.swift"
-            timestampString = "519854707.087434"
+            timestampString = "529321005.110943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "invokeRequest(request:allowDeauthorization:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/AuthTests.swift"
-            timestampString = "529242079.546676"
+            timestampString = "529321005.111032"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -441,13 +441,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/UserHandler.swift"
-            timestampString = "519857456.123354"
+            timestampString = "529321005.111111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "Spaces"
-            landmarkType = "4">
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -457,7 +457,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/UserTests.swift"
-            timestampString = "529242079.546762"
+            timestampString = "529321005.11119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -1057,7 +1057,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/BaseTestCase.swift"
-            timestampString = "529242079.546952"
+            timestampString = "529321005.11173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1531,7 +1531,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "529241745.354207"
+            timestampString = "529264637.149251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -1594,7 +1594,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "529241745.354643"
+            timestampString = "529264637.150181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -1657,7 +1657,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "529241745.35496"
+            timestampString = "529264637.150744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -1726,6 +1726,229 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/AppTokenTests.swift"
+            timestampString = "529319884.705861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "testValidAppToken()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/AppTokenTests.swift"
+            timestampString = "529319884.705917"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "testValidAppToken()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.AppTokenTests.testValidAppToken() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/AppTokenTests.swift"
+                  timestampString = "529317856.958724"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.AppTokenTests.testValidAppToken() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/AppTokenTests.swift"
+                  timestampString = "529317856.96198"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/AppTokenTests.swift"
+            timestampString = "529319884.705965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "testValidAppToken()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.AppTokenTests.testValidAppToken() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/AppTokenTests.swift"
+                  timestampString = "529317856.966413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Any&gt; in closure #1 (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.AppTokenTests.testValidAppToken() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/AppTokenTests.swift"
+                  timestampString = "529317856.96949"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in closure #1 (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.AppTokenTests.testValidAppToken() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/AppTokenTests.swift"
+                  timestampString = "529317856.97356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Sources/UserHandler.swift"
+            timestampString = "529321005.112379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "createUser(user:onboardingToken:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MemexSwiftSDK.Spaces.createUser(user: MemexSwiftSDK.User, onboardingToken: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MemexSwiftSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/UserHandler.swift"
+                  timestampString = "529317730.643533"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "650">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MemexSwiftSDK.Response) -&gt; () in MemexSwiftSDK.Spaces.createUser(user: MemexSwiftSDK.User, onboardingToken: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Optional&lt;MemexSwiftSDK.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MemexSwiftSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Sources/UserHandler.swift"
+                  timestampString = "529317730.646499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Sources/UserHandler.swift"
+            timestampString = "529321005.112512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "createUser(user:onboardingToken:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/UserTests.swift"
+            timestampString = "529321005.112595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "testResetPassword()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Sources/AuthorizationController.swift"
+            timestampString = "529321005.112684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "deauthorize(completionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
