@@ -23,7 +23,6 @@ class UserTests: BaseTestCase {
         XCTAssertEqual(newUser?.email, credentials.identifier, "wrong email")
         XCTAssertEqual(newUser?.fullname, user.fullname, "wrong fullname")
         XCTAssertTrue(newUser?.hasPassword == true, "wrong hasPassword value")
-        XCTAssertTrue(newUser?.advanced == false, "wrong advanced value")
         expectation1.fulfill()
       })
     }
@@ -52,7 +51,6 @@ class UserTests: BaseTestCase {
             XCTAssertEqual(getUser?.email, credentials.identifier, "wrong email")
             XCTAssertEqual(getUser?.fullname, user.fullname, "wrong fullname")
             XCTAssertTrue(getUser?.hasPassword == true, "wrong hasPassword value")
-            XCTAssertTrue(getUser?.advanced == false, "wrong advanced value")
             expectation1.fulfill()
           })
         })
@@ -191,7 +189,7 @@ class UserTests: BaseTestCase {
       user.email = email
       memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (newUser, error) in
         memex.requestContactVerification(type: .email, completion: { (error) in
-          XCTAssertNotNil(error, "request not failed")
+          XCTAssertNotNil(error, "error is nil")
           expectation1.fulfill()
         })
       })
