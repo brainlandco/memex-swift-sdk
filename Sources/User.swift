@@ -59,7 +59,8 @@ public class User: JSONRepresentable {
     self.originSpaceMUID <- map["origin_space_muid"]
     self.hasPassword <- map["has_password"]
     self.isEmailVerified <- map["is_email_verified"]
-    self.passwordChangedAt <- map["password_cahnged_at"]
+    self.isTFAEnabled <- map["is_tfa_enabled"]
+    self.passwordChangedAt <- map["password_changed_at"]
   }
    
 }
