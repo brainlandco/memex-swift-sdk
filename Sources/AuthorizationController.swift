@@ -87,7 +87,7 @@ class AuthorizationController {
     self.spaces?.requestor.request(
       method: .POST,
       path: "sessions/create",
-      queryStringParameters: nil,
+      queryStringParameters: ["is_non_cookies": true],
       bodyParameters: bodyParameters,
       completionHandler: { [weak self] content, code, error in
         guard let strongSelf = self else { return };
