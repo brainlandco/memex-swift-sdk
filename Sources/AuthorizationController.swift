@@ -157,8 +157,7 @@ class AuthorizationController {
   private func persistToken(token: String?) {
     do {
       if let token = token {
-        // remove always access options after //https://forums.developer.apple.com/thread/4743 is fixed
-        if !self.secretStore.set(token, forKey: self.tokenKey, withAccess: KeychainSwiftAccessOptions.accessibleAlways) {
+        if !self.secretStore.set(token, forKey: self.tokenKey, withAccess: KeychainSwiftAccessOptions.accessibleWhenUnlockedThisDeviceOnly) {
           if self.secretStore.lastResultCode != noErr {
             NSLog("Failed to write token to Keychain: \(self.secretStore.lastResultCode).")
           }
