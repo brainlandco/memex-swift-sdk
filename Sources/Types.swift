@@ -60,10 +60,10 @@ public enum ContactType: String {
 public typealias VoidOutputs = (_ error: Swift.Error?)->()
 
 /**
- - parameter retryToken: Authorization retry token
+ - parameter mfa: multi factor auth challange context
  - parameter error: Error if something wrong happens
  */
-public typealias RetryOutputs = (_ retryToken: String?, _ error: Swift.Error?)->()
+public typealias RetryOutputs = (_ mfa: MFAChallange?, _ error: Swift.Error?)->()
 
 /**
  - parameter user: User object. Includes all properties if yourself otherwise it is reduced only tu public records.

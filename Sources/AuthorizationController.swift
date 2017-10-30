@@ -48,7 +48,7 @@ class AuthorizationController {
   
   // MARK: Authorization
   
-  typealias TokenResponse = (_ token: String?, _ retryToken: String?, _ error: Swift.Error?)->()
+  typealias TokenResponse = (_ token: String?, _ mfa: MFAChallange?,_ error: Swift.Error?)->()
   
   func authorizeWithCredentials(credentials: Credentials,
                                 completionHandler: @escaping TokenResponse) {
@@ -74,13 +74,28 @@ class AuthorizationController {
   }
   
   func authorizeWithRetryToken(retryToken: String,
+                               activationToken: String?,
                                completionHandler: @escaping TokenResponse) {
-    self.authorizeWithBodyParameters(bodyParameters: [
-      "identity": [
-        "retry_token": retryToken
-      ]
-      ],
-                                     completionHandler: completionHandler)
+    
+    if let activationToken = activationToken {
+      self.authorizeWithBodyParameters(bodyParameters: [
+        "identity": [
+          "retry_token": retryToken
+        ],
+        "secret": [
+          "activation_token": activationToken
+        ]
+        ],
+                                       completionHandler: completionHandler)
+    } else {
+      self.authorizeWithBodyParameters(bodyParameters: [
+        "identity": [
+          "retry_token": retryToken
+        ]
+        ],
+                                       completionHandler: completionHandler)
+    }
+    
   }
   
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
@@ -92,7 +107,10 @@ class AuthorizationController {
       completionHandler: { [weak self] content, code, error in
         guard let strongSelf = self else { return };
         let token = content?["token"] as? String
-        let retryToken = content?["retry_token"] as? String
+        var mfa: MFAChallange?
+        if let json = content?["mfa"] as? [String: Any] {
+          mfa = MFAChallange(JSON: json)
+        }
         if error == nil {
           strongSelf.syncLock.withCriticalScope {
             if strongSelf.internalUserToken != token {
@@ -101,7 +119,7 @@ class AuthorizationController {
             }
           }
         }
-        completionHandler(token, retryToken, error)
+        completionHandler(token, mfa, error)
     })
   }
   

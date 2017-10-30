@@ -43,6 +43,7 @@
 		773B8E1BBB6F11F02415D148BDFF99E0 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85530FA9579A7C420BA7BC713EB984 /* URLTransform.swift */; };
 		788CBB382CF7D1EF034DA370C4C2146B /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1926A75035CCBCCA2819731D5CC3E73 /* CustomOperators.swift */; };
 		78C0AD69AE4305D1719D31C3D7F8B66D /* AuthorizationChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = D152B653B7C03C210CE849B20C6032F1 /* AuthorizationChanged.swift */; };
+		790690541FA795E000F79242 /* MFA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790690521FA7954600F79242 /* MFA.swift */; };
 		7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982F80E633A6FAAFDCF53309F08CB7E2 /* TegKeychainConstants.swift */; };
 		7F9333032194B7E2039B19B37F8F9317 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1B5C5886AD03ECC6786E08D0A2489C /* Types.swift */; };
 		7FB873A4A9AA307F774299193A8C05D2 /* Dispatch+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F80B0C4F53DEE25E9D31B4518AA882 /* Dispatch+Additions.swift */; };
@@ -210,6 +211,7 @@
 		6C88EFDA9026BFCE4964EEC5689E7054 /* BytesCountTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BytesCountTransform.swift; sourceTree = "<group>"; };
 		6FBD68FCEF9ACC5BD7F349C9E076D015 /* Pods-MemexSwiftSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MemexSwiftSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		774DFE51B266869002FA1F06C0F17AB3 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		790690521FA7954600F79242 /* MFA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFA.swift; sourceTree = "<group>"; };
 		7C779F8BDD47C75857E54803D419707C /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
 		7FF412EC82B1BA073781CB8151855C77 /* ColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorTransform.swift; sourceTree = "<group>"; };
 		82474B60E0AC0E3C04ED9C0905C7D9B5 /* ErrorPayload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ErrorPayload.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				67223F33B0DCF34231DEB040DE44B146 /* LinksHandler.swift */,
 				599F88E030BBD76FD849A30B75A5B4DB /* Lock.swift */,
 				2796540E6F63B509BF9D8A7A90DBB8E3 /* Media.swift */,
+				790690521FA7954600F79242 /* MFA.swift */,
 				6515D9F2F5FB4FD79401DBA73BE06AF8 /* MediaHandler.swift */,
 				5C77B53D3F5DE53C0BC35D32D577D624 /* MIMETypes.swift */,
 				F0BF322A21172592A57C475D044351D9 /* NSLock+Additions.swift */,
@@ -841,6 +844,7 @@
 				D0B28DD1514CE89EC765342587541359 /* LinksHandler.swift in Sources */,
 				25A83EE26F37442F6E6E83430406ABD5 /* Lock.swift in Sources */,
 				5FD2B8E1334B596F41989EF5F08FD26C /* Media.swift in Sources */,
+				790690541FA795E000F79242 /* MFA.swift in Sources */,
 				E4C72E2050C47205A03BE7B2DC6E1066 /* MediaHandler.swift in Sources */,
 				4AA257B71E721F9B8AFBE71874BBDC78 /* MemexSwiftSDK-dummy.m in Sources */,
 				74A13322E076692429623FCAD829643C /* MIMETypes.swift in Sources */,
