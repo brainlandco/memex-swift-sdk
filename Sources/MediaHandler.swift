@@ -29,7 +29,6 @@ public extension Spaces {
       json.removeValue(forKey: "data_upload_url")
       return json as AnyObject
     }
-    print(array)
     POST("teams/personal/media", parameters:array as AnyObject, headers: headers) { [weak self] response in
       var oldModelVersion: Int?
       if let value = response.headers?[HTTPHeader.previousModelVersionHeader] {
