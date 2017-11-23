@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MemexSwiftSDK'
-  s.version          = '1.3'
+  s.version          = '1.3.1'
   s.summary          = 'Memex platform SDK.'
 
   s.description      = <<-DESC
@@ -24,8 +24,8 @@ Memex is new form of your external memory.
 
   s.source_files = "Sources/*.swift"
 
-  s.dependency 'ObjectMapper', '~> 3.0.0'
-  s.dependency 'ReachabilitySwift', '~> 4.0-beta2'
-  s.dependency 'KeychainSwift', '~> 9.0'
+  s.dependency 'ObjectMapper', '~> 3.1.0'
+  s.dependency 'ReachabilitySwift', '~> 4.1.0'
+  s.dependency 'KeychainSwift', '~> 10.0'
 
 end
