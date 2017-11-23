@@ -43,15 +43,23 @@ public extension Spaces {
   public func createUser(user: User,
                          onboardingToken: String? = nil,
                          completion: @escaping UserOutputs) {
-    var parameters = [String: Any]()
-    parameters["user"] = user.toJSON()
-    parameters["onboarding_token"] = onboardingToken
-    POST("users", parameters: parameters) { [weak self] response in
+    user.onboardingToken = onboardingToken
+    var json = user.toJSON()
+    json.removeValue(forKey: "id")
+    json.removeValue(forKey: "is_phone_verified")
+    json.removeValue(forKey: "is_email_verified")
+    json.removeValue(forKey: "updated_at")
+    json.removeValue(forKey: "created_at")
+    json.removeValue(forKey: "has_password")
+    json.removeValue(forKey: "origin_space_muid")
+    json.removeValue(forKey: "password_changed_at")
+    
+    POST("users", parameters: json as AnyObject) { [weak self] response in
       if (response.httpErrorCode == 409) {
         completion(nil, MemexError.alreadyExists)
         return
       }
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary), response.error)
     }
   }
   
@@ -67,7 +75,7 @@ public extension Spaces {
     let id = (userID == User.Constants.myselfUserID || userID == nil) ? "self" : "\(userID!)"
     GET("users/\(id)",
     parameters: nil) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary), response.error)
     }
   }
   
@@ -93,14 +101,26 @@ public extension Spaces {
    */
   public func updateUser(user: User,
                          completion: @escaping UserOutputs) {
-    var userParams = Mapper<User>().toJSON(user)
+    var userParams = user.toJSON()
     userParams["avatar"] = nil
     if let avatar_muid = user.avatar?.MUID {
       userParams["avatar_muid"] = avatar_muid
     }
+    userParams.removeValue(forKey: "id")
+    userParams.removeValue(forKey: "updated_at")
+    userParams.removeValue(forKey: "created_at")
+    userParams.removeValue(forKey: "is_phone_verified")
+    userParams.removeValue(forKey: "is_email_verified")
+    userParams.removeValue(forKey: "password")
+    userParams.removeValue(forKey: "has_password")
+    userParams.removeValue(forKey: "origin_space_muid")
+    userParams.removeValue(forKey: "password_changed_at")
+    userParams.removeValue(forKey: "permissions")
+    userParams.removeValue(forKey: "avatar")
+    
     POST("users/self",
-         parameters: ["user": userParams]) { [weak self] response in
-          completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["user"]), response.error)
+         parameters: userParams as AnyObject) { [weak self] response in
+          completion(self?.entityFromDictionary(dictionary: response.contentDictionary), response.error)
     }
   }
   
@@ -121,7 +141,7 @@ public extension Spaces {
     }
     parameters["new_password"] = newPassword
     POST("users/self/change-password",
-         parameters: parameters) { response in
+         parameters: parameters as AnyObject) { response in
           completion(response.error)
     }
   }
@@ -138,7 +158,7 @@ public extension Spaces {
     var parameters = [String: Any]()
     parameters["email"] = email
     POST("users/self/request-password-reset",
-         parameters: parameters) { response in
+         parameters: parameters as AnyObject) { response in
           completion(response.error)
     }
   }
@@ -158,7 +178,7 @@ public extension Spaces {
     parameters["token"] = resetToken
     parameters["new_password"] = newPassword
     POST("users/self/reset-password",
-         parameters: parameters) { response in
+         parameters: parameters as AnyObject) { response in
           completion(response.error)
     }
   }
@@ -176,7 +196,7 @@ public extension Spaces {
     var parameters = [String: Any]()
     parameters["type"] = type.rawValue
     POST("users/self/contacts/request-verification",
-         parameters: parameters) { response in
+         parameters: parameters as AnyObject) { response in
           completion(response.error)
     }
   }
@@ -196,7 +216,7 @@ public extension Spaces {
     parameters["token"] = verificationToken
     parameters["type"] = type.rawValue
     POST("users/self/contacts/verify",
-         parameters: parameters) { response in
+         parameters: parameters as AnyObject) { response in
           completion(response.error)
     }
   }
@@ -207,9 +227,8 @@ public extension Spaces {
    - parameter completion: Completion block that returns error if action fails
    
    */
-  @available(*, deprecated)
   public func requestBackup(completion: @escaping VoidOutputs) {
-    GET("users/self/backup") { response in
+    POST("users/self/exports") { response in
       completion(response.error)
     }
   }

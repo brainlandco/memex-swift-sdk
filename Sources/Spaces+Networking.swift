@@ -16,8 +16,9 @@ extension Spaces {
       path: endpoint,
       queryStringParameters: parameters,
       bodyParameters: nil,
-      completionHandler: { [weak self] content, code, error in
-        self?.processResponseContent(content: content, code: code, error: error, responseHandler: completion)
+      completionHandler: { [weak self] content, code, headers, error in
+        self?.processResponseContent(content: content, code: code, headers: headers,
+                                     error: error, responseHandler: completion)
       })
   }
   
@@ -29,34 +30,36 @@ extension Spaces {
       path: endpoint,
       queryStringParameters: parameters,
       bodyParameters: nil,
-      completionHandler: { [weak self] content, code, error in
-        self?.processResponseContent(content: content, code: code, error: error, responseHandler: completion)
+      completionHandler: { [weak self] content, code, outHeaders, error in
+        self?.processResponseContent(content: content, code: code, headers: outHeaders, error: error, responseHandler: completion)
       })
   }
   
   func POST(_ endpoint: String,
-                   parameters: [String: Any]? = nil,
+                   parameters: AnyObject? = nil,
+                   headers: [String: String]? = nil,
                    completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
       method: .POST,
       path: endpoint,
       queryStringParameters: nil,
       bodyParameters: parameters,
-      completionHandler: { [weak self] content, code, error in
-        self?.processResponseContent(content: content, code: code, error: error, responseHandler: completion)
+      headers: headers,
+      completionHandler: { [weak self] content, code, outHeaders, error in
+        self?.processResponseContent(content: content, code: code, headers: outHeaders, error: error, responseHandler: completion)
       })
   }
   
   func PUT(_ endpoint: String,
-                  parameters: [String: Any]? = nil,
+                  parameters: AnyObject? = nil,
                   completion: ResponseHandlerClosure? = nil) {
     self.requestor.request(
       method: .PUT,
       path: endpoint,
       queryStringParameters: nil,
       bodyParameters: parameters,
-      completionHandler: { [weak self] content, code, error in
-        self?.processResponseContent(content: content, code: code, error: error, responseHandler: completion)
+      completionHandler: { [weak self] content, code, outHeaders, error in
+        self?.processResponseContent(content: content, code: code, headers: outHeaders, error: error, responseHandler: completion)
       })
   }
   
@@ -68,13 +71,15 @@ extension Spaces {
       path: endpoint,
       queryStringParameters: parameters,
       bodyParameters: nil,
-      completionHandler: { [weak self] content, code, error in
-        self?.processResponseContent(content: content, code: code, error: error, responseHandler: completion)
+      completionHandler: { [weak self] content, code, outHeaders, error in
+        self?.processResponseContent(content: content, code: code, headers: outHeaders,
+                                     error: error, responseHandler: completion)
       })
   }
   
-  func processResponseContent(content: [String: Any]?,
+  func processResponseContent(content: AnyObject?,
                               code: Int?,
+                              headers: [AnyHashable: Any]?,
                               error: Swift.Error?,
                               responseHandler: ResponseHandlerClosure? = nil) {
     let response = Response()
@@ -83,6 +88,7 @@ extension Spaces {
       response.error = error
     }
     response.httpErrorCode = code
+    response.headers = headers
     responseHandler?(response)
   }
   

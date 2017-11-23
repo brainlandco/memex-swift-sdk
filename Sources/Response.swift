@@ -9,6 +9,7 @@ class Response {
   }
   var error: Swift.Error?
   var httpErrorCode: Int?
+  var headers: [AnyHashable: Any]?
   
   init() {
   }

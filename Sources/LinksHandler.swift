@@ -3,26 +3,45 @@ import ObjectMapper
 
 
 public extension Spaces {
-  
   /**
-   New link creation.
+   New media creation. This method allows you to sync multiple media. If there is some data that needs to be uploaded put it to dataUploadURL and call markMediaAsUploaded.
    
-   - parameter link: New link object
+   - parameter media: Set of new or changed links
    - parameter completion: Completion block
-   - parameter link: Link object with valid dataUploadURL
+   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
+   - parameter media: Media object with valid dataUploadURL
    - parameter error: Error if something wrong happens
    
    */
-  public func createLink(link: Link,
-                         completion: @escaping (_ media: Link?, _ error: Swift.Error?)->()) {
-    POST("links",
-         parameters: [
-          "link": Mapper<Link>().toJSON(link)
-    ]) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["link"]),
-                 response.error)
+  public func createLinks(links: [Link],
+                          removeToken: String? = nil,
+                          completion: @escaping PushOutputs<Link>) {
+    
+    var headers = [String: String]()
+    if let value = removeToken {
+      headers[HTTPHeader.removeTokenHeader] = value
+    }
+    
+    let array = links.map { item -> AnyObject in
+      var json = item.toJSON()
+      json.removeValue(forKey: "owner_id")
+      return json as AnyObject
+    }
+    
+    POST("teams/personal/links", parameters:array as AnyObject, headers: headers) { [weak self] response in
+      var oldModelVersion: Int?
+      if let value = response.headers?[HTTPHeader.previousModelVersionHeader] {
+        oldModelVersion = Int(value as! String)
+      }
+      var modelVersion: Int?
+      if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+        modelVersion = Int(value as! String)
+      }
+      let links: [Link]? = self?.entitiesFromArray(array: response.content)
+      completion(links, oldModelVersion, modelVersion, response.error)
     }
   }
+  
   
   /**
    Method for getting space links
@@ -35,34 +54,12 @@ public extension Spaces {
    */
   public func getSpaceLinks(muid: String,
                             completion: @escaping (_ space: [Link]?, _ error: Swift.Error?)->()) {
-    GET("spaces/\(muid)/links") { [weak self] response in
-      let links: [Link]? = self?.entitiesFromArray(array: response.contentDictionary?["links"])
+    GET("teams/personal/spaces/\(muid)/links") { [weak self] response in
+      let links: [Link]? = self?.entitiesFromArray(array: response.content)
       completion(links, response.error)
     }
   }
   
-  /**
-   This method allows you to sync multiple links
-   
-   - parameter items: Set of new or changed links
-   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
-   - parameter completion: Completion block
-   
-   */
-  public func pushLinks(items: [Link],
-                        removeToken: String? = nil,
-                        completion: @escaping PushOutputs) {
-    var parameters = [String: Any]()
-    parameters["links"] = items.toJSON()
-    if let value = removeToken {
-      parameters["remove_token"] = value
-    }
-    POST("links/multiple",parameters: parameters) { response in
-      let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
-      let modelVersion = response.contentDictionary?["model_version"] as? Int
-      completion(oldModelVersion, modelVersion, response.error)
-    }
-  }
   
   /**
    Method for fetching all accessible links.
@@ -87,13 +84,25 @@ public extension Spaces {
     if let value = limit {
       parameters["limit"] = value
     }
-    GET("links",
+    GET("teams/personal/links",
         parameters: parameters) { [weak self] response in
-          let items: [Link]? = self?.entitiesFromArray(array: response.contentDictionary?["links"])
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          let totalItems = response.contentDictionary?["total"] as? Int
-          let hasMore = response.contentDictionary?["has_more"] as? Bool
-          let nextOffset = response.contentDictionary?["next_offset"] as? Int
+          let items: [Link]? = self?.entitiesFromArray(array: response.content)
+          var modelVersion: Int?
+          if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+            modelVersion = Int(value as! String)
+          }
+          var totalItems: Int?
+          if let value = response.headers?[HTTPHeader.paginationTotalHeader] {
+            totalItems = Int(value as! String)
+          }
+          var nextOffset: Int?
+          if let value = response.headers?[HTTPHeader.paginationNextOffsetHeader] {
+            nextOffset = Int(value as! String)
+          }
+          var hasMore: Bool? = false
+          if let value = response.headers?[HTTPHeader.paginationHasMoreHeader] {
+            hasMore = (value as! String) == "true"
+          }
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }

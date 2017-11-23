@@ -103,8 +103,8 @@ class AuthorizationController {
       method: .POST,
       path: "sessions/create",
       queryStringParameters: ["is_non_cookies": true],
-      bodyParameters: bodyParameters,
-      completionHandler: { [weak self] content, code, error in
+      bodyParameters: bodyParameters as AnyObject,
+      completionHandler: { [weak self] content, code, headers, error in
         guard let strongSelf = self else { return };
         let token = content?["token"] as? String
         var mfa: MFAChallange?
@@ -138,7 +138,7 @@ class AuthorizationController {
       queryStringParameters: nil,
       bodyParameters: nil,
       allowDeauthorization: false,
-      completionHandler: { [weak self] content, code, error in
+      completionHandler: { [weak self] content, code, headers, error in
         self?.syncLock.withCriticalScope {
           if (self?.internalUserToken != nil) {
             self?.internalUserToken = nil

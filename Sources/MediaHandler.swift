@@ -5,24 +5,44 @@ import ObjectMapper
 public extension Spaces {
   
   /**
-   New media creation. If there is some data that needs to be uploaded put it to dataUploadURL and call markMediaAsUploaded.
+   New media creation. This method allows you to sync multiple media. If there is some data that needs to be uploaded put it to dataUploadURL and call markMediaAsUploaded.
    
-   - parameter media: New media object
+   - parameter media: Set of new or changed links
    - parameter completion: Completion block
+   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
    - parameter media: Media object with valid dataUploadURL
    - parameter error: Error if something wrong happens
    
    */
-  public func createMedia(media: Media,
-                          completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
-    POST("media",
-         parameters: [
-          "media": Mapper<Media>().toJSON(media)
-    ]) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]),
-                 response.error)
+  public func createMedia(media: [Media],
+                          removeToken: String? = nil,
+                          completion: @escaping PushOutputs<Media>) {
+    
+    var headers = [String: String]()
+    if let value = removeToken {
+      headers[HTTPHeader.removeTokenHeader] = value
+    }
+    
+    let array = media.map { item -> AnyObject in
+      var json = item.toJSON()
+      json.removeValue(forKey: "owner_id")
+      json.removeValue(forKey: "data_upload_url")
+      return json as AnyObject
+    }
+    POST("teams/personal/media", parameters:array as AnyObject, headers: headers) { [weak self] response in
+      var oldModelVersion: Int?
+      if let value = response.headers?[HTTPHeader.previousModelVersionHeader] {
+        oldModelVersion = Int(value as! String)
+      }
+      var modelVersion: Int?
+      if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+        modelVersion = Int(value as! String)
+      }
+      let media: [Media]? = self?.entitiesFromArray(array: response.content)
+      completion(media, oldModelVersion, modelVersion, response.error)
     }
   }
+  
   
   /**
    Returns media object. It can be used when dataDownloadURL is expired and new is needed.
@@ -35,8 +55,8 @@ public extension Spaces {
    */
   public func getMedia(mediaMUID: String,
                        completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
-    GET("media/\(mediaMUID)") { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]), response.error)
+    GET("teams/personal/media/\(mediaMUID)") { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary), response.error)
     }
   }
   
@@ -49,31 +69,8 @@ public extension Spaces {
    */
   public func markMediaAsUploaded(mediaMUID: String,
                                   completion: @escaping VoidOutputs) {
-    POST("media/\(mediaMUID)/mark-as-uploaded") { response in
+    POST("teams/personal/media/\(mediaMUID)/set-as-valid-data") { response in
       completion(response.error)
-    }
-  }
-  
-  /**
-   This method allows you to sync multiple media.
-   
-   - parameter items: Set of new or changed links
-   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
-   - parameter completion: Completion block
-   
-   */
-  public func pushMedia(items: [Media],
-                        removeToken: String? = nil,
-                        completion: @escaping PushOutputs) {
-    var parameters = [String: Any]()
-    parameters["media"] = items.toJSON()
-    if let value = removeToken {
-      parameters["remove_token"] = value
-    }
-    POST("media/multiple", parameters:parameters) { response in
-      let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
-      let modelVersion = response.contentDictionary?["model_version"] as? Int
-      completion(oldModelVersion, modelVersion, response.error)
     }
   }
   
@@ -100,13 +97,25 @@ public extension Spaces {
     if let value = limit {
       parameters["limit"] = value
     }
-    GET("media",
+    GET("teams/personal/media",
         parameters: parameters) { [weak self] response in
-          let items: [Media]? = self?.entitiesFromArray(array: response.contentDictionary?["media"])
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          let totalItems = response.contentDictionary?["total"] as? Int
-          let hasMore = response.contentDictionary?["has_more"] as? Bool
-          let nextOffset = response.contentDictionary?["next_offset"] as? Int
+          let items: [Media]? = self?.entitiesFromArray(array: response.content)
+          var modelVersion: Int?
+          if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+            modelVersion = Int(value as! String)
+          }
+          var totalItems: Int?
+          if let value = response.headers?[HTTPHeader.paginationTotalHeader] {
+            totalItems = Int(value as! String)
+          }
+          var nextOffset: Int?
+          if let value = response.headers?[HTTPHeader.paginationNextOffsetHeader] {
+            nextOffset = Int(value as! String)
+          }
+          var hasMore: Bool? = false
+          if let value = response.headers?[HTTPHeader.paginationHasMoreHeader] {
+            hasMore = (value as! String) == "true"
+          }
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }

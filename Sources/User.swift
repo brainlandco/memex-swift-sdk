@@ -38,6 +38,9 @@ public class User: JSONRepresentable {
   public var passwordChangedAt: Date?
   /// Flag that tells if user set his password or he can be only authenticated using onboarding token
   public var hasPassword: Bool?
+  /// Onboarding token
+  public var onboardingToken: String?
+  
   
   /// Two Factor Authorization Flag
   public var isTFAEnabled: Bool?
@@ -73,6 +76,7 @@ public class User: JSONRepresentable {
     self.isTFAEnabled <- map["is_tfa_enabled"]
     self.passwordChangedAt <- map["password_changed_at"]
     self.permissions <- map["permissions"]
+    self.onboardingToken <- map["onboarding_token"]
   }
    
 }
