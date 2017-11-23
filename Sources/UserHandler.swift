@@ -44,7 +44,17 @@ public extension Spaces {
                          onboardingToken: String? = nil,
                          completion: @escaping UserOutputs) {
     user.onboardingToken = onboardingToken
-    POST("users", parameters: user.toJSON() as AnyObject) { [weak self] response in
+    var json = user.toJSON()
+    json.removeValue(forKey: "id")
+    json.removeValue(forKey: "is_phone_verified")
+    json.removeValue(forKey: "is_email_verified")
+    json.removeValue(forKey: "updated_at")
+    json.removeValue(forKey: "created_at")
+    json.removeValue(forKey: "has_password")
+    json.removeValue(forKey: "origin_space_muid")
+    json.removeValue(forKey: "password_changed_at")
+    
+    POST("users", parameters: json as AnyObject) { [weak self] response in
       if (response.httpErrorCode == 409) {
         completion(nil, MemexError.alreadyExists)
         return
@@ -91,20 +101,22 @@ public extension Spaces {
    */
   public func updateUser(user: User,
                          completion: @escaping UserOutputs) {
-    var userParams = Mapper<User>().toJSON(user)
+    var userParams = user.toJSON()
     userParams["avatar"] = nil
     if let avatar_muid = user.avatar?.MUID {
       userParams["avatar_muid"] = avatar_muid
     }
     userParams.removeValue(forKey: "id")
-    userParams.removeValue(forKey: "is_phone_verified")
-    userParams.removeValue(forKey: "is_email_verified")
     userParams.removeValue(forKey: "updated_at")
     userParams.removeValue(forKey: "created_at")
+    userParams.removeValue(forKey: "is_phone_verified")
+    userParams.removeValue(forKey: "is_email_verified")
     userParams.removeValue(forKey: "password")
     userParams.removeValue(forKey: "has_password")
     userParams.removeValue(forKey: "origin_space_muid")
     userParams.removeValue(forKey: "password_changed_at")
+    userParams.removeValue(forKey: "permissions")
+    userParams.removeValue(forKey: "avatar")
     
     POST("users/self",
          parameters: userParams as AnyObject) { [weak self] response in

@@ -30,13 +30,15 @@ public extension Spaces {
     headers[HTTPHeader.autodumpModeHeader] = autodump ? "true" : "false"
     
     let array = spaces.map { item -> AnyObject in
-      var spaceJSON = item.toJSON()
+      var json = item.toJSON()
       if includeRepresentations {
-        spaceJSON["representations"] = item.representations.flatMap { media in
+        json["representations"] = item.representations.flatMap { media in
           media.toJSON()
         }
       }
-      return spaceJSON as AnyObject
+      json.removeValue(forKey: "owner_id")
+      json.removeValue(forKey: "unread")
+      return json as AnyObject
     }
     
     POST("teams/personal/spaces", parameters: array as AnyObject, headers: headers ) { [weak self] response in

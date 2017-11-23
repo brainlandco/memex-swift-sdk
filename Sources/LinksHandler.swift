@@ -23,7 +23,9 @@ public extension Spaces {
     }
     
     let array = links.map { item -> AnyObject in
-      return item.toJSON() as AnyObject
+      var json = item.toJSON()
+      json.removeValue(forKey: "owner_id")
+      return json as AnyObject
     }
     
     POST("teams/personal/links", parameters:array as AnyObject, headers: headers) { [weak self] response in

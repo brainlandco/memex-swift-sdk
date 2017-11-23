@@ -35,7 +35,6 @@ class SpacesTests: BaseTestCase {
         XCTAssertTrue(newSpace?.state == .visible, "wrong visibility state")
         XCTAssertNotNil(newSpace?.ownerID, "missing owner")
         XCTAssertTrue(newSpace?.ownerID == myself?.ID, "wrong owner")
-        XCTAssertTrue(newSpace?.unread == false, "wrong unread")
         let representation = newSpace?.representations![0]
         XCTAssertTrue(representation!.MUID == media.MUID, "wrong representation MUID")
         expectation1.fulfill()

@@ -37,8 +37,6 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public var color: Color?
   /// Set of media that represents space (eg webpage space is represented by url, thumbnail, summary)
   public var representations: [Media]?
-  /// Unread flag (if user needs to be notified about changes)
-  public var unread: Bool?
   public override var hashValue: Int {
     return self.MUID!.hashValue
   }
@@ -61,7 +59,6 @@ public class Space: JSONRepresentable, ObjectProtocol {
     self.caption <- map["caption"]
     self.color <- map["color"]
     self.representations <- map["representations"]
-    self.unread <- map["unread"]
   }
   
 }
