@@ -29,7 +29,6 @@ class SpacesTests: BaseTestCase {
         XCTAssertNotNil(newSpace?.MUID, "missing ID")
         XCTAssertNotNil(newSpace?.createdAt, "missing created at")
         XCTAssertNotNil(newSpace?.updatedAt, "missing updated at")
-        XCTAssertNil(newSpace?.visitedAt, "non nil visitedAt")
         XCTAssertTrue(newSpace?.spaceType == space.spaceType, "wrong data")
         XCTAssertTrue(newSpace?.caption == space.caption, "wrong caption")
         XCTAssertTrue(newSpace?.MUID == space.MUID, "wrong MUID")
@@ -75,7 +74,6 @@ class SpacesTests: BaseTestCase {
                          autodump: false, removeToken: nil, completion: { (newSpaces, _, _, error) in
         XCTAssertNil(error, "request failed")
         let newSpace = newSpaces!.first
-        XCTAssertNil(newSpace?.visitedAt, "request failed")
         let visit = SpaceVisit()
         visit.spaceMUID = newSpace?.MUID
         visit.visitedAt = Date()

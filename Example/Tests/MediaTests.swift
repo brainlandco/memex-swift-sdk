@@ -9,6 +9,7 @@ class MediaTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let media = Media()
       media.dataState = .dataValid
+      media.mediaType = .source
       media.embededData = "text".data(using: .utf8)
       memex.createMedia(media: [media], completion: { (newMedia, _, _, error) in
         XCTAssertNil(error, "request failed")
@@ -33,6 +34,7 @@ class MediaTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let media = Media()
       media.dataState = .waitingForNewUploadURL
+      media.mediaType = MediaType.source
       memex.createMedia(media: [media], completion: { (newMedia, _, _, error) in
         XCTAssertNil(error, "request failed")
         let newMedium = newMedia!.first
@@ -79,6 +81,7 @@ class MediaTests: BaseTestCase {
       media.MUID = UUID().uuidString
       media.dataState = .dataValid
       media.embededData = "text".data(using: .utf8)
+      media.mediaType = MediaType.source
       memex.createMedia(media: [media], completion: { (_, oldModelVersion, newModelVersion, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertTrue(oldModelVersion == 0, "wrong old model version")
