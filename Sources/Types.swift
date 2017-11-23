@@ -101,7 +101,8 @@ public typealias PullOutputs<T> = (
  - parameter error: Error if something wrong happens
  
  */
-public typealias PushOutputs = (
+public typealias PushOutputs<T> = (
+  _ items: [T]?,
   _ oldModelVersion: Int?,
   _ modelVersion: Int?,
   _ error: Swift.Error?)->()
@@ -118,8 +119,9 @@ public enum ProcessingMode: String {
 }
 
 
-typealias RequestCompletion = (_ content: [String: Any]?,
+typealias RequestCompletion = (_ content: AnyObject?,
   _ code: Int?,
+  _ headers: [AnyHashable: Any]?,
   _ error: Swift.Error?)->()
 
 
@@ -136,6 +138,14 @@ struct HTTPHeader {
   static let contentType = "Content-Type"
   static let userToken = "X-User-Token"
   static let appToken = "X-App-Token"
+  static let removeTokenHeader = "X-Remove-Token"
+  static let paginationTotalHeader = "X-Pagination-Total"
+  static let paginationHasMoreHeader = "X-Pagination-Has-More"
+  static let paginationNextOffsetHeader = "X-Pagination-Next-Offset"
+  static let previousModelVersionHeader = "X-Previous-Model-Version"
+  static let modelVersionHeader = "X-Model-Version"
+  static let processingModeHeader = "X-Processing-Mode"
+  static let autodumpModeHeader = "X-Autodump-Mode"
 }
 
 

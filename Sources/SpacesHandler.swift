@@ -1,38 +1,56 @@
 import Foundation
 import ObjectMapper
 
-
 public extension Spaces {
   
-  
   /**
-   New space creation.
+   If you want create multiple spaces or sync your local model then this method is for you.
    
-   - parameter space: New space object
+   - parameter items: Set of new or changed spaces
    - parameter process: Tells if/how you want to process this space.
    - parameter autodump: If true it will automatically link space with most related already existing space
+   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
    - parameter completion: Completion block
    - parameter spaceMUID: MUID of created space
    - parameter error: Error if something wrong happens
    
    */
-  public func createSpace(space: Space,
+  public func createSpaces(spaces: [Space],
+                           includeRepresentations: Bool,
                           process: ProcessingMode,
                           autodump: Bool,
-                          completion: @escaping (_ space: Space?, _ error: Swift.Error?)->()) {
-    var spaceJSON = space.toJSON()
-    spaceJSON["representations"] = space.representations.flatMap { media in
-      media.toJSON()
+                          removeToken: String?,
+                          completion: @escaping PushOutputs<Space>) {
+    
+    var headers = [String: String]()
+    headers[HTTPHeader.processingModeHeader] = process.rawValue
+    if let value = removeToken {
+      headers[HTTPHeader.removeTokenHeader] = value
     }
-    let parameters: [String: Any] = ["space": spaceJSON,
-                                     "process": process.rawValue,
-                                     "autodump": autodump]
-    POST("spaces", parameters: parameters ) { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["space"]),
-                 response.error)
+    headers[HTTPHeader.autodumpModeHeader] = autodump ? "true" : "false"
+    
+    let array = spaces.map { item -> AnyObject in
+      var spaceJSON = item.toJSON()
+      if includeRepresentations {
+        spaceJSON["representations"] = item.representations.flatMap { media in
+          media.toJSON()
+        }
+      }
+      return spaceJSON as AnyObject
+    }
+    
+    POST("teams/personal/spaces", parameters: array as AnyObject, headers: headers ) { response in
+      var oldModelVersion: Int?
+      if let value = response.headers?[HTTPHeader.previousModelVersionHeader] {
+        oldModelVersion = Int(value as! String)
+      }
+      var modelVersion: Int?
+      if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+        modelVersion = Int(value as! String)
+      }
+      completion(nil, oldModelVersion, modelVersion, response.error)
     }
   }
-  
   
   /**
    Method for getting specific space
@@ -45,8 +63,8 @@ public extension Spaces {
    */
   public func getSpace(muid: String,
                        completion: @escaping (_ space: Space?, _ error: Swift.Error?)->()) {
-    GET("spaces/\(muid)") { [weak self] response in
-      completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["space"]),
+    GET("teams/personal/spaces/\(muid)") { [weak self] response in
+      completion(self?.entityFromDictionary(dictionary: response.contentDictionary),
                  response.error)
     }
   }
@@ -60,10 +78,9 @@ public extension Spaces {
    */
   public func logSpaceVisits(visits: [SpaceVisit],
                              completion: @escaping VoidOutputs) {
-    POST("spaces/log-visits",
-         parameters: [
-          "spaces": Mapper<SpaceVisit>().toJSONArray(visits)
-    ]) { response in
+    POST("teams/personal/spaces/log-visits",
+         parameters: Mapper<SpaceVisit>().toJSONArray(visits) as AnyObject
+    ) { response in
       completion(response.error)
     }
   }
@@ -79,35 +96,11 @@ public extension Spaces {
    */
   public func getSpacesAbstract(muids: [String],
                                 completion: @escaping (_ caption: String?, _ error: Swift.Error?)->()) {
-    POST("spaces/abstract",
+    POST("teams/personal/spaces/abstract",
          parameters: [
           "space_MUIDs": muids
-    ]) { response in
+    ] as AnyObject) { response in
       completion(response.contentDictionary?["caption"] as? String, response.error)
-    }
-  }
-  
-  /**
-   If you want create multiple spaces or sync your local model then this method is for you.
-   
-   - parameter items: Set of new or changed spaces
-   - parameter removeToken: Entities can have assigned remove token and it can be used to easily remove them before they are replaced by another ones
-   - parameter completion: Completion block
-   
-   */
-  public func pushSpaces(items: [Space],
-                         removeToken: String? = nil,
-                         completion: @escaping PushOutputs) {
-    var parameters = [String: Any]()
-    parameters["spaces"] = items.toJSON()
-    if let value = removeToken {
-      parameters["remove_token"] = value
-    }
-    POST("spaces/multiple",
-         parameters:parameters) { response in
-          let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          completion(oldModelVersion, modelVersion, response.error)
     }
   }
   
@@ -134,13 +127,25 @@ public extension Spaces {
     if let value = limit {
       parameters["limit"] = value
     }
-    GET("spaces",
+    GET("teams/personal/spaces",
         parameters: parameters) { [weak self] response in
-          let items: [Space]? = self?.entitiesFromArray(array: response.contentDictionary?["spaces"])
-          let modelVersion = response.contentDictionary?["model_version"] as? Int
-          let totalItems = response.contentDictionary?["total"] as? Int
-          let hasMore = response.contentDictionary?["has_more"] as? Bool
-          let nextOffset = response.contentDictionary?["next_offset"] as? Int
+          let items: [Space]? = self?.entitiesFromArray(array: response.content)
+          var modelVersion: Int?
+          if let value = response.headers?[HTTPHeader.modelVersionHeader] {
+            modelVersion = Int(value as! String)
+          }
+          var totalItems: Int?
+          if let value = response.headers?[HTTPHeader.paginationTotalHeader] {
+            totalItems = Int(value as! String)
+          }
+          var nextOffset: Int?
+          if let value = response.headers?[HTTPHeader.paginationNextOffsetHeader] {
+            nextOffset = Int(value as! String)
+          }
+          var hasMore: Bool? = false
+          if let value = response.headers?[HTTPHeader.paginationHasMoreHeader] {
+            hasMore = (value as! String) == "true"
+          }
           completion(items, modelVersion, totalItems, hasMore, nextOffset, response.error)
     }
   }

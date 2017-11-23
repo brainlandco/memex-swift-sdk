@@ -22,7 +22,8 @@ class RequestInvoker {
     method: HTTPMethod,
     path: String,
     queryStringParameters: [String: Any]? = nil,
-    bodyParameters: [String: Any]? = nil,
+    bodyParameters: AnyObject? = nil,
+    headers: [String: String]? = nil,
     allowDeauthorization: Bool? = nil,
     completionHandler: @escaping RequestCompletion) {
     do {
@@ -31,12 +32,13 @@ class RequestInvoker {
         path: path,
         queryStringParameters: queryStringParameters,
         bodyParameters: bodyParameters,
+        headers: headers,
         userToken: self.spaces!.auth.userToken)
       self.invokeRequest(request: request,
                          allowDeauthorization: allowDeauthorization ?? self.spaces?.configuration.allowDeauthorization ?? false,
                          completionHandler: completionHandler)
     } catch {
-      completionHandler(nil, nil, MemexError.JSONParsingError)
+      completionHandler(nil, nil, nil, MemexError.JSONParsingError)
     }
   }
   
@@ -44,7 +46,8 @@ class RequestInvoker {
     method: HTTPMethod,
     path: String,
     queryStringParameters: [String: Any]?,
-    bodyParameters: [String: Any]?,
+    bodyParameters: AnyObject?,
+    headers: [String: String]?,
     userToken: String?) throws -> URLRequest {
     let base = self.spaces!.configuration.serverURL.appendingPathComponent(path)
     var path = "\(base.absoluteString)"
@@ -62,6 +65,14 @@ class RequestInvoker {
       request.setValue(userToken, forHTTPHeaderField: HTTPHeader.userToken)
     }
     request.setValue(self.spaces!.configuration.appToken, forHTTPHeaderField: HTTPHeader.appToken)
+    if let headers = headers {
+      for (key, value) in headers {
+        request.setValue(value, forHTTPHeaderField: key)
+      }
+    }
+    
+    request.setValue(userToken, forHTTPHeaderField: HTTPHeader.userToken)
+    
     if let body = bodyParameters {
       request.setValue(MIMETypes.JSON, forHTTPHeaderField: HTTPHeader.contentType)
       let data = try JSONSerialization.data(withJSONObject: body, options: [])
@@ -79,7 +90,7 @@ class RequestInvoker {
         self.logRequest(request: task.originalRequest ?? request,
                         response: response,
                         resposneData: data)
-        completionHandler(nil, nil, error)
+        completionHandler(nil, nil, nil, error)
       } else {
         self.processResponseWithRequest(request: request,
                                         response: response!,
@@ -105,17 +116,16 @@ class RequestInvoker {
     case 200..<300:
       printLog = printLog || self.spaces!.configuration.logAllRequests
       if data.count == 0 {
-        completionHandler(nil, code, nil)
+        completionHandler(nil, code, httpResponse.allHeaderFields, nil)
       } else {
-        var content: [String: Any]?
+        var content: AnyObject?
         do {
-          content = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+          content = try JSONSerialization.jsonObject(with: data, options: []) as AnyObject?
         } catch {
-          completionHandler(nil, code, MemexError.JSONParsingError)
+          completionHandler(nil, code, httpResponse.allHeaderFields, MemexError.JSONParsingError)
           return
         }
-        
-        completionHandler(content, code, nil)
+        completionHandler(content, code, httpResponse.allHeaderFields, nil)
       }
     default:
       printLog = true
@@ -162,20 +172,20 @@ class RequestInvoker {
             })
           }
         }
-        completionHandler(nil, code, MemexError.notAuthorized)
+        completionHandler(nil, code, nil, MemexError.notAuthorized)
       } else {
         if code == 404 {
-          completionHandler(nil, code, MemexError.endpointNotFound)
+          completionHandler(nil, code, nil, MemexError.endpointNotFound)
         } else {
-          completionHandler(nil, code, MemexError.genericClientError)
+          completionHandler(nil, code, nil, MemexError.genericClientError)
         }
       }
     default:
       if code == 503 {
         self.spaces?.healthChecker.observedEnabledMaintanance()
-        completionHandler(nil, code, MemexError.serverMaintanance)
+        completionHandler(nil, code, nil, MemexError.serverMaintanance)
       } else {
-        completionHandler(nil, code, MemexError.genericServerError)
+        completionHandler(nil, code, nil, MemexError.genericServerError)
       }
     }
   }

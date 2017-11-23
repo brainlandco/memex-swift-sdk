@@ -77,7 +77,7 @@ class MediaTests: BaseTestCase {
       media.MUID = UUID().uuidString
       media.dataState = .dataValid
       media.embededData = "text".data(using: .utf8)
-      memex.pushMedia(items: [media], completion: { (oldModelVersion, newModelVersion, error) in
+      memex.pushMedia(items: [media], completion: { (_, oldModelVersion, newModelVersion, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertTrue(oldModelVersion == 0, "wrong old model version")
         XCTAssertTrue(newModelVersion == 1, "wrong new model version")

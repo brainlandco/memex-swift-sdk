@@ -16,9 +16,7 @@ public extension Spaces {
   public func createMedia(media: Media,
                           completion: @escaping (_ media: Media?, _ error: Swift.Error?)->()) {
     POST("media",
-         parameters: [
-          "media": Mapper<Media>().toJSON(media)
-    ]) { [weak self] response in
+         parameters: Mapper<Media>().toJSON(media) as AnyObject) { [weak self] response in
       completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["media"]),
                  response.error)
     }
@@ -64,16 +62,16 @@ public extension Spaces {
    */
   public func pushMedia(items: [Media],
                         removeToken: String? = nil,
-                        completion: @escaping PushOutputs) {
+                        completion: @escaping PushOutputs<Media>) {
     var parameters = [String: Any]()
     parameters["media"] = items.toJSON()
     if let value = removeToken {
       parameters["remove_token"] = value
     }
-    POST("media/multiple", parameters:parameters) { response in
+    POST("media", parameters:parameters as AnyObject) { response in
       let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
       let modelVersion = response.contentDictionary?["model_version"] as? Int
-      completion(oldModelVersion, modelVersion, response.error)
+      completion(nil, oldModelVersion, modelVersion, response.error)
     }
   }
   

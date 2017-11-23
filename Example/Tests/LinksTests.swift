@@ -9,9 +9,11 @@ class LinksTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let space = Space()
       space.MUID = UUID().uuidString
-      memex.createSpace(space: space, process: .no, autodump: false, completion: { (newSpace, error) in
+      memex.createSpaces(spaces: [space], includeRepresentations: true, process: .no, autodump: false,
+                         removeToken: nil, completion: { (newSpaces, _, _, error) in
         XCTAssertNil(error, "request failed")
         
+        let newSpace = newSpaces!.first
         let link = Link()
         link.originSpaceMUID = newSpace?.MUID
         link.targetSpaceMUID = newSpace?.MUID
@@ -39,9 +41,11 @@ class LinksTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let space = Space()
       space.MUID = UUID().uuidString
-      memex.createSpace(space: space, process: .no, autodump: false, completion: { (newSpace, error) in
+      memex.createSpaces(spaces: [space], includeRepresentations: true, process: .no,
+                         autodump: false, removeToken: nil, completion: { (newSpaces, _, _, error) in
         XCTAssertNil(error, "request failed")
-        
+        let newSpace = newSpaces!.first
+                          
         let link = Link()
         link.MUID = UUID().uuidString
         link.originSpaceMUID = newSpace?.MUID
@@ -68,15 +72,16 @@ class LinksTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let space = Space()
       space.MUID = UUID().uuidString
-      memex.createSpace(space: space, process: .no, autodump: false, completion: { (newSpace, error) in
+      memex.createSpaces(spaces: [space], includeRepresentations: true, process: .no,
+                         autodump: false, removeToken: nil, completion: { (newSpaces, _, _, error) in
         XCTAssertNil(error, "request failed")
-        
+        let newSpace = newSpaces!.first
         let link = Link()
         link.MUID = UUID().uuidString
         link.originSpaceMUID = newSpace?.MUID
         link.targetSpaceMUID = newSpace?.MUID
       
-        memex.pushLinks(items: [link], completion: { (oldModelVersion, newModelVersion, error) in
+        memex.pushLinks(items: [link], completion: { (_, oldModelVersion, newModelVersion, error) in
           XCTAssertNil(error, "request failed")
           XCTAssertTrue(oldModelVersion == 1, "wrong old model version")
           XCTAssertTrue(newModelVersion == 2, "wrong new model version")

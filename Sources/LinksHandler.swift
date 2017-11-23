@@ -16,9 +16,7 @@ public extension Spaces {
   public func createLink(link: Link,
                          completion: @escaping (_ media: Link?, _ error: Swift.Error?)->()) {
     POST("links",
-         parameters: [
-          "link": Mapper<Link>().toJSON(link)
-    ]) { [weak self] response in
+         parameters: Mapper<Link>().toJSON(link) as AnyObject) { [weak self] response in
       completion(self?.entityFromDictionary(dictionary: response.contentDictionary?["link"]),
                  response.error)
     }
@@ -51,16 +49,16 @@ public extension Spaces {
    */
   public func pushLinks(items: [Link],
                         removeToken: String? = nil,
-                        completion: @escaping PushOutputs) {
+                        completion: @escaping PushOutputs<Link>) {
     var parameters = [String: Any]()
     parameters["links"] = items.toJSON()
     if let value = removeToken {
       parameters["remove_token"] = value
     }
-    POST("links/multiple",parameters: parameters) { response in
+    POST("links", parameters: parameters as AnyObject) { response in
       let oldModelVersion = response.contentDictionary?["old_model_version"] as? Int
       let modelVersion = response.contentDictionary?["model_version"] as? Int
-      completion(oldModelVersion, modelVersion, response.error)
+      completion(nil, oldModelVersion, modelVersion, response.error)
     }
   }
   
