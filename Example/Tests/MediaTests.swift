@@ -81,6 +81,7 @@ class MediaTests: BaseTestCase {
       media.MUID = UUID().uuidString
       media.dataState = .dataValid
       media.embededData = "text".data(using: .utf8)
+      media.metadata = ["item": 1]
       media.mediaType = MediaType.source
       memex.createMedia(media: [media], completion: { (_, oldModelVersion, newModelVersion, error) in
         XCTAssertNil(error, "request failed")
