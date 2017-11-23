@@ -72,7 +72,7 @@ public class Media: JSONRepresentable, ObjectProtocol {
     self.updatedAt <- map["updated_at"]
     self.state <- map["state"]
     self.metadata <- (map["metadata"], EncodedJSONTransform())
-    self.mediaType <- map["type"]
+    self.mediaType <- map["tag"]
     self.ownerID <- map["owner_id"]
     self.dataState <- map["data_state"]
     self.embededData <- map["embeded_data"]

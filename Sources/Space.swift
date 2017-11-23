@@ -25,8 +25,6 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public var createdAt: Date?
   /// Timestamp of last update
   public var updatedAt: Date?
-  /// Timestamp of last vsit
-  public var visitedAt: Date?
   /// Visibility state
   public var state: ObjectState?
   /// Owner user ID
@@ -57,12 +55,11 @@ public class Space: JSONRepresentable, ObjectProtocol {
     self.MUID <- map["muid"]
     self.createdAt <- map["created_at"]
     self.updatedAt <- map["updated_at"]
-    self.visitedAt <- map["visited_at"]
     self.state <- map["state"]
     self.ownerID <- map["owner_id"]
     self.spaceType <- map["type_identifier"]
-    self.caption <- map["tag_label"]
-    self.color <- map["tag_color"]
+    self.caption <- map["caption"]
+    self.color <- map["color"]
     self.representations <- map["representations"]
     self.unread <- map["unread"]
   }

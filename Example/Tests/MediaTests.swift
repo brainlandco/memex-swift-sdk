@@ -10,17 +10,18 @@ class MediaTests: BaseTestCase {
       let media = Media()
       media.dataState = .dataValid
       media.embededData = "text".data(using: .utf8)
-      memex.createMedia(media: media, completion: { (newMedia, error) in
+      memex.createMedia(media: [media], completion: { (newMedia, _, _, error) in
         XCTAssertNil(error, "request failed")
-        XCTAssertNotNil(newMedia?.MUID, "missing ID")
-        XCTAssertNotNil(newMedia?.createdAt, "missing created at")
-        XCTAssertNotNil(newMedia?.updatedAt, "missing updated at")
-        XCTAssertNotNil(newMedia?.embededData, "missing data")
-        XCTAssertTrue(newMedia?.embededData == media.embededData, "wrong data")
-        XCTAssertTrue(newMedia?.dataState == media.dataState, "wrong data state")
-        XCTAssertTrue(newMedia?.state == .visible, "wrong visibility state")
-        XCTAssertNotNil(newMedia?.ownerID, "missing owner")
-        XCTAssertTrue(newMedia?.ownerID == myself?.ID, "wrong owner")
+        let newMedium = newMedia!.first
+        XCTAssertNotNil(newMedium?.MUID, "missing ID")
+        XCTAssertNotNil(newMedium?.createdAt, "missing created at")
+        XCTAssertNotNil(newMedium?.updatedAt, "missing updated at")
+        XCTAssertNotNil(newMedium?.embededData, "missing data")
+        XCTAssertTrue(newMedium?.embededData == media.embededData, "wrong data")
+        XCTAssertTrue(newMedium?.dataState == media.dataState, "wrong data state")
+        XCTAssertTrue(newMedium?.state == .visible, "wrong visibility state")
+        XCTAssertNotNil(newMedium?.ownerID, "missing owner")
+        XCTAssertTrue(newMedium?.ownerID == myself?.ID, "wrong owner")
         expectation1.fulfill()
       })
     }
@@ -32,23 +33,24 @@ class MediaTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let media = Media()
       media.dataState = .waitingForNewUploadURL
-      memex.createMedia(media: media, completion: { (newMedia, error) in
+      memex.createMedia(media: [media], completion: { (newMedia, _, _, error) in
         XCTAssertNil(error, "request failed")
-        XCTAssertNotNil(newMedia, "missing media")
-        XCTAssertNil(newMedia?.embededData, "non nil data")
-        XCTAssertNotNil(newMedia?.dataUploadURL, "nil data upload url")
-        XCTAssertTrue(newMedia?.dataState == .readyForDataUpload, "wrong data state")
+        let newMedium = newMedia!.first
+        XCTAssertNotNil(newMedium, "missing media")
+        XCTAssertNil(newMedium?.embededData, "non nil data")
+        XCTAssertNotNil(newMedium?.dataUploadURL, "nil data upload url")
+        XCTAssertTrue(newMedium?.dataState == .readyForDataUpload, "wrong data state")
         
         let originalData = "data".data(using: .utf8)
-        let request = URLRequest(url: newMedia!.dataUploadURL!)
+        let request = URLRequest(url: newMedium!.dataUploadURL!)
         URLSession.shared.uploadTask(with: request,
                                      from: originalData,
                                      completionHandler: { (data, response, error) in
                                       XCTAssertNil(error, "request failed")
-                                      memex.markMediaAsUploaded(mediaMUID: newMedia!.MUID!,
+                                      memex.markMediaAsUploaded(mediaMUID: newMedium!.MUID!,
                                                                 completion: { (error) in
                                                                   XCTAssertNil(error, "request failed")
-                                                                  memex.getMedia(mediaMUID: newMedia!.MUID!,
+                                                                  memex.getMedia(mediaMUID: newMedium!.MUID!,
                                                                                  completion: { (getMedia, error) in
                                                                                   XCTAssertNil(error, "request failed")
                                                                                   XCTAssertNotNil(getMedia?.dataDownloadURL, "nil data download url")
@@ -77,7 +79,7 @@ class MediaTests: BaseTestCase {
       media.MUID = UUID().uuidString
       media.dataState = .dataValid
       media.embededData = "text".data(using: .utf8)
-      memex.pushMedia(items: [media], completion: { (_, oldModelVersion, newModelVersion, error) in
+      memex.createMedia(media: [media], completion: { (_, oldModelVersion, newModelVersion, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertTrue(oldModelVersion == 0, "wrong old model version")
         XCTAssertTrue(newModelVersion == 1, "wrong new model version")

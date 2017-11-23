@@ -96,6 +96,16 @@ public extension Spaces {
     if let avatar_muid = user.avatar?.MUID {
       userParams["avatar_muid"] = avatar_muid
     }
+    userParams.removeValue(forKey: "id")
+    userParams.removeValue(forKey: "is_phone_verified")
+    userParams.removeValue(forKey: "is_email_verified")
+    userParams.removeValue(forKey: "updated_at")
+    userParams.removeValue(forKey: "created_at")
+    userParams.removeValue(forKey: "password")
+    userParams.removeValue(forKey: "has_password")
+    userParams.removeValue(forKey: "origin_space_muid")
+    userParams.removeValue(forKey: "password_changed_at")
+    
     POST("users/self",
          parameters: userParams as AnyObject) { [weak self] response in
           completion(self?.entityFromDictionary(dictionary: response.contentDictionary), response.error)

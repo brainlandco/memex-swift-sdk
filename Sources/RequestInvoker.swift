@@ -128,7 +128,8 @@ class RequestInvoker {
         completionHandler(content, code, httpResponse.allHeaderFields, nil)
       }
     default:
-      printLog = true
+      printLog = false
+      self.logRequest(request: request, response: response, resposneData: data)
       self.processResponseErrorWithCode(code: code,
                                         data: data,
                                         allowDeauthorization: allowDeauthorization,

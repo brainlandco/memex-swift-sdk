@@ -83,9 +83,6 @@ class SpacesTests: BaseTestCase {
           XCTAssertNil(error, "request failed")
           memex.getSpace(muid: newSpace!.MUID!, completion: { (getSpace, error) in
             XCTAssertNil(error, "request failed")
-            XCTAssertNotNil(getSpace?.visitedAt, "missing visited at")
-            let delta = visit.visitedAt!.timeIntervalSince(getSpace!.visitedAt!)
-            XCTAssertTrue(abs(delta) < 2, "wrong MUID")
             expectation1.fulfill()
           })
         })
@@ -119,7 +116,8 @@ class SpacesTests: BaseTestCase {
     self.prepareSDK(authorize: true) { (memex, myself) in
       let space = Space()
       space.MUID = UUID().uuidString
-      memex.pushSpaces(items: [space], completion: { (items, oldModelVersion, newModelVersion, error) in
+      memex.createSpaces(spaces: [space], includeRepresentations: false, process: .no,
+                         autodump: false, removeToken: nil, completion: { (items, oldModelVersion, newModelVersion, error) in
         XCTAssertNil(error, "request failed")
         XCTAssertTrue(oldModelVersion == 0, "wrong old model version")
         XCTAssertTrue(newModelVersion == 1, "wrong new model version")

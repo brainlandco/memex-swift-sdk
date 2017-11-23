@@ -39,7 +39,7 @@ public extension Spaces {
       return spaceJSON as AnyObject
     }
     
-    POST("teams/personal/spaces", parameters: array as AnyObject, headers: headers ) { response in
+    POST("teams/personal/spaces", parameters: array as AnyObject, headers: headers ) { [weak self] response in
       var oldModelVersion: Int?
       if let value = response.headers?[HTTPHeader.previousModelVersionHeader] {
         oldModelVersion = Int(value as! String)
@@ -48,7 +48,8 @@ public extension Spaces {
       if let value = response.headers?[HTTPHeader.modelVersionHeader] {
         modelVersion = Int(value as! String)
       }
-      completion(nil, oldModelVersion, modelVersion, response.error)
+      let spaces: [Space]? = self?.entitiesFromArray(array: response.content)
+      completion(spaces, oldModelVersion, modelVersion, response.error)
     }
   }
   
