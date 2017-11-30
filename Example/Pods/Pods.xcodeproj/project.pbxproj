@@ -46,8 +46,8 @@
 		6FB26A47AABE68B41B50710022F0C9FD /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ADC450D70440AB70B5320F7F77257 /* NSDecimalNumberTransform.swift */; };
 		717EA74AA6F3BB71B3F9577A2F0D8D4D /* HealthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62089D0D7E0C8A2C8FE6E097654499F8 /* HealthChecker.swift */; };
 		7845C199408A9276B74546B8E3F1C383 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1980E7EBE3A6F48A7C667F621F1D18 /* User.swift */; };
-		798A40321FD0BC1B00709081 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A40311FD0BC1B00709081 /* Session.swift */; };
-		798A40341FD0BC2F00709081 /* SessionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A40331FD0BC2F00709081 /* SessionsHandler.swift */; };
+		79024A6B1FD0C27C0072F064 /* SessionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79024A691FD0C27B0072F064 /* SessionsHandler.swift */; };
+		79024A6C1FD0C27C0072F064 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79024A6A1FD0C27B0072F064 /* Session.swift */; };
 		7AFE043B45514AA2CDDC8722B97CBFEF /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0007F462E4B47BFB7526047E94A50024 /* TransformOperators.swift */; };
 		7B19EC992E3AF85ADAD34540164406C6 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4476F5714395BBC40ED17D2EB4CBCC9D /* UserHandler.swift */; };
 		7C0F17488B3552EAAFC074CFC4491DD5 /* TegKeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982F80E633A6FAAFDCF53309F08CB7E2 /* TegKeychainConstants.swift */; };
@@ -208,8 +208,8 @@
 		6FBD68FCEF9ACC5BD7F349C9E076D015 /* Pods-MemexSwiftSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MemexSwiftSDK_Tests.modulemap"; sourceTree = "<group>"; };
 		73E53439BA8D9510E2DD7C08B0948522 /* ConnectionHealthChanged.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectionHealthChanged.swift; path = Sources/ConnectionHealthChanged.swift; sourceTree = "<group>"; };
 		774DFE51B266869002FA1F06C0F17AB3 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
-		798A40311FD0BC1B00709081 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		798A40331FD0BC2F00709081 /* SessionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHandler.swift; sourceTree = "<group>"; };
+		79024A691FD0C27B0072F064 /* SessionsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionsHandler.swift; path = Sources/SessionsHandler.swift; sourceTree = "<group>"; };
+		79024A6A1FD0C27B0072F064 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Sources/Session.swift; sourceTree = "<group>"; };
 		7C779F8BDD47C75857E54803D419707C /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
 		7E93DF148F624209EB0A3995D7D4390D /* Base64Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64Transform.swift; path = Sources/Base64Transform.swift; sourceTree = "<group>"; };
 		83049202F5DBDA68FA3816BA1E5BF48B /* BytesCountTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BytesCountTransform.swift; path = Sources/BytesCountTransform.swift; sourceTree = "<group>"; };
@@ -426,9 +426,9 @@
 				878031F3EEAC976E637F0388E01974CE /* JSONRepresentable.swift */,
 				57AB20398D4F1130AB61F20522FF9B15 /* Link.swift */,
 				9A39954EAC29846D81B63925EC521D5B /* LinksHandler.swift */,
-				798A40311FD0BC1B00709081 /* Session.swift */,
-				798A40331FD0BC2F00709081 /* SessionsHandler.swift */,
 				27C0D422BCBE1E3595439A6EAA467BCF /* Lock.swift */,
+				79024A6A1FD0C27B0072F064 /* Session.swift */,
+				79024A691FD0C27B0072F064 /* SessionsHandler.swift */,
 				DDC153BBA1245228527C33F207B5BEDD /* Media.swift */,
 				E3178467DBEF54315C28957654E330F8 /* MediaHandler.swift */,
 				2F46E24A3ECA348AEDDBE2B033337AEC /* MFA.swift */,
@@ -778,12 +778,12 @@
 				FFA037C271A0123C19E7889E4E6FB6D2 /* Event.swift in Sources */,
 				717EA74AA6F3BB71B3F9577A2F0D8D4D /* HealthChecker.swift in Sources */,
 				CBCE420519DFD68F4F841D3A9AE6B7D3 /* ISO8601DateTransform.swift in Sources */,
-				798A40341FD0BC2F00709081 /* SessionsHandler.swift in Sources */,
 				1092814F081DCA9C7F5AD9B462892DB9 /* JSONRepresentable.swift in Sources */,
 				F0F081A84BBF2705C2E41F9A24481CB6 /* Link.swift in Sources */,
 				FAF2E11610E8A2EEB6F3F789D66DF841 /* LinksHandler.swift in Sources */,
 				974485F7A8FB66DED688AA418095E0F6 /* Lock.swift in Sources */,
 				2C88DDAA359E27377E8035705F62F1B5 /* Media.swift in Sources */,
+				79024A6B1FD0C27C0072F064 /* SessionsHandler.swift in Sources */,
 				0FD5325E643E953522438B7B1D33A744 /* MediaHandler.swift in Sources */,
 				FA433735C31B0D8FAD6E222F72AD1829 /* MemexSwiftSDK-dummy.m in Sources */,
 				DF060357177984DB91426336079DF579 /* MFA.swift in Sources */,
@@ -801,7 +801,7 @@
 				BAF89F4632AD8C10D1FD184AE25314E6 /* SpaceVisit.swift in Sources */,
 				9F741D5223316568B565879E38F54E53 /* String+Additions.swift in Sources */,
 				CEB8B6393865B646179F6D0B0D5AFC8A /* Types.swift in Sources */,
-				798A40321FD0BC1B00709081 /* Session.swift in Sources */,
+				79024A6C1FD0C27C0072F064 /* Session.swift in Sources */,
 				2BBB3FC5850FE4F8A48785ED16770246 /* URLTransform.swift in Sources */,
 				7845C199408A9276B74546B8E3F1C383 /* User.swift in Sources */,
 				7B19EC992E3AF85ADAD34540164406C6 /* UserHandler.swift in Sources */,
