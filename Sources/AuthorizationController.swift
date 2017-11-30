@@ -99,11 +99,18 @@ class AuthorizationController {
   }
   
   func authorizeWithBodyParameters(bodyParameters: [String: Any], completionHandler: @escaping TokenResponse) {
+    var body = bodyParameters
+    var identity = bodyParameters["identity"] as? [String: Any]
+    if identity == nil {
+      identity = [:]
+    }
+    identity!["device"] = UIDevice.current.name
+    body["identity"] = identity
     self.spaces?.requestor.request(
       method: .POST,
       path: "sessions/create",
       queryStringParameters: ["is_non_cookies": true],
-      bodyParameters: bodyParameters as AnyObject,
+      bodyParameters: body as AnyObject,
       completionHandler: { [weak self] content, code, headers, error in
         guard let strongSelf = self else { return };
         let token = content?["token"] as? String
@@ -123,7 +130,7 @@ class AuthorizationController {
     })
   }
   
-  func deauthorize(completionHandler: @escaping VoidOutputs) {
+  func deauthorize(all: Bool = false, completionHandler: @escaping VoidOutputs) {
     var authorized = false;
     self.syncLock.withCriticalScope {
       authorized = self.internalUserToken != nil
@@ -134,7 +141,7 @@ class AuthorizationController {
     }
     self.spaces?.requestor.request(
       method: .POST,
-      path: "sessions/invalidate",
+      path: all ? "sessions/invalidate" : "sessions/current/invalidate",
       queryStringParameters: nil,
       bodyParameters: nil,
       allowDeauthorization: false,

@@ -14,6 +14,7 @@
 		796DCEC81EFC629B00A2BE09 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC71EFC629B00A2BE09 /* UserTests.swift */; };
 		796DCECA1EFEA0F000A2BE09 /* MediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCEC91EFEA0F000A2BE09 /* MediaTests.swift */; };
 		796DCECC1EFEAF9100A2BE09 /* SpacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DCECB1EFEAF9100A2BE09 /* SpacesTests.swift */; };
+		798A40361FD0BE3A00709081 /* SessionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A40351FD0BE3A00709081 /* SessionsTest.swift */; };
 		D8583F73A246BDB68AB54657 /* Pods_MemexSwiftSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6BCB058CFBD3F2EE6A2504 /* Pods_MemexSwiftSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		796DCEC71EFC629B00A2BE09 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		796DCEC91EFEA0F000A2BE09 /* MediaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTests.swift; sourceTree = "<group>"; };
 		796DCECB1EFEAF9100A2BE09 /* SpacesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpacesTests.swift; sourceTree = "<group>"; };
+		798A40351FD0BE3A00709081 /* SessionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTest.swift; sourceTree = "<group>"; };
 		A23AF129EF050739580BD00B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B06B856B8150F934BAE6ED9F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E5813D45C2D1931CC245BB4F /* Pods-MemexSwiftSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemexSwiftSDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemexSwiftSDK_Tests/Pods-MemexSwiftSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				796DCEC91EFEA0F000A2BE09 /* MediaTests.swift */,
 				796DCECB1EFEAF9100A2BE09 /* SpacesTests.swift */,
 				607FACEB1AFB9204008FA782 /* BaseTestCase.swift */,
+				798A40351FD0BE3A00709081 /* SessionsTest.swift */,
 				796DCEC71EFC629B00A2BE09 /* UserTests.swift */,
 				796DCEC51EFC615700A2BE09 /* AppTokenTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -256,6 +259,7 @@
 				7911E3BA1F01882300FFF584 /* LinksTests.swift in Sources */,
 				796DCEC81EFC629B00A2BE09 /* UserTests.swift in Sources */,
 				796DCECA1EFEA0F000A2BE09 /* MediaTests.swift in Sources */,
+				798A40361FD0BE3A00709081 /* SessionsTest.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* BaseTestCase.swift in Sources */,
 				796DCEC41EFC4FE500A2BE09 /* AuthTests.swift in Sources */,
 				796DCEC61EFC615700A2BE09 /* AppTokenTests.swift in Sources */,

@@ -98,8 +98,8 @@ public extension Spaces {
    
    - parameter completion: Completion block that returns error if something wrong happens.
    */
-  public func logout(completion: @escaping VoidOutputs) {
-    self.auth.deauthorize(completionHandler: completion)
+  public func logout(all: Bool = false, completion: @escaping VoidOutputs) {
+    self.auth.deauthorize(all: all, completionHandler: completion)
   }
 
   

@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthHandler.swift"
-            timestampString = "531077050.63501"
+            timestampString = "533773266.915363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.102764"
+            timestampString = "533773266.915468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "authorizeWithBodyParameters(bodyParameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.102882"
+            timestampString = "533773266.915549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "authorizeWithBodyParameters(bodyParameters:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.103654"
+            timestampString = "533773266.9159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.10374"
+            timestampString = "533773266.915985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.103819"
+            timestampString = "533773266.916065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -1057,7 +1057,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/BaseTestCase.swift"
-            timestampString = "529321005.11173"
+            timestampString = "533773266.916818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1405,7 +1405,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "533165817.111097"
+            timestampString = "533773184.979784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -1468,7 +1468,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tests/LinksTests.swift"
-            timestampString = "533165817.111152"
+            timestampString = "533773184.979834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -1705,12 +1705,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Sources/AuthorizationController.swift"
-            timestampString = "533165817.111427"
+            timestampString = "533773266.917797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "deauthorize(completionHandler:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "deauthorize(all:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1883,6 +1883,132 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
                   endingLineNumber = "101"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/SessionsTest.swift"
+            timestampString = "533774427.478292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "testSessionsPull()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774275.528642"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Optional&lt;Any&gt; in closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774275.532145"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () -&gt; Swift.String in closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774275.536059"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/SessionsTest.swift"
+            timestampString = "533774427.478772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "testSessionsPull()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774429.851588"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #3 : @autoclosure () throws -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774429.854404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #4 : @autoclosure () -&gt; Swift.String in closure #1 (Swift.Optional&lt;Swift.Array&lt;MemexSwiftSDK.Session&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (MemexSwiftSDK.Spaces, Swift.Optional&lt;MemexSwiftSDK.User&gt;) -&gt; () in MemexSwiftSDK_Tests.SessionsTests.testSessionsPull() -&gt; ()"
+                  moduleName = "MemexSwiftSDK_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adamzdara/Memex/memex-swift-sdk/Example/Tests/SessionsTest.swift"
+                  timestampString = "533774429.857011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
