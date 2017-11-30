@@ -27,6 +27,7 @@ class AuthorizationController {
   init(spaces: Spaces) {
     self.spaces = spaces
     self.secretStore = KeychainSwift()
+    self.secretStore.synchronizable = false
     self.tokenKey = spaces.configuration.userTokenKey
   }
   
