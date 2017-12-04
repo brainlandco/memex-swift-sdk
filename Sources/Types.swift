@@ -71,6 +71,12 @@ public typealias RetryOutputs = (_ mfa: MFAChallange?, _ error: Swift.Error?)->(
  */
 public typealias UserOutputs = (_ user: User?, _ error: Swift.Error?)->()
 
+/**
+ - parameter export: Export object.
+ - parameter error: Error message if something wrong happens.
+ */
+public typealias ExportOutputs = (_ export: Export?, _ error: Swift.Error?)->()
+
 
 /**
  - parameter audit: User security audit.
