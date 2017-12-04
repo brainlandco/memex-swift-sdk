@@ -197,4 +197,25 @@ class UserTests: BaseTestCase {
     waitForExpectations(timeout: Constants.timeout, handler: nil)
   }
   
+  
+  func testUserSecurityAudit() {
+    let expectation1 = expectation(description: "default")
+    self.prepareSDK { (memex, myself) in
+      let onboardingToken = UUID().uuidString
+      let user = User()
+      user.email = self.mockEmail()
+      memex.createUser(user: user, onboardingToken: onboardingToken, completion: { (newUser, error) in
+        memex.loginUserWithOnboardingToken(token: onboardingToken, completion: { (retryToken, error) in
+          memex.getUserSecurityAudit(completion: { (audit, error) in
+            XCTAssertNil(error, "error is not nil")
+            XCTAssertNotNil(audit, "error is nil")
+            expectation1.fulfill()
+          })
+        })
+      })
+    }
+    waitForExpectations(timeout: Constants.timeout, handler: nil)
+  }
+  
+  
 }

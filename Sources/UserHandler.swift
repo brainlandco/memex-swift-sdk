@@ -233,4 +233,39 @@ public extension Spaces {
     }
   }
   
+  /**
+   Sets copy target for export.
+   
+   - parameter id: Export id
+   - parameter type: Type of target (eg. dropbox)
+   - parameter secret: Access token to target service
+   - parameter completion: Completion block that returns error if action fails
+   
+   */
+  public func setExportCopyTarget(id: Int, type: String, secret: String,
+                                  completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["type"] = type
+    parameters["secret"] = secret
+    POST("users/self/exports/\(id)/copy-target", parameters: parameters as AnyObject) { response in
+      completion(response.error)
+    }
+  }
+  
+  /**
+   Returns users security issues
+   
+   - parameter completion: Completion block
+   
+   */
+  public func getUserSecurityAudit(completion: @escaping UserSecurityAuditOutputs) {
+    GET("users/self/security-audit",
+        parameters: nil) { [weak self] response in
+          completion(self?.entityFromDictionary(dictionary: response.contentDictionary),
+                     response.error)
+    }
+  }
+  
+
+  
 }
