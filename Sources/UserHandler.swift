@@ -227,8 +227,18 @@ public extension Spaces {
    - parameter completion: Completion block that returns error if action fails
    
    */
-  public func requestBackup(completion: @escaping VoidOutputs) {
-    POST("users/self/exports") { response in
+  public func requestBackup(notify: Bool, copyTargetType: String?,
+    copyTargetSecret: String?, completion: @escaping VoidOutputs) {
+    var parameters = [String: Any]()
+    parameters["should_notify"] = notify
+    if copyTargetType != nil {
+      parameters["copy_target"] = [
+        "type": copyTargetType,
+        "secret": copyTargetSecret,
+      ]
+    }
+    POST("users/self/exports",
+         parameters: parameters as AnyObject) { response in
       completion(response.error)
     }
   }
