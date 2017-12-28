@@ -26,7 +26,7 @@ class AppTokenTests: BaseTestCase {
   
   func testInvalidAppToken() {
     let expectation1 = expectation(description: "default")
-    let memex = Memex(appToken: "invalid-token", environment: .staging, verbose: true)
+    let memex = Memex(appToken: "invalid-token", environment: .local, verbose: true)
     memex.prepare { error in
       XCTAssertNil(error, "nonnil error")
       let user = User()
