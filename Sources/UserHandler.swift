@@ -251,21 +251,6 @@ public extension Spaces {
       completion(response.error)
     }
   }
-  
-  /**
-   Returns users security issues
-   
-   - parameter completion: Completion block
-   
-   */
-  public func getUserSecurityAudit(completion: @escaping UserSecurityAuditOutputs) {
-    GET("users/self/security-audit",
-        parameters: nil) { [weak self] response in
-          completion(self?.entityFromDictionary(dictionary: response.contentDictionary),
-                     response.error)
-    }
-  }
-  
 
   
 }

@@ -73,15 +73,6 @@ public typealias UserOutputs = (_ user: User?, _ error: Swift.Error?)->()
 
 
 /**
- - parameter audit: User security audit.
- - parameter error: Error message if something wrong happens.
- */
-public typealias UserSecurityAuditOutputs = (_ audit: UserSecurityAudit?, _ error: Swift.Error?)->()
-
-
-
-
-/**
  Structure of response of pull method
  
  - parameter items: Set of items

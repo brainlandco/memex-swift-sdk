@@ -154,11 +154,11 @@ class RequestInvoker {
     case 400..<500:
       var notAuthorized = false
       if let errorPayload = errorPayload, let errorCode = errorPayload.code {
-        if errorCode == 401 || errorCode == 402 || errorCode == 403 {
+        if errorCode == 401 {
           notAuthorized = true
         }
       }
-      if code == 401 || code == 402 || code == 403 {
+      if code == 401 {
         notAuthorized = true
       }
       if notAuthorized {
