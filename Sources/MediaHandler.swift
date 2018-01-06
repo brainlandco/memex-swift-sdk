@@ -27,6 +27,7 @@ public extension Spaces {
       var json = item.toJSON()
       json.removeValue(forKey: "owner_id")
       json.removeValue(forKey: "data_upload_url")
+      json.removeValue(forKey: "data_download_url")
       return json as AnyObject
     }
     POST("teams/personal/media", parameters:array as AnyObject, headers: headers) { [weak self] response in
