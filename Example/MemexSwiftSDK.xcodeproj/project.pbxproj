@@ -133,7 +133,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				35CD79E6ACD479E5BA58FAEE /* [CP] Embed Pods Frameworks */,
-				F34FAE93EE6F006D73C28C86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,21 +230,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemexSwiftSDK_Tests/Pods-MemexSwiftSDK_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F34FAE93EE6F006D73C28C86 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemexSwiftSDK_Tests/Pods-MemexSwiftSDK_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

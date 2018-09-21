@@ -12,10 +12,10 @@ func <- (left: inout Data, right: Map) {
 func <- (left: inout Data?, right: Map) {
   left <- (right, Base64Transform())
 }
-/// Implicitly Unwrapped Optional
-func <- (left: inout Data!, right: Map) {
-  left <- (right, Base64Transform())
-}
+///// Implicitly Unwrapped Optional
+//func <- (left: inout Data!, right: Map) {
+//  left <- (right, Base64Transform())
+//}
 
 // MARK: Color
 
@@ -27,10 +27,10 @@ func <- (left: inout Color, right: Map) {
 func <- (left: inout Color?, right: Map) {
   left <- (right, ColorTransform())
 }
-/// Implicitly Unwrapped Optional
-func <- (left: inout Color!, right: Map) {
-  left <- (right, ColorTransform())
-}
+///// Implicitly Unwrapped Optional
+//func <- (left: inout Color!, right: Map) {
+//  left <- (right, ColorTransform())
+//}
 
 // MARK: Date
 
@@ -42,10 +42,10 @@ func <- (left: inout Date, right: Map) {
 func <- (left: inout Date?, right: Map) {
   left <- (right, ISO8601DateTransform())
 }
-/// Implicitly Unwrapped Optional
-func <- (left: inout Date!, right: Map) {
-  left <- (right, ISO8601DateTransform())
-}
+///// Implicitly Unwrapped Optional
+//func <- (left: inout Date!, right: Map) {
+//  left <- (right, ISO8601DateTransform())
+//}
 
 // MARK: NSDecimalNumber
 
@@ -57,10 +57,10 @@ func <- (left: inout NSDecimalNumber, right: Map) {
 func <- (left: inout NSDecimalNumber?, right: Map) {
   left <- (right, DecimalNumberTransform())
 }
-/// Implicitly Unwrapped Optional
-func <- (left: inout NSDecimalNumber!, right: Map) {
-  left <- (right, DecimalNumberTransform())
-}
+///// Implicitly Unwrapped Optional
+//func <- (left: inout NSDecimalNumber!, right: Map) {
+//  left <- (right, DecimalNumberTransform())
+//}
 
 // MARK: URL
 
@@ -72,7 +72,7 @@ func <- (left: inout URL, right: Map) {
 func <- (left: inout URL?, right: Map) {
   left <- (right, URLTransform())
 }
-/// Implicitly Unwrapped Optional
-func <- (left: inout URL!, right: Map) {
-  left <- (right, URLTransform())
-}
+///// Implicitly Unwrapped Optional
+//func <- (left: inout URL!, right: Map) {
+//  left <- (right, URLTransform())
+//}

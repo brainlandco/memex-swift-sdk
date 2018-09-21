@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8BEB4B9310BF17B227B6345755AC740E'
-               BlueprintName = 'ObjectMapper'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ObjectMapper.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F1283783B47681871B76F962E0AC1190"
+               BlueprintName = "ObjectMapper"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "ObjectMapper.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
