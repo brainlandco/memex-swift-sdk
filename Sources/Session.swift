@@ -20,7 +20,7 @@ public class Session: JSONRepresentable {
   public var os: String?
   /// Origin space MUID
   public var device: String?
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.ID!.hashValue
   }
   

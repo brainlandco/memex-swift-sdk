@@ -54,7 +54,7 @@ public class Media: JSONRepresentable, ObjectProtocol {
   /// If media represents any space then its MUID is present
   public var representedSpaceMUID: String?
   
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.MUID!.hashValue
   }
   

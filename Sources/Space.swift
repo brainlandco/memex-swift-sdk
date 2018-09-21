@@ -37,7 +37,7 @@ public class Space: JSONRepresentable, ObjectProtocol {
   public var color: Color?
   /// Set of media that represents space (eg webpage space is represented by url, thumbnail, summary)
   public var representations: [Media]?
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.MUID!.hashValue
   }
   

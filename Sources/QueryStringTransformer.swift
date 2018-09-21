@@ -53,13 +53,13 @@ class QueryStringTransformer {
       let dictionary = object as! [String: Any]
       for nestedKey in dictionary.keys {
         let nestedValue = dictionary[nestedKey as String]
-        let nextLevelKey = key != nil ? "\(key)[\(nestedKey)]" : nestedKey
-        queryItems += self.queryItemsFromObject(object: nestedValue, key:nextLevelKey as AnyObject!)
+        let nextLevelKey = key != nil ? "\(key ?? "nil")[\(nestedKey)]" : nestedKey
+        queryItems += self.queryItemsFromObject(object: nestedValue, key:nextLevelKey as AnyObject)
       }
     } else if object is [AnyObject] {
       let array = object as! [AnyObject]
       for nestedValue in array {
-        queryItems += self.queryItemsFromObject(object: nestedValue, key:"\(key)[]" as AnyObject!)
+        queryItems += self.queryItemsFromObject(object: nestedValue, key:"\(key ?? "nil")[]" as AnyObject)
       }
     } else {
       queryItems.append(URLQueryItem(name:key as! String, value:"\(object!)"))

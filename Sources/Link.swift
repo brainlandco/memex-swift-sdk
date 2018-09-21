@@ -21,7 +21,7 @@ public class Link: JSONRepresentable, ObjectProtocol {
   public var originSpaceMUID: String?
   /// Target space MUID
   public var targetSpaceMUID: String?
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.MUID!.hashValue
   }
   

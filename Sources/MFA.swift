@@ -26,7 +26,7 @@ public class MFAChallange: JSONRepresentable {
   /// Last update timestamp
   public var expiresAt: Date?
   
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.retryToken!.hashValue
   }
   

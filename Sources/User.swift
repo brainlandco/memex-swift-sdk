@@ -48,7 +48,7 @@ public class User: JSONRepresentable {
   /// Flag that tells if user has enabled advanced features. This will be in future replaced with full feature flags set.
   public var permissions: [String: Any]?
   
-  public override var hashValue: Int {
+  public override var hash: Int {
     return self.ID!.hashValue
   }
   
